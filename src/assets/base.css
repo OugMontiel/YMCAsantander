@@ -1,53 +1,41 @@
-/* color palette from <https://github.com/vuejs/theme> */
 :root {
-  --vt-c-white: #ffffff;
-  --vt-c-white-soft: #f8f8f8;
-  --vt-c-white-mute: #f2f2f2;
+  /* paleta de colores YMCA  */
+  --color-transparencia: #0082b7; /* Pantone 640 C */
+  --color-confianza: #005a8f; /* Pantone 7462 C */
+  --color-calidez: #ffb618; /* Pantone 1235 C */
+  --color-amabilidad: #ff8e12; /* Pantone 1495 C */
+  --color-esperanza: #82bc00; /* Pantone 376 C */
+  --color-seguridad: #00933a; /* Pantone 355 C */
+  --color-espiritualidad: #775091; /* Pantone 7677 C */
+  --color-transformacion: #943d6f; /* Pantone 689 C */
+  --color-juventud: #d50053; /* Pantone Strong Red C */
+  --color-humildad: #d8d6d4; /* Pantone Cool Gray 1C */
+  --color-pasion: #d41f26; /* Pantone 1795 C */
+  --color-generosidad: #fb7eb4; /* Pantone 211 C */
 
-  --vt-c-black: #181818;
-  --vt-c-black-soft: #222222;
-  --vt-c-black-mute: #282828;
+  /* paleta de colores funcionales (imprescindibles para fondos, textos, bordes) */
+  --color-fondo: #ffffff; /* Blanco puro para fondo */
+  --color-fondo-secundario: #f5f5f5; /* Gris claro para secciones */
+  --color-texto-principal: #1c1c1c; /* Gris oscuro para textos principales */
+  --color-texto-secundario: #666666; /* Gris medio para texto secundario */
+  --color-borde: #e0e0e0; /* Gris claro para bordes y divisores */
 
-  --vt-c-indigo: #2c3e50;
+  /* Paleta de colores Estados del sistema */
+  --color-exito: #28a745; /* Verde éxito - Confirmaciones */
+  --color-error: #dc3545; /* Rojo error - Validaciones */
+  --color-advertencia: #ffc107; /* Amarillo alerta - Warnings */
+  --color-info: #17a2b8; /* Azul claro - Informaciones */
 
-  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
-  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
-  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
-  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+  /* paleta de olores de interacción (botones, enlaces, hover, focus) */
+  --color-primario: var(--color-confianza); /* Azul principal para botones y enlaces */
+  --color-primario-hover: #004070;
+  --color-secundario: var(--color-calidez); /* Para botones alternativos */
+  --color-secundario-hover: #e6a700;
+  --color-focus: #009ee3; /* Para resaltar inputs */
 
-  --vt-c-text-light-1: var(--vt-c-indigo);
-  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
-  --vt-c-text-dark-1: var(--vt-c-white);
-  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
-}
-
-/* semantic color variables for this project */
-:root {
-  --color-background: var(--vt-c-white);
-  --color-background-soft: var(--vt-c-white-soft);
-  --color-background-mute: var(--vt-c-white-mute);
-
-  --color-border: var(--vt-c-divider-light-2);
-  --color-border-hover: var(--vt-c-divider-light-1);
-
-  --color-heading: var(--vt-c-text-light-1);
-  --color-text: var(--vt-c-text-light-1);
-
-  --section-gap: 160px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: var(--vt-c-black);
-    --color-background-soft: var(--vt-c-black-soft);
-    --color-background-mute: var(--vt-c-black-mute);
-
-    --color-border: var(--vt-c-divider-dark-2);
-    --color-border-hover: var(--vt-c-divider-dark-1);
-
-    --color-heading: var(--vt-c-text-dark-1);
-    --color-text: var(--vt-c-text-dark-2);
-  }
+  /*Transparencias útiles (si usas overlays o modales) */
+  --overlay-negro: rgba(0, 0, 0, 0.5);
+  --overlay-blanco: rgba(255, 255, 255, 0.8);
 }
 
 /* Estilos globales */
@@ -61,7 +49,6 @@
 
 /* Estilos para imágenes */
 img {
-  
   object-fit: contain; /* Ajustar la imagen sin recortarla */
 }
 
