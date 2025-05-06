@@ -1,5 +1,5 @@
 <script>
-import logoYMCA from "@/assets/logo.webp";
+import logoYMCA from "@/assets/Logo_Ymca-removebg-preview.png";
 
 export default {
   name: "Header",
