@@ -1,12 +1,14 @@
 <script>
-import logoYMCA from "@/assets/Logo_Ymca-removebg-preview.png";
+import logoChico from "@/assets/Logo_Ymca-removebg-preview.png";
+import logoGrande from "@/assets/logo.webp";
 
 export default {
   name: "Header",
   data() {
     return {
       isMenuOpen: false,
-      logoYMCA,
+      logoChico,
+      logoGrande,
     };
   },
   methods: {
@@ -37,7 +39,7 @@ export default {
     <router-link to="/" class="logoLink">
       <!-- Solo un logo con clases condicionales -->
       <img
-        :src="logoYMCA"
+        :src="logoGrande"
         alt="YMCA - Logo principal"
         :class="{logoDesktop: true, logoMobile: false}"
         loading="eager"
@@ -45,7 +47,8 @@ export default {
         height="40"
       />
       <img
-        :src="logoYMCA"
+        v-if="!isMenuOpen"
+        :src="logoChico"
         alt="YMCA - Logo mobile"
         :class="{logoMobile: true, logoDesktop: false}"
         loading="eager"
@@ -56,24 +59,37 @@ export default {
 
     <!-- seccion de nevacion por la pagina -->
     <nav class="nav" aria-label="Navegación principal">
+      <!-- Opciones para la navegacion  -->
       <ul class="navList" :class="{'navList--open': isMenuOpen}" @click="closeMenu">
-        <li class="navItem" role="none">
-          <router-link to="/" role="menuitem" class="navLink"> Inicio </router-link>
-        </li>
-        <li class="navItem" role="none">
-          <router-link to="/about" role="menuitem" class="navLink"> ¿quienes Somos? </router-link>
-        </li>
-        <li class="navItem" role="none">
-          <router-link to="/Programas" role="menuitem" class="navLink"> Programas </router-link>
-        </li>
-        <li class="navItem" role="none">
-          <router-link to="/Voluntariado" role="menuitem" class="navLink"> Voluntariado </router-link>
-        </li>
-        <li class="navItem" role="none">
-          <router-link to="/Publicaciones" role="menuitem" class="navLink"> Publicaciones </router-link>
-        </li>
-
-        <!-- Repetir para demás items -->
+        <!-- imagen para cunado sale lateral  -->
+        <img
+          :src="logoChico"
+          alt="YMCA - Logo mobile"
+          class="LogoNav"
+          :class="{'navList--open': isMenuOpen}"
+          loading="eager"
+          width="80"
+          height="30"
+        />
+        <div class="navList2">
+          <li class="navItem" role="none">
+            <router-link to="/" role="menuitem" class="navLink"> Inicio </router-link>
+          </li>
+          <li class="navItem" role="none">
+            <router-link to="/about" role="menuitem" class="navLink"> ¿quienes Somos? </router-link>
+          </li>
+          <li class="navItem" role="none">
+            <router-link to="/Programas" role="menuitem" class="navLink"> Programas </router-link>
+          </li>
+          <li class="navItem" role="none">
+            <router-link to="/Voluntariado" role="menuitem" class="navLink"> Voluntariado </router-link>
+          </li>
+          <li class="navItem" role="none">
+            <router-link to="/Publicaciones" role="menuitem" class="navLink"> Publicaciones </router-link>
+          </li>
+        </div>
+        <!-- marca para cuando sale lateral -->
+        <div class="marcaNav" :class="{'navList--open': isMenuOpen}">Diego Montiel</div>
       </ul>
     </nav>
 
@@ -86,7 +102,6 @@ export default {
 
 <style scoped>
 .header {
-  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -96,20 +111,14 @@ export default {
   border-bottom: 1px solid var(--color-borde);
 }
 
-.logoLink {
-  z-index: 100;
-}
-
-.logo-link img {
-  display: block;
-  width: 8em; /* Tamaño desktop */
-}
-
-.logoMobile,
-.logoDesktop {
+.logoMobile {
   display: none;
 }
 
+.logoDesktop {
+  display: block;
+  width: 8em;
+}
 .navList {
   display: flex;
   gap: 1.5rem;
@@ -117,7 +126,6 @@ export default {
 }
 
 .navLink {
-  position: relative;
   color: var(--color-texto-principal);
   text-decoration: none;
   font-weight: 500;
@@ -126,6 +134,17 @@ export default {
   transition:
     color 0.2s ease,
     background-color 0.2s ease;
+}
+.navList2 {
+  display: flex;
+}
+
+.marcaNav {
+  display: none;
+}
+
+.LogoNav {
+  display: none;
 }
 
 .navLink:hover,
@@ -144,18 +163,17 @@ export default {
   color: var(--color-texto-principal);
   z-index: 100;
 }
-/* Mostrar desktop en pantallas grandes */
-@media (min-width: 761px) {
-  .logoDesktop {
-    display: block;
-    width: 8em;
-  }
-}
 
 @media (max-width: 768px) {
+  .header {
+    justify-content: space-around;
+  }
+  .logoDesktop {
+    display: none;
+  }
   .logoMobile {
     display: block;
-    width: 6em;
+    width: 8em;
   }
 
   .navList {
@@ -164,13 +182,25 @@ export default {
     right: 0;
     bottom: 0;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     width: min(100%, 300px);
     padding: 2rem;
     background-color: var(--color-fondo);
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
     box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+  }
+  .navList2 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .marcaNav {
+    display: block;
+  }
+
+  .LogoNav {
+    display: block;
   }
 
   .navList--open {
