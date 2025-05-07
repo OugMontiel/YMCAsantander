@@ -15,85 +15,59 @@ export default {
 
 <template>
   <footer>
-    <!-- seccion info paguina -->
-
+    <!-- Sección de información principal del pie de página -->
     <div class="footerInfo">
-      <!-- seccion de img y mensaje Bonito  -->
+      <!-- Logo y mensaje inspirador -->
       <div class="footerLogo">
-        <!-- Solo un logo con clases condicionales -->
         <router-link to="/" class="logoLink">
           <img :src="logoGrande" alt="YMCA - Logo principal" :class="{logoDesktop: true, logoMobile: false}" loading="eager" />
-          <img :src="logoChico" alt="YMCA - Logo mobile" :class="{logoMobile: true, logoDesktop: false}" loading="eager" />
+          <img :src="logoChico" alt="YMCA - Logo móvil" :class="{logoMobile: true, logoDesktop: false}" loading="eager" />
         </router-link>
-        <p>mensaje bonito</p>
+        <p>Un mensaje bonito que inspire a todos los que lo lean.</p>
       </div>
 
-      <!-- Seccion de links  -->
-      <div class="footerLinks">
-        <!-- barra de navegacion basica con todo y mas  -->
-        <nav class="navBar">
-          <ul>
-            <li>
-              <router-link to="/"> Inicio </router-link>
-            </li>
-            <li>
-              <router-link to="/about"> ¿quienes Somos? </router-link>
-            </li>
-            <li>
-              <router-link to="/Programas"> Programas </router-link>
-            </li>
-            <li>
-              <router-link to="/Voluntariado"> Voluntariado </router-link>
-            </li>
-            <li>
-              <router-link to="/Publicaciones"> Publicaciones </router-link>
-            </li>
-          </ul>
-        </nav>
+      <!-- Sección de enlaces -->
 
-        <!-- barra de navegacion Legal -->
-        <nav class="navBar">
-          <ul>
-            <li>
-              <router-link to="/aviso-privacidad"> Aviso de privacidad </router-link>
-            </li>
-            <li>
-              <router-link to="/terminos-y-condiciones"> Terminos y condiciones </router-link>
-            </li>
-            <li>
-              <router-link to="/politica-de-cookies"> Politica de cookies </router-link>
-            </li>
-          </ul>
-        </nav>
-        <!-- barra de navegacion para conocenos  -->
-        <nav class="navBar">
-          <ul>
-            <li>
-              <router-link to="/Socio"> Hazte Socio </router-link>
-            </li>
-            <li>
-              <router-link to="/donar"> Donar Ahora </router-link>
-            </li>
-            <li>
-              <router-link to="/voluntariado"> hazte Voluntario </router-link>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      <!-- Navegación principal -->
+      <nav class="navBar">
+        <h3>YMCA Santander</h3>
+        <ul>
+          <li><router-link to="/">Inicio</router-link></li>
+          <li><router-link to="/about">¿Quiénes somos?</router-link></li>
+          <li><router-link to="/Programas">Programas</router-link></li>
+          <li><router-link to="/Voluntariado">Voluntariado</router-link></li>
+          <li><router-link to="/Publicaciones">Publicaciones</router-link></li>
+        </ul>
+      </nav>
+
+      <!-- Navegación legal -->
+      <nav class="navBar">
+        <h3>Legal</h3>
+        <ul>
+          <li><router-link to="/aviso-privacidad">Aviso de privacidad</router-link></li>
+          <li><router-link to="/terminos-y-condiciones">Términos y condiciones</router-link></li>
+          <li><router-link to="/politica-de-cookies">Política de cookies</router-link></li>
+          <li><router-link to="/esal">esal</router-link></li>
+        </ul>
+      </nav>
+
+      <!-- Navegación de participación -->
+      <nav class="navBar">
+        <h3>Conocenos</h3>
+        <ul>
+          <li><router-link to="/Socio">Hazte socio</router-link></li>
+          <li><router-link to="/donar">Donar ahora</router-link></li>
+          <li><router-link to="/voluntariado">Hazte voluntario</router-link></li>
+        </ul>
+      </nav>
     </div>
 
-    <!-- seccion del Desarrollador -->
-
+    <!-- Créditos del desarrollador -->
     <div class="footerDesarrollador">
-      <!-- Copiray -->
       <p>© 2023 YMCA. Todos los derechos reservados.</p>
       <p>
         Desarrollado por
-        <a href="#">Diego Alejandro Montiel Florez</a>
-      </p>
-      <p>
-        Diseñado por
-        <a href="#">Diego Alejandro Montiel Florez</a>
+        <a href="#">Diego Alejandro Montiel Flórez</a>
       </p>
     </div>
   </footer>
@@ -103,14 +77,57 @@ export default {
 footer {
   display: flex;
   flex-direction: column;
-}
-.footerInfo {
-  display: flex;
-  align-items: center;
+  justify-content: space-between;
+
+  height: 20rem;
+
+  
+
+  background-color: var(--color-fondo);
+  border-top: 1px solid var(--color-borde);
 }
 .footerDesarrollador {
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  border-top: 1px solid var(--color-borde);
+}
+.footerInfo {
+  display: flex;
+  justify-content: space-around;
+}
+.logoMobile {
+  display: none;
+}
+
+.navBar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  list-style: none;
+}
+
+.navBar h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.navBar li {
+  color: var(--color-texto-principal);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.2rem 1rem;
+  border-radius: 0.25rem;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+.navBar li:hover,
+.navBar li:focus-visible {
+  background-color: var(--color-secundario-hover);
+  color: var(--color-fondo);
+  outline: none;
 }
 </style>
