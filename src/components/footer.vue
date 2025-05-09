@@ -1,6 +1,6 @@
 <script>
-import logoChico from "@/assets/Logo_Ymca-removebg-preview.png";
-import logoGrande from "@/assets/logo.webp";
+import logoChico from "@/assets/logos/Logo_Ymca-removebg-preview.png";
+import logoGrande from "@/assets/logos/logo.webp";
 
 export default {
   name: "footer",
@@ -32,11 +32,11 @@ export default {
       <nav class="navBar">
         <h3>YMCA Santander</h3>
         <ul>
-          <li><router-link to="/">Inicio</router-link></li>
-          <li><router-link to="/about">¿Quiénes somos?</router-link></li>
-          <li><router-link to="/Programas">Programas</router-link></li>
-          <li><router-link to="/Voluntariado">Voluntariado</router-link></li>
-          <li><router-link to="/Publicaciones">Publicaciones</router-link></li>
+          <li><router-link to="/" class="navLink">Inicio</router-link></li>
+          <li><router-link to="/about" class="navLink">¿Quiénes somos?</router-link></li>
+          <li><router-link to="/Programas" class="navLink">Programas</router-link></li>
+          <li><router-link to="/Voluntariado" class="navLink">Voluntariado</router-link></li>
+          <li><router-link to="/Publicaciones" class="navLink">Publicaciones</router-link></li>
         </ul>
       </nav>
 
@@ -44,10 +44,10 @@ export default {
       <nav class="navBar">
         <h3>Legal</h3>
         <ul>
-          <li><router-link to="/aviso-privacidad">Aviso de privacidad</router-link></li>
-          <li><router-link to="/terminos-y-condiciones">Términos y condiciones</router-link></li>
-          <li><router-link to="/politica-de-cookies">Política de cookies</router-link></li>
-          <li><router-link to="/esal">esal</router-link></li>
+          <li><router-link to="/avisoPrivacidad" class="navLink">Aviso de privacidad</router-link></li>
+          <li><router-link to="/terminosYCondiciones" class="navLink">Términos y condiciones</router-link></li>
+          <li><router-link to="/politicaDeCookies" class="navLink">Política de cookies</router-link></li>
+          <li><router-link to="/esal" class="navLink">esal</router-link></li>
         </ul>
       </nav>
 
@@ -55,9 +55,9 @@ export default {
       <nav class="navBar">
         <h3>Conocenos</h3>
         <ul>
-          <li><router-link to="/Socio">Hazte socio</router-link></li>
-          <li><router-link to="/donar">Donar ahora</router-link></li>
-          <li><router-link to="/voluntariado">Hazte voluntario</router-link></li>
+          <li><router-link to="/Socio" class="navLink">Hazte socio</router-link></li>
+          <li><router-link to="/donar" class="navLink">Donar ahora</router-link></li>
+          <li><router-link to="/voluntariado" class="navLink">Hazte voluntario</router-link></li>
         </ul>
       </nav>
     </div>
@@ -121,7 +121,7 @@ footer {
   border-bottom: 1px solid var(--color-borde);
 }
 
-.navBar li {
+.navLink {
   color: var(--color-texto-principal);
   text-decoration: none;
   font-weight: 500;
@@ -131,11 +131,12 @@ footer {
     color 0.2s ease,
     background-color 0.2s ease;
 }
-.navBar li:hover,
-.navBar li:focus-visible {
+.navLink:hover,
+.navLink:focus-visible {
   background-color: var(--color-secundario-hover);
   color: var(--color-fondo);
   outline: none;
+  text-decoration: underline;
 }
 
 @media (max-width: 940px) {
@@ -155,20 +156,20 @@ footer {
     justify-content: center;
     align-items: center;
   }
-  .footerLogo p{
-    padding: 0 0 0 .8rem;
+  .footerLogo p {
+    padding: 0 0 0 0.8rem;
   }
-  .navBar{
+  .navBar {
     padding: 0 0 1.5rem 1.5rem;
   }
-  
+
   .logoDesktop {
     width: 15rem;
   }
 }
 
 @media (max-width: 770px) {
-  .footerInfo{
+  .footerInfo {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
     grid-template-rows: repeat(2, auto); /* Dos filas automáticas */
