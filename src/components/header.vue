@@ -95,7 +95,7 @@ export default {
 
     <!-- seccion de iconos para cuando la pntalla es pequeña -->
     <button class="menuButton" @click.stop="toggleMenu" :aria-expanded="isMenuOpen.toString()" aria-label="Menú de navegación">
-      <UIcon :name="isMenuOpen ? 'material-symbols-light:close' : 'material-symbols-light:menu-rounded'" class="menu-icon" />
+      <UIcon :name="isMenuOpen ? 'material-symbols-light:close' : 'material-symbols-light:menu-rounded'" class="menu-icon" width="2em" />
     </button>
   </header>
 </template>
@@ -156,12 +156,6 @@ export default {
 
 .menuButton {
   display: none;
-  background: none;
-  border: none;
-  padding: 0.5rem;
-  cursor: pointer;
-  color: var(--color-texto-principal);
-  z-index: 100;
 }
 
 @media (max-width: 770px) {
@@ -197,6 +191,7 @@ export default {
   }
   .marcaNav {
     display: block;
+    color: var(--color-texto-secundario);
   }
 
   .LogoNav {
@@ -209,6 +204,12 @@ export default {
 
   .menuButton {
     display: block;
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    color: var(--color-texto-principal);
+    z-index: 100;
   }
 
   .navLink {
