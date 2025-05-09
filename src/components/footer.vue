@@ -30,6 +30,7 @@ export default {
 
       <!-- Navegación principal -->
       <nav class="navBar navYMCA">
+      <nav class="navBar navYMCA">
         <h3>YMCA Santander</h3>
         <ul>
           <li><router-link to="/" class="navLink">Inicio</router-link></li>
@@ -42,6 +43,7 @@ export default {
 
       <!-- Navegación legal -->
       <nav class="navBar navLegal">
+      <nav class="navBar navLegal">
         <h3>Legal</h3>
         <ul>
           <li><router-link to="/avisoPrivacidad" class="navLink">Aviso de privacidad</router-link></li>
@@ -52,6 +54,7 @@ export default {
       </nav>
 
       <!-- Navegación de participación -->
+      <nav class="navBar navConocenos">
       <nav class="navBar navConocenos">
         <h3>Conocenos</h3>
         <ul>
@@ -88,13 +91,20 @@ footer {
   align-items: center;
 
   color: var(--color-texto-secundario);
+  color: var(--color-texto-secundario);
   border-top: 1px solid var(--color-borde);
 }
 .footerInfo {
   display: flex;
   justify-content: space-around;
   padding: 2.5rem 0 1rem 0; /* responsive */
+  padding: 2.5rem 0 1rem 0; /* responsive */
   flex: 1;
+}
+
+.footerLogo p {
+  padding: 0 0 0 0.8rem;
+  color: var(--color-texto-principal);
 }
 
 .footerLogo p {
@@ -122,6 +132,7 @@ footer {
   font-size: 1.5rem;
   margin-bottom: 1rem;
   color: var(--color-texto-principal);
+  color: var(--color-texto-principal);
   border-bottom: 1px solid var(--color-borde);
 }
 
@@ -148,10 +159,14 @@ footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
     grid-template-rows: repeat(2, auto); /* dos filas automáticas */
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
+    grid-template-rows: repeat(2, auto); /* dos filas automáticas */
     padding: 2rem 0 0 0; /* responsive */
   }
   /* Primer hijo: ocupa la primera columna y abarca las 3 filas */
   .footerLogo {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
     grid-column: 1 / 4;
     grid-row: 1 / 2;
 
@@ -161,6 +176,7 @@ footer {
     align-items: center;
   }
   .navBar {
+    padding: 1.5rem 0 1.5rem 1.5rem;
     padding: 1.5rem 0 1.5rem 1.5rem;
   }
   .logoDesktop {
@@ -185,4 +201,5 @@ footer {
     align-items: center;
   }
 }
+
 </style>
