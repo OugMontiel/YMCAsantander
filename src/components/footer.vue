@@ -115,7 +115,7 @@ footer {
 }
 
 .navBar h3 {
-  padding: 0 1rem 0 0; 
+  padding: 0 1rem 0 0;
   font-size: 1.5rem;
   margin-bottom: 1rem;
   border-bottom: 1px solid var(--color-borde);
@@ -136,5 +136,42 @@ footer {
   background-color: var(--color-secundario-hover);
   color: var(--color-fondo);
   outline: none;
+}
+
+@media (max-width: 940px) {
+  .footerInfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Dos columnas iguales */
+    grid-template-rows: repeat(3, auto); /* Tres filas automáticas */
+    padding: 2rem 0 0 0; /* responsive */
+  }
+  /* Primer hijo: ocupa la primera columna y abarca las 3 filas */
+  .footerLogo {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .footerLogo p{
+    padding: 0 0 0 .8rem;
+  }
+  .navBar{
+    padding: 0 0 1.5rem 1.5rem;
+  }
+  
+  .logoDesktop {
+    width: 15rem;
+  }
+}
+
+@media (max-width: 770px) {
+  .footerInfo{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    grid-template-rows: repeat(2, auto); /* Dos filas automáticas */
+  }
 }
 </style>

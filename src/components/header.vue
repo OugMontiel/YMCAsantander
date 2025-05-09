@@ -164,7 +164,7 @@ export default {
   z-index: 100;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 770px) {
   .header {
     justify-content: space-around;
   }
