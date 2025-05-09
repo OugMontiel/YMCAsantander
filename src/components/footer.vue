@@ -29,7 +29,7 @@ export default {
       <!-- Sección de enlaces -->
 
       <!-- Navegación principal -->
-      <nav class="navBar">
+      <nav class="navBar navYMCA">
         <h3>YMCA Santander</h3>
         <ul>
           <li><router-link to="/" class="navLink">Inicio</router-link></li>
@@ -41,7 +41,7 @@ export default {
       </nav>
 
       <!-- Navegación legal -->
-      <nav class="navBar">
+      <nav class="navBar navLegal">
         <h3>Legal</h3>
         <ul>
           <li><router-link to="/avisoPrivacidad" class="navLink">Aviso de privacidad</router-link></li>
@@ -52,7 +52,7 @@ export default {
       </nav>
 
       <!-- Navegación de participación -->
-      <nav class="navBar">
+      <nav class="navBar navConocenos">
         <h3>Conocenos</h3>
         <ul>
           <li><router-link to="/Socio" class="navLink">Hazte socio</router-link></li>
@@ -79,8 +79,6 @@ footer {
   flex-direction: column;
   justify-content: space-between;
 
-  height: 20rem; /* responsive */
-
   background-color: var(--color-fondo);
   border-top: 1px solid var(--color-borde);
 }
@@ -89,13 +87,19 @@ footer {
   justify-content: space-around;
   align-items: center;
 
+  color: var(--color-texto-secundario);
   border-top: 1px solid var(--color-borde);
 }
 .footerInfo {
   display: flex;
   justify-content: space-around;
-  padding: 2.5rem 0 0 0; /* responsive */
+  padding: 2.5rem 0 1rem 0; /* responsive */
   flex: 1;
+}
+
+.footerLogo p {
+  padding: 0 0 0 0.8rem;
+  color: var(--color-texto-principal);
 }
 .logoMobile {
   display: none;
@@ -103,7 +107,6 @@ footer {
 .logoDesktop {
   display: block;
   width: 20rem; /* responsive */
-  padding-bottom: 2rem;
 }
 
 .navBar {
@@ -118,6 +121,7 @@ footer {
   padding: 0 1rem 0 0;
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  color: var(--color-texto-principal);
   border-bottom: 1px solid var(--color-borde);
 }
 
@@ -142,37 +146,43 @@ footer {
 @media (max-width: 940px) {
   .footerInfo {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* Dos columnas iguales */
-    grid-template-rows: repeat(3, auto); /* Tres filas automáticas */
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
+    grid-template-rows: repeat(2, auto); /* dos filas automáticas */
     padding: 2rem 0 0 0; /* responsive */
   }
   /* Primer hijo: ocupa la primera columna y abarca las 3 filas */
   .footerLogo {
-    grid-column: 1 / 2;
-    grid-row: 1 / 4;
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .footerLogo p {
-    padding: 0 0 0 0.8rem;
-  }
   .navBar {
-    padding: 0 0 1.5rem 1.5rem;
+    padding: 1.5rem 0 1.5rem 1.5rem;
   }
-
   .logoDesktop {
     width: 15rem;
   }
 }
 
-@media (max-width: 770px) {
+@media (max-width: 670px) {
+  .footerDesarrollador {
+    flex-direction: column;
+  }
   .footerInfo {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
-    grid-template-rows: repeat(2, auto); /* Dos filas automáticas */
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+  }
+  .footerLogo {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  .navBar {
+    align-items: center;
   }
 }
 </style>
