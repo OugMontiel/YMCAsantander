@@ -79,9 +79,7 @@ footer {
   flex-direction: column;
   justify-content: space-between;
 
-  height: 20rem;
-
-  
+  height: 20rem; /* responsive */
 
   background-color: var(--color-fondo);
   border-top: 1px solid var(--color-borde);
@@ -96,9 +94,16 @@ footer {
 .footerInfo {
   display: flex;
   justify-content: space-around;
+  padding: 2.5rem 0 0 0; /* responsive */
+  flex: 1;
 }
 .logoMobile {
   display: none;
+}
+.logoDesktop {
+  display: block;
+  width: 20rem; /* responsive */
+  padding-bottom: 2rem;
 }
 
 .navBar {
@@ -110,8 +115,10 @@ footer {
 }
 
 .navBar h3 {
+  padding: 0 1rem 0 0; 
   font-size: 1.5rem;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--color-borde);
 }
 
 .navBar li {
