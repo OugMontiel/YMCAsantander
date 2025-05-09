@@ -29,7 +29,7 @@ export default {
       <!-- Sección de enlaces -->
 
       <!-- Navegación principal -->
-      <nav class="navBar navYMCA">
+
       <nav class="navBar navYMCA">
         <h3>YMCA Santander</h3>
         <ul>
@@ -42,7 +42,7 @@ export default {
       </nav>
 
       <!-- Navegación legal -->
-      <nav class="navBar navLegal">
+
       <nav class="navBar navLegal">
         <h3>Legal</h3>
         <ul>
@@ -54,7 +54,7 @@ export default {
       </nav>
 
       <!-- Navegación de participación -->
-      <nav class="navBar navConocenos">
+
       <nav class="navBar navConocenos">
         <h3>Conocenos</h3>
         <ul>
@@ -201,5 +201,4 @@ footer {
     align-items: center;
   }
 }
-
 </style>
