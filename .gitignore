@@ -28,3 +28,7 @@ coverage
 *.sw?
 
 *.tsbuildinfo
+
+# Auto-generated type declarations  ... NuxtUi
+auto-imports.d.ts
+components.d.ts

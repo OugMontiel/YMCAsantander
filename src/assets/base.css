@@ -1,3 +1,6 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
 :root {
   /* paleta de colores YMCA  */
   --color-transparencia: #0082b7; /* Pantone 640 C */
