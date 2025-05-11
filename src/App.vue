@@ -1,13 +1,13 @@
 <script setup>
 import {RouterView} from "vue-router";
-import Header from "@/components/Header.vue";
+import Header from "@/components/header.vue";
 import Footer from "@/components/Footer.vue";
 </script>
 
 <template>
-  <div class="app-container">
+  <div class="appContainer">
     <Header />
-    <main class="main-content">
+    <main class="mainContent">
       <RouterView />
     </main>
     <Footer />
@@ -15,13 +15,13 @@ import Footer from "@/components/Footer.vue";
 </template>
 
 <style scoped>
-.app-container {
+.appContainer {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-.main-content {
+.mainContent {
   flex: 1;
   padding: 1rem;
 }
