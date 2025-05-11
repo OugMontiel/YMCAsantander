@@ -1,10 +1,13 @@
 <script>
-
 import logoChico from "@/assets/logos/LogoAzul.png";
 import logoGrande from "@/assets/logos/LogoAzul.png";
+import FondoDinamico from "@/components/fondos/fondoDinamico.vue";
 
 export default {
   name: "footer",
+  components: {
+    FondoDinamico,
+  },
   data() {
     return {
       logoChico,
@@ -16,6 +19,8 @@ export default {
 
 <template>
   <footer>
+    <!-- Fondo dinámico -->
+    <FondoDinamico />
     <!-- Sección de información principal del pie de página -->
     <div class="footerInfo">
       <!-- Logo y mensaje inspirador -->
@@ -79,12 +84,11 @@ export default {
 
 <style>
 footer {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
-  background-color: var(--color-fondo);
-  border-top: 1px solid var(--color-borde);
 }
 .footerDesarrollador {
   display: flex;

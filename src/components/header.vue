@@ -1,9 +1,13 @@
 <script>
 import logoChico from "@/assets/logos/LogoAzul.png";
 import logoGrande from "@/assets/logos/LogoAzul.png";
+import FondoDinamico from "@/components/fondos/fondoDinamico.vue";
 
 export default {
   name: "Header",
+  components: {
+    FondoDinamico,
+  },
   data() {
     return {
       isMenuOpen: false,
@@ -35,6 +39,8 @@ export default {
 
 <template>
   <header class="header">
+    <!-- seccion de fondo dinamico -->
+    <FondoDinamico />
     <!-- seccion de logos, uno grande y otro chico para diferenciar pantallas -->
     <router-link to="/" class="logoLink">
       <!-- Solo un logo con clases condicionales -->
@@ -102,13 +108,13 @@ export default {
 
 <style scoped>
 .header {
+  position: relative;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
   min-height: 4rem;
   padding: 0.5rem 1.5rem;
-  background-color: var(--color-fondo);
-  border-bottom: 1px solid var(--color-borde);
 }
 
 .logoMobile {
