@@ -1,6 +1,6 @@
 <script>
-import logoChico from "@/assets/logos/Logo_Ymca-removebg-preview.png";
-import logoGrande from "@/assets/logos/logo.webp";
+import logoChico from "@/assets/logos/LogoAzul.png";
+import logoGrande from "@/assets/logos/LogoAzul.png";
 
 export default {
   name: "Header",
