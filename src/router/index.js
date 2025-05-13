@@ -11,7 +11,6 @@ import ProyectosHeader from "../components/header/proyectosHeader.vue";
 import SocialHeader from "../components/header/socialHeader.vue";
 import LegalHeader from "../components/header/legalHeader.vue";
 
-
 // vistas legales
 import Privacidad from "../views/legal/Privacidad.vue";
 import TerminosYCondiciones from "../views/legal/TerminosYCondiciones.vue";
@@ -54,7 +53,6 @@ const router = createRouter({
       name: "experiencia",
       component: ExperienciaHeader,
       children: [
-  
         {
           path: "areaInternacional",
           name: "areaInternacional",
@@ -72,7 +70,6 @@ const router = createRouter({
       name: "proyectos",
       component: ProyectosHeader,
       children: [
-    
         {
           path: "programas",
           name: "programas",
@@ -95,7 +92,6 @@ const router = createRouter({
       name: "aporta",
       component: AporteHeader,
       children: [
-       
         {
           path: "socio",
           name: "socio",
@@ -118,7 +114,6 @@ const router = createRouter({
       name: "social",
       component: SocialHeader,
       children: [
- 
         {
           path: "voluntariado",
           name: "voluntariado",
