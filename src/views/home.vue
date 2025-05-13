@@ -11,27 +11,52 @@ const items = [img1, img2, img3, img4, img5, img6];
 
 <template>
   <div class="home">
-    <UCarousel
-      v-slot="{item}"
-      loop
-      arrows
-      auto-scroll
-      :items="items"
-      :ui="{
-        item: 'basis-1/3 shrink-0',
-      }"
-      class="homeCarousel"
-    >
-      <img :src="item" />
-    </UCarousel>
-    <div class="homeBinvenida">
-      <h1>YMCA SANTANDER</h1>
-      <H2>bienvenidos </H2>
-      <p>
-        <strong>YMCA</strong> es un movimiento mundial con <strong>173 años de historia</strong>. y 30 años en Santander. respresentando a
-        las santanderianos de una forma unica y exclusica
-      </p>
-    </div>
+    <!-- Carucel con biembenida  -->
+    <section class="bienvenida">
+      <UCarousel
+        v-slot="{item}"
+        loop
+        arrows
+        auto-scroll
+        :items="items"
+        :ui="{
+          item: 'basis-1/3 shrink-0',
+        }"
+        class="homeCarousel"
+      >
+        <img :src="item" />
+      </UCarousel>
+      <div class="homeBinvenida">
+        <h1>YMCA SANTANDER</h1>
+        <H2>bienvenidos </H2>
+        <p>
+          <strong>YMCA</strong> es un movimiento mundial con <strong>173 años de historia</strong>. y 30 años en Santander. respresentando a
+          las santanderianos de una forma unica y exclusica
+        </p>
+      </div>
+    </section>
+
+    <!-- Presentación de programas -->
+    <section class="programas">
+      <div class="programasTitulo">
+        <h1>Nuestros Programas</h1>
+        <p>Conoce las iniciativas que impulsamos para construir una sociedad más justa y pacífica.</p>
+      </div>
+
+      <div class="programasContenido">
+        <article class="programa">
+          <h2>Paza La Paz</h2>
+          <p>
+            Iniciativa comunitaria que fomenta la convivencia, el diálogo y la resolución pacífica de conflictos en barrios vulnerables.
+          </p>
+        </article>
+
+        <article class="programa">
+          <h2>Paz Ciudadana</h2>
+          <p>Programa que promueve la participación ciudadana y la seguridad mediante actividades educativas y culturales.</p>
+        </article>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -40,8 +65,10 @@ const items = [img1, img2, img3, img4, img5, img6];
   position: relative;
   overflow: hidden;
   display: flex;
+  flex-direction: column;
 }
 
+/* Estilo Carousel */
 .homeCarousel {
   position: absolute;
   top: 0;
@@ -60,7 +87,7 @@ const items = [img1, img2, img3, img4, img5, img6];
 .homeBinvenida {
   position: relative;
   width: 45%;
-  
+
   margin: 4rem 4rem 0 auto;
   padding: 2rem;
 
@@ -68,7 +95,7 @@ const items = [img1, img2, img3, img4, img5, img6];
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  gap: .4em;
+  gap: 0.4em;
 
   background-color: var(--color-fondo-texto);
   color: var(--color-texto-principal);
@@ -77,24 +104,23 @@ const items = [img1, img2, img3, img4, img5, img6];
 }
 
 .homeBinvenida h1 {
-  font-size: 3rem;         /* Super grande */
-  font-weight: 800;        /* Bien negrita */
+  font-size: 3rem; /* Super grande */
+  font-weight: 800; /* Bien negrita */
   color: var(--color-texto-secundario);
   text-shadow: 1px 1px 4px var(--color-fonde-shadow);
 }
 
-
 .homeBinvenida h2 {
-  font-size: 1.5rem;       /* Un poco más pequeño que h1 */
+  font-size: 1.5rem; /* Un poco más pequeño que h1 */
   font-weight: 600;
   color: var(--color-texto-secundario);
 }
 
 /* Estilo del párrafo */
 .homeBinvenida p {
-  font-size: 1rem;         /* Tamaño normal */
+  font-size: 1rem; /* Tamaño normal */
   line-height: 1.6;
-  text-align: justify
+  text-align: justify;
 }
 
 .homeBinvenida strong {
@@ -102,4 +128,40 @@ const items = [img1, img2, img3, img4, img5, img6];
   font-weight: bold;
 }
 
+/* stilos programas  */
+.programas {
+  padding: 2rem;
+  background-color: var(--color-fondo-secundario);
+  color: var(--color-texto-principal);
+}
+
+.programasTitulo h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-texto-secundario);
+}
+
+.programasTitulo p {
+  margin-bottom: 2rem;
+}
+
+.programasContenido {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.programa {
+  background: var(--color-fondo-texto);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px var(--color-fonde-shadow);
+  flex: 1 1 300px;
+}
+
+.programa h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-texto-secundario);
+}
 </style>
