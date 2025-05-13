@@ -18,7 +18,7 @@ export default {
     iniciarCambio() {
       setInterval(() => {
         this.index = (this.index + 1) % this.fondos.length;
-      }, 5000); // cambia cada 5s
+      }, 60000); // cambia cada 1 minuto
     },
   },
 };

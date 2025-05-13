@@ -196,3 +196,9 @@ Enlaces a documentación, tutoriales y herramientas útiles.
 
 ## Contacto
 Información de contacto para soporte o preguntas relacionadas con el proyecto.
+
+# Necesito 
+
+1. Fotos 
+2. logo miniatura 
+3. Un triangulo .. para fonde del logo y que no se vea afectado por el cambio de color del fondo 
