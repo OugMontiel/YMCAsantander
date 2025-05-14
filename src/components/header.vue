@@ -85,7 +85,7 @@ export default {
             <router-link to="/about" role="menuitem" class="navLink"> ¿quienes Somos? </router-link>
           </li>
           <li class="navItem" role="none">
-            <router-link to="/Programas" role="menuitem" class="navLink"> Programas </router-link>
+            <router-link to="/proyectos" role="menuitem" class="navLink"> Programas </router-link>
           </li>
           <li class="navItem" role="none">
             <router-link to="/Voluntariado" role="menuitem" class="navLink"> Voluntariado </router-link>

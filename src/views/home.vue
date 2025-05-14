@@ -133,10 +133,18 @@ const items = [img1, img2, img3, img4, img5, img6];
   padding: 2rem;
   background-color: var(--color-fondo-secundario);
   color: var(--color-texto-principal);
-}
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.programasTitulo {
+  text-align: center;
+}
 .programasTitulo h1 {
   font-size: 2rem;
+  font-weight: 600;
   margin-bottom: 0.5rem;
   color: var(--color-texto-secundario);
 }
@@ -161,6 +169,7 @@ const items = [img1, img2, img3, img4, img5, img6];
 
 .programa h2 {
   font-size: 1.5rem;
+  font-weight: 500;
   margin-bottom: 0.5rem;
   color: var(--color-texto-secundario);
 }
