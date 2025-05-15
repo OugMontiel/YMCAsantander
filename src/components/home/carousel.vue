@@ -1,12 +1,11 @@
 <script setup lang="js">
-import img1 from "@/assets/img/carousel/fondoAzulOpc1.png";
-import img2 from "@/assets/img/carousel/fondoMoradoOpc1.png";
-import img3 from "@/assets/img/carousel/fondoNaranjaOpc1.png";
-import img4 from "@/assets/img/carousel/fondoAzulOpc1.png";
-import img5 from "@/assets/img/carousel/fondoMoradoOpc1.png";
-import img6 from "@/assets/img/carousel/fondoNaranjaOpc1.png";
+import img1 from "@/assets/img/carousel/fotoCarousel1.jpg";
+import img2 from "@/assets/img/carousel/fotoCarousel2.jpg";
+import img3 from "@/assets/img/carousel/fotoCarousel3.jpg";
+import img4 from "@/assets/img/carousel/fotoCarousel4.jpg";
+import img5 from "@/assets/img/carousel/fotoCarousel5.jpg";
 
-const items = [img1, img2, img3, img4, img5, img6];
+const items = [img1, img2, img3, img4, img5];
 </script>
 
 <template>
