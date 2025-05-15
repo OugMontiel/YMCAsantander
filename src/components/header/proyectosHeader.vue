@@ -26,7 +26,7 @@ export default {
 <style scoped>
 .headerProyectos {
   width: 100%;
-  padding: .2em 0;
+  padding: 0.2em 0;
   background-color: var(--color-fondo);
 }
 

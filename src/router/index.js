@@ -71,7 +71,7 @@ const router = createRouter({
       component: ProyectosHeader,
       children: [
         {
-          path: "programas",
+          path: "",
           name: "programas",
           component: Programas,
         },
