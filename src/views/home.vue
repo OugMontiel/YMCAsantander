@@ -1,61 +1,33 @@
-<script setup lang="js">
-import img1 from "@/assets/img/carousel/fondoAzulOpc1.png";
-import img2 from "@/assets/img/carousel/fondoMoradoOpc1.png";
-import img3 from "@/assets/img/carousel/fondoNaranjaOpc1.png";
-import img4 from "@/assets/img/carousel/fondoAzulOpc1.png";
-import img5 from "@/assets/img/carousel/fondoMoradoOpc1.png";
-import img6 from "@/assets/img/carousel/fondoNaranjaOpc1.png";
+<script>
+import Carousel from "@/components/home/carousel.vue";
+import Programas from "@/components/home/programas.vue";
+import Video from "@/components/home/video.vue";
 
-const items = [img1, img2, img3, img4, img5, img6];
+export default {
+  name: "HomeBienvenida",
+  components: {
+    Carousel,
+    Programas,
+    Video,
+  },
+};
 </script>
 
 <template>
   <div class="home">
-    <!-- Carucel con biembenida  -->
+    <!-- Carrusel -->
     <section class="bienvenida">
-      <UCarousel
-        v-slot="{item}"
-        loop
-        arrows
-        auto-scroll
-        :items="items"
-        :ui="{
-          item: 'basis-1/3 shrink-0',
-        }"
-        class="homeCarousel"
-      >
-        <img :src="item" />
-      </UCarousel>
-      <div class="homeBinvenida">
-        <h1>YMCA SANTANDER</h1>
-        <H2>bienvenidos </H2>
-        <p>
-          <strong>YMCA</strong> es un movimiento mundial con <strong>173 años de historia</strong>. y 30 años en Santander. respresentando a
-          las santanderianos de una forma unica y exclusica
-        </p>
-      </div>
+      <Carousel />
     </section>
 
     <!-- Presentación de programas -->
     <section class="programas">
-      <div class="programasTitulo">
-        <h1>Nuestros Programas</h1>
-        <p>Conoce las iniciativas que impulsamos para construir una sociedad más justa y pacífica.</p>
-      </div>
+      <Programas />
+    </section>
 
-      <div class="programasContenido">
-        <article class="programa">
-          <h2>Paza La Paz</h2>
-          <p>
-            Iniciativa comunitaria que fomenta la convivencia, el diálogo y la resolución pacífica de conflictos en barrios vulnerables.
-          </p>
-        </article>
-
-        <article class="programa">
-          <h2>Paz Ciudadana</h2>
-          <p>Programa que promueve la participación ciudadana y la seguridad mediante actividades educativas y culturales.</p>
-        </article>
-      </div>
+    <!-- Video -->
+    <section class="video">
+      <Video />
     </section>
   </div>
 </template>
@@ -66,111 +38,5 @@ const items = [img1, img2, img3, img4, img5, img6];
   overflow: hidden;
   display: flex;
   flex-direction: column;
-}
-
-/* Estilo Carousel */
-.homeCarousel {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -1; /* Fondo */
-}
-
-.homeCarousel img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
-.homeBinvenida {
-  position: relative;
-  width: 45%;
-
-  margin: 4rem 4rem 0 auto;
-  padding: 2rem;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  gap: 0.4em;
-
-  background-color: var(--color-fondo-texto);
-  color: var(--color-texto-principal);
-  border-radius: 1rem;
-  z-index: 1;
-}
-
-.homeBinvenida h1 {
-  font-size: 3rem; /* Super grande */
-  font-weight: 800; /* Bien negrita */
-  color: var(--color-texto-secundario);
-  text-shadow: 1px 1px 4px var(--color-fonde-shadow);
-}
-
-.homeBinvenida h2 {
-  font-size: 1.5rem; /* Un poco más pequeño que h1 */
-  font-weight: 600;
-  color: var(--color-texto-secundario);
-}
-
-/* Estilo del párrafo */
-.homeBinvenida p {
-  font-size: 1rem; /* Tamaño normal */
-  line-height: 1.6;
-  text-align: justify;
-}
-
-.homeBinvenida strong {
-  color: var(--color-texto-secundario);
-  font-weight: bold;
-}
-
-/* stilos programas  */
-.programas {
-  padding: 2rem;
-  background-color: var(--color-fondo-secundario);
-  color: var(--color-texto-principal);
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.programasTitulo {
-  text-align: center;
-}
-.programasTitulo h1 {
-  font-size: 2rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: var(--color-texto-secundario);
-}
-
-.programasTitulo p {
-  margin-bottom: 2rem;
-}
-
-.programasContenido {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.programa {
-  background: var(--color-fondo-texto);
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px var(--color-fonde-shadow);
-  flex: 1 1 300px;
-}
-
-.programa h2 {
-  font-size: 1.5rem;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-  color: var(--color-texto-secundario);
 }
 </style>
