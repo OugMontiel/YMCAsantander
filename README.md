@@ -199,6 +199,6 @@ Información de contacto para soporte o preguntas relacionadas con el proyecto.
 
 # Necesito 
 
-1. Fotos 
-2. logo miniatura 
-3. Un triangulo .. para fonde del logo y que no se vea afectado por el cambio de color del fondo 
+- Un triangulo Blanco.. para fonde del logo y que no se vea afectado por el cambio de color del fondo 
+- logos de los programas 
+- Info paz y ciudadania 
