@@ -3,18 +3,28 @@
   <section class="programas">
     <div class="programasTitulo">
       <h1>Nuestros Programas</h1>
-      <p>Conoce las iniciativas que impulsamos para construir una sociedad más justa y pacífica.</p>
+      <p>
+        Descubre las iniciativas que promovemos para construir una sociedad más justa y pacífica, impulsando la inclusión, el liderazgo
+        juvenil y el compromiso comunitario.
+      </p>
     </div>
 
     <div class="programasContenido">
       <article class="programa">
         <h2>Paza La Paz</h2>
-        <p>Iniciativa comunitaria que fomenta la convivencia, el diálogo y la resolución pacífica de conflictos en barrios vulnerables.</p>
+        <p>
+          Es un proyecto dirigido a jóvenes entre 14 y 28 años en situación de vulnerabilidad social. Busca contribuir con la construcción
+          de Paz y la transformación del conflicto social en Colombia, generando oportunidades para el empoderamiento y la inclusión de los
+          y las jóvenes.
+        </p>
       </article>
 
       <article class="programa">
         <h2>Paz Ciudadana</h2>
-        <p>Programa que promueve la participación ciudadana y la seguridad mediante actividades educativas y culturales.</p>
+        <p>
+          Falta falta. Falta falta . Falta falta . Falta falta . Falta falta . Falta falta . Falta falta . Falta falta . Falta falta . Falta
+          falta . Falta falta . Falta falta . Falta falta .
+        </p>
       </article>
     </div>
   </section>

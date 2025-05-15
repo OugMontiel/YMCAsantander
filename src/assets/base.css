@@ -19,7 +19,7 @@
   /* paleta de colores funcionales (imprescindibles para fondos, textos, bordes) */
   --color-fondo: #ffffff; /* Blanco puro para fondo */
   --color-fondo-secundario: #f5f5f5; /* Gris claro para secciones */
-  --color-fondo-texto: #f5f5f541; /* Gris claro para fondo de texto */
+  --color-fondo-texto: #f5f5f594; /* Gris claro para fondo de texto */
   --color-fonde-shadow: #00000033; /* Gris oscuro para sombras */
   --color-texto-principal: #1c1c1c; /* Gris oscuro para textos principales */
   --color-texto-secundario: var(--color-confianza);

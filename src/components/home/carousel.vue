@@ -25,10 +25,10 @@ const items = [img1, img2, img3, img4, img5];
     </UCarousel>
     <div class="homeBinvenida">
       <h1>YMCA SANTANDER</h1>
-      <H2>bienvenidos </H2>
       <p>
-        <strong>YMCA</strong> es un movimiento mundial con <strong>173 años de historia</strong>. y 30 años en Santander. respresentando a
-        las santanderianos de una forma unica y exclusica
+        <strong> YMCA</strong> Santander forma parte del movimiento mundial de la Asociación Cristiana de Jóvenes (ACJ-YMCA), fundada en
+        1844 por George Williams. En<strong> Santander </strong> llega en 1994 y desde entonces, ha trabajado en el desarrollo juvenil, la
+        inclusión social y la construcción de comunidades solidarias.
       </p>
     </div>
   </section>
@@ -76,13 +76,6 @@ const items = [img1, img2, img3, img4, img5];
   color: var(--color-texto-secundario);
   text-shadow: 1px 1px 4px var(--color-fonde-shadow);
 }
-
-.homeBinvenida h2 {
-  font-size: 1.5rem; /* Un poco más pequeño que h1 */
-  font-weight: 600;
-  color: var(--color-texto-secundario);
-}
-
 /* Estilo del párrafo */
 .homeBinvenida p {
   font-size: 1rem; /* Tamaño normal */
