@@ -2,14 +2,20 @@
   <div class="about">
     <h2 class="section-title">MISIÓN DE LA YMCA SANTANDER</h2>
     <p class="mission">
-      <strong>YMCA Santander</strong> ha asumido su compromiso frente al contexto, generando diversos programas y proyectos encaminados a
-      empoderar a los y las jóvenes, en particular a aquellos en condición de vulnerabilidad.
+      <strong>YMCA Santander</strong> trabaja por el desarrollo juvenil y la transformación social. Su misión es inspirar y crear
+      oportunidades para una vida digna, especialmente entre poblaciones vulnerables, promoviendo el empoderamiento de jóvenes y mujeres
+      como agentes clave de cambio. .
     </p>
 
     <h2 class="section-title">VISIÓN DE LA YMCA SANTANDER</h2>
     <p class="vision">
-      <strong>YMCA Santander</strong> es reconocida como una organización de voluntariado, que ofrece programas y servicios para la
-      formación integral de los niños, niñas y jóvenes, como aporte en la construcción del tejido social en el Departamento de Santander.
+      YMCA Santander busca consolidarse como un referente en el desarrollo juvenil y la transformación social, promoviendo el liderazgo, la
+      inclusión y el bienestar comunitario. A través de programas sostenibles y de alto impacto. <strong>VISION 2030</strong> de la YMCA es
+      una estrategia global adoptada en el Consejo Mundial de julio de 2022, con el objetivo de empoderar comunidades y transformar vidas.
+      Se basa en cuatro pilares fundamentales: Bienestar Comunitario: Fomentar el desarrollo integral de los jóvenes en cuerpo, mente y
+      espíritu. Planeta Sostenible: Canalizar el compromiso juvenil hacia la justicia climática y la sostenibilidad. Mundo Justo: Amplificar
+      las voces y acciones de los jóvenes en sus comunidades. Impacto Social: Implementar programas estratégicos alineados con los Objetivos
+      de Desarrollo Sostenible de la ONU
     </p>
 
     <h2 class="section-title">HISTORIA DE LA YMCA</h2>
