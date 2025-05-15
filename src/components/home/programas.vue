@@ -20,10 +20,10 @@
       </article>
 
       <article class="programa">
-        <h2>Paz Ciudadana</h2>
+        <h2>Mision y voluntariado</h2>
         <p>
-          Falta falta. Falta falta . Falta falta . Falta falta . Falta falta . Falta falta . Falta falta . Falta falta . Falta falta . Falta
-          falta . Falta falta . Falta falta . Falta falta .
+          El proyecto busca la promoción del bienestar comunitario, sostenibilidad ambiental y justicia social, a través del fortalecimiento
+          de la acción voluntaria inspirada en los valores cristianos.
         </p>
       </article>
     </div>
