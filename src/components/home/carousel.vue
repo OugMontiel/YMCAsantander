@@ -46,7 +46,7 @@ const items = [img1, img2, img3, img4, img5];
 /* Texto */
 .homeBienvenidaContent {
   position: absolute;
-  bottom: 2rem; 
+  bottom: 2rem;
   right: 2rem;
   width: 45%;
   padding: 2rem;
@@ -93,11 +93,9 @@ const items = [img1, img2, img3, img4, img5];
   }
 }
 @media (min-width: 1024px) {
-  .homeBienvenidaContent{
+  .homeBienvenidaContent {
     bottom: auto;
     top: 10rem;
-    
   }
 }
-
 </style>
