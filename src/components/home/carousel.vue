@@ -9,25 +9,16 @@ const items = [img1, img2, img3, img4, img5];
 </script>
 
 <template>
-  <section class="bienvenida">
-    <UCarousel
-      v-slot="{item}"
-      loop
-      arrows
-      auto-scroll
-      :items="items"
-      :ui="{
-        item: 'basis-1/3 shrink-0',
-      }"
-      class="homeCarousel"
-    >
-      <img :src="item" />
+  <section class="bienvenida" aria-label="Bienvenida YMCA Santander">
+    <UCarousel v-slot="{item}" loop auto-scroll :items="items" :ui="{item: 'basis-full shrink-0'}" class="homeCarousel">
+      <img :src="item" alt="Imagen del carrusel YMCA" class="w-full aspect-[16/9] object-cover" />
     </UCarousel>
-    <div class="homeBinvenida">
+
+    <div class="homeBienvenidaContent">
       <h1>YMCA SANTANDER</h1>
       <p>
-        <strong> YMCA</strong> Santander forma parte del movimiento mundial de la Asociación Cristiana de Jóvenes (ACJ-YMCA), fundada en
-        1844 por George Williams. En<strong> Santander </strong> llega en 1994 y desde entonces, ha trabajado en el desarrollo juvenil, la
+        <strong>YMCA</strong> Santander forma parte del movimiento mundial de la Asociación Cristiana de Jóvenes (ACJ-YMCA), fundada en 1844
+        por George Williams. En <strong>Santander</strong> llega en 1994 y desde entonces, ha trabajado en el desarrollo juvenil, la
         inclusión social y la construcción de comunidades solidarias.
       </p>
     </div>
@@ -35,56 +26,78 @@ const items = [img1, img2, img3, img4, img5];
 </template>
 
 <style scoped>
-/* Estilo Carousel */
-.homeCarousel {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
+.bienvenida {
+  position: relative;
   width: 100%;
-  z-index: -1; /* Fondo */
+}
+
+.homeCarousel {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Mantiene proporción uniforme */
+  z-index: -1;
 }
 
 .homeCarousel img {
-  height: 100%;
   width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
-.homeBinvenida {
-  position: relative;
+/* Texto */
+.homeBienvenidaContent {
+  position: absolute;
+  bottom: 2rem; 
+  right: 2rem;
   width: 45%;
-
-  margin: 4rem 4rem 0 auto;
   padding: 2rem;
+  background-color: var(--color-fondo-texto);
+  color: var(--color-texto-principal);
+  border-radius: 1rem;
+  z-index: 10;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 0.4rem;
   text-align: center;
-  gap: 0.4em;
-
-  background-color: var(--color-fondo-texto);
-  color: var(--color-texto-principal);
-  border-radius: 1rem;
-  z-index: 1;
 }
 
-.homeBinvenida h1 {
-  font-size: 3rem; /* Super grande */
-  font-weight: 800; /* Bien negrita */
+.homeBienvenidaContent h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
   color: var(--color-texto-secundario);
   text-shadow: 1px 1px 4px var(--color-fonde-shadow);
 }
-/* Estilo del párrafo */
-.homeBinvenida p {
-  font-size: 1rem; /* Tamaño normal */
+
+.homeBienvenidaContent p {
+  font-size: 1rem;
   line-height: 1.6;
   text-align: justify;
 }
 
-.homeBinvenida strong {
+.homeBienvenidaContent strong {
   color: var(--color-texto-secundario);
   font-weight: bold;
 }
+
+/* Responsivo */
+@media (max-width: 800px) {
+  .homeBienvenidaContent {
+    width: 90%;
+    padding: 1.5rem;
+    bottom: 1rem;
+  }
+
+  .homeBienvenidaContent h1 {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .homeBienvenidaContent{
+    bottom: auto;
+    top: 10rem;
+    
+  }
+}
+
 </style>

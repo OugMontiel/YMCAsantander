@@ -35,7 +35,6 @@ export default {
 <style scoped>
 .home {
   position: relative;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
 }
