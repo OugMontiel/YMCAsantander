@@ -32,3 +32,6 @@ coverage
 # Auto-generated type declarations  ... NuxtUi
 auto-imports.d.ts
 components.d.ts
+
+# archivos de claves
+Claves.json
