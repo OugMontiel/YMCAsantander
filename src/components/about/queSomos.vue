@@ -34,8 +34,15 @@ export default {
   display: flex;
   justify-content: center;
 }
+
 .aboutImg {
-  max-height: 50vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 .SomosContenido {
   display: flex;
@@ -45,6 +52,14 @@ export default {
   text-align: justify;
   gap: 1rem;
   padding: 1em;
+
+  max-width: 40%;
+  padding: 2em;
+  margin: 15em;
+  
+
+  background-color: var(--color-fondo-texto);
+  border-radius: 1em;
 }
 .SomosContenido p {
   max-width: 50em;
@@ -52,23 +67,11 @@ export default {
 
 /* xs - Teléfonos pequeños */
 @media (max-width: 480px) {
-  
 }
 
 /* sm - Teléfonos estándar */
 @media (max-width: 576px) {
-  .aboutImg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-  }
   .SomosContenido {
-    background-color: var(--color-fondo-texto);
-    border-radius: 1em;
     padding: 0.5em;
     margin: 0.5em;
   }
@@ -76,14 +79,34 @@ export default {
 
 /* md - Tablets */
 @media (max-width: 768px) {
+  .SomosContenido {
+    padding: 1em;
+    margin: 0.5em;
+  }
 }
 
 /* lg - Laptops pequeñas */
 @media (max-width: 992px) {
+  .Somos {
+    justify-content: right;
+  }
+  .SomosContenido {
+    max-width: 50%;
+    padding: 1em;
+    margin: 1em;
+  }
 }
 
 /* xl - Laptops / desktops medianos */
 @media (max-width: 1200px) {
+  .Somos {
+    justify-content: right;
+  }
+  .SomosContenido {
+    max-width: 45%;
+    padding: 2em;
+    margin: 11em;
+  }
 }
 
 /* xxl - Pantallas grandes */

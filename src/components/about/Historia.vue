@@ -113,24 +113,24 @@
 
 /* sm - Teléfonos estándar */
 @media (max-width: 576px) {
-  .timeLineMundial {
-    padding-right: 1.5em;
-    margin-right: .5em;
-  }
-
-  .timeLineColombia {
-    padding-left: 1.5em;
-    margin-left: .5em;
-  }
-
-  .timeLineSantander {
-    padding-right: 1.5em;
-    margin-right: .5em;
-  }
 }
 
 /* md - Tablets */
 @media (max-width: 768px) {
+  .timeLineMundial {
+    padding-right: 1.5em;
+    margin-right: 0.5em;
+  }
+
+  .timeLineColombia {
+    padding-left: 1.5em;
+    margin-left: 0.5em;
+  }
+
+  .timeLineSantander {
+    padding-right: 1.5em;
+    margin-right: 0.5em;
+  }
 }
 
 /* lg - Laptops pequeñas */
@@ -139,9 +139,26 @@
 
 /* xl - Laptops / desktops medianos */
 @media (max-width: 1200px) {
+   .timeLineMundial {
+    padding-right: 2em;
+    margin-right: 1em;
+  }
+
+  .timeLineColombia {
+    padding-left: 2em;
+    margin-left: 1em;
+  }
+
+  .timeLineSantander {
+    padding-right: 2em;
+    margin-right: 1em;
+  }
 }
 
 /* xxl - Pantallas grandes */
 @media (min-width: 1201px) {
+  .timeLine {
+  padding: 2em;
+}
 }
 </style>

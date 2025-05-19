@@ -51,7 +51,7 @@
 
   display: flex;
   justify-content: center;
-  width: 70%;
+  width: 60%;
 
   border-radius: 12px;
   box-shadow: 0 10px 25px var(--color-fondo-shadow);
@@ -76,11 +76,14 @@
 
 /* xs - Teléfonos pequeños */
 @media (max-width: 480px) {
-  
 }
 
 /* sm - Teléfonos estándar */
 @media (max-width: 576px) {
+}
+
+/* md - Tablets */
+@media (max-width: 768px) {
   .MisionYVision {
     flex-direction: column;
     padding: 1em;
@@ -90,16 +93,25 @@
   }
 }
 
-/* md - Tablets */
-@media (max-width: 768px) {
-}
-
 /* lg - Laptops pequeñas */
 @media (max-width: 992px) {
 }
 
 /* xl - Laptops / desktops medianos */
 @media (max-width: 1200px) {
+    .MisionYVision {
+    flex-direction: column;
+    padding: 1em;
+  }
+  .MisionYVisionContenido {
+    flex-direction: row;
+  }
+  .mision {
+    width: 100%;
+  }
+  .MisionYVisionVideo {
+    width: 100%;
+  }
 }
 
 /* xxl - Pantallas grandes */
