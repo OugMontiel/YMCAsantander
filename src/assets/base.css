@@ -1,11 +1,24 @@
+/* ============================================================= */
+/* ======================= IMPORTACIONES ======================= */
+/* ============================================================= */
+
+/* Fuente principal desde Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap");
+
+/* Importación de TailwindCSS */
 @import "tailwindcss";
+
+/* Importación de componentes de Nuxt UI */
 @import "@nuxt/ui";
 
-:root {
-  /* === Colores === */
+/* ============================================================= */
+/* ======================== VARIABLES ROOT ====================== */
+/* ============================================================= */
 
-  /* paleta de colores YMCA  */
+:root {
+  /* ===================== PALETA INSTITUCIONAL YMCA ===================== */
+  /* Colores asociados a los valores de la organización */
+
   --color-transparencia: #0082b7; /* Pantone 640 C */
   --color-confianza: #005a8f; /* Pantone 7462 C */
   --color-calidez: #ffb618; /* Pantone 1235 C */
@@ -19,49 +32,54 @@
   --color-pasion: #d41f26; /* Pantone 1795 C */
   --color-generosidad: #fb7eb4; /* Pantone 211 C */
 
-  /* paleta de colores funcionales (fondos, textos, bordes) */
-  
+  /* ===================== PALETA FUNCIONAL ===================== */
+  /* Colores utilizados para fondos, textos, bordes, etc. */
+
   /* Fondos */
-  --color-fondo: #ffffff; /* Blanco puro para fondo */
+  --color-fondo: #ffffff; /* Fondo blanco base */
   --color-fondo-secundario: #f5f5f5; /* Gris claro para secciones */
-  --color-fondo-texto: #f5f5f594; /* Gris claro para fondo de texto */
-  --color-fondo-shadow: #00000033; /* Gris oscuro para sombras */
+  --color-fondo-texto: #f5f5f594; /* Fondo sutil para campos de texto */
+  --color-fondo-shadow: #00000033; /* Sombra suave para elevaciones */
 
   /* Textos */
-  --color-texto-principal: #1c1c1c; /* Gris oscuro para textos principales */
-  --color-texto-secundario: var(--color-confianza);
+  --color-texto-principal: #1c1c1c; /* Texto general */
+  --color-texto-secundario: var(--color-confianza); /* Énfasis o subtítulos */
 
   /* Bordes */
-  --color-borde: #e0e0e0; /* Gris claro para bordes y divisores */
+  --color-borde: #e0e0e0; /* Divisores y bordes sutiles */
 
-  /* Paleta de colores Estados del sistema */
-  --color-sistema-exito: #28a745; /* Verde éxito - Confirmaciones */
-  --color-sistema-error: #dc3545; /* Rojo error - Validaciones */
-  --color-sistema-advertencia: #ffc107; /* Amarillo alerta - Warnings */
-  --color-sistema-info: #17a2b8; /* Azul claro - Informaciones */
+  /* ===================== ESTADOS DEL SISTEMA ===================== */
+  /* Colores para mensajes de éxito, error, advertencia, etc. */
 
-  /* paleta de olores de interacción (botones, enlaces, hover, focus) */
-  
+  --color-sistema-exito: #28a745; /* Confirmación */
+  --color-sistema-error: #dc3545; /* Validaciones o errores */
+  --color-sistema-advertencia: #ffc107; /* Warnings o alertas */
+  --color-sistema-info: #17a2b8; /* Información general */
+
+  /* ===================== INTERACCIONES ===================== */
+  /* Para botones, enlaces, hovers, etc. */
+
   /* Botones */
-  --color-botones-primario: var(--color-confianza); /* Azul principal para botones y enlaces */
-  --color-botones-secundario: var(--color-calidez); /* Para botones alternativos */
-  
-  /* enlaces  */
-  --color-enlace-primario: var(--color-confianza); /* Azul principal para enlaces */
-  --color-enlace-secundario: var(--color-calidez); /* Para enlaces alternativos */
+  --color-botones-primario: var(--color-confianza);
+  --color-botones-secundario: var(--color-calidez);
 
-  /* hover */
+  /* Enlaces */
+  --color-enlace-primario: var(--color-confianza);
+  --color-enlace-secundario: var(--color-calidez);
+
+  /* Hover (al pasar el mouse) */
   --color-hover-primario: #004070;
   --color-hover-secundario: #e6a700;
-  
-  /* focus */
-  --color-focus-primario:#009ee3; /* Para resaltar inputs */
 
-  /*Transparencias útiles (si usas overlays o modales) */
+  /* Focus (cuando se selecciona un input) */
+  --color-focus-primario: #009ee3;
+
+  /* Overlays y fondos con opacidad */
   --overlay-negro: rgba(0, 0, 0, 0.5);
   --overlay-blanco: rgba(255, 255, 255, 0.8);
 
-  /* === Fuentes === */
+  /* ===================== TIPOGRAFÍA ===================== */
+
   --fuente-principal: "Nunito", sans-serif;
 
   --peso-light: 300;
@@ -70,12 +88,15 @@
   --peso-black: 900;
 }
 
-/* ===== Estilos globales ===== */
+/* ============================================================= */
+/* ======================= ESTILOS GLOBALES ===================== */
+/* ============================================================= */
+
 * {
-  padding: 0; /* Eliminar padding por defecto */
-  margin: 0; /* Eliminar margen por defecto */
-  border: 0; /* Eliminar borde por defecto */
-  box-sizing: border-box; /* Incluir padding y borde en el tamaño total */
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box; /* Modelo de caja universal */
 }
 
 body {
@@ -85,86 +106,108 @@ body {
   color: var(--color-texto-principal);
 }
 
-/* ===== FORMULARIOS ===== */
+/* ============================================================= */
+/* ====================== ESTILOS DE FORMULARIOS ================= */
+/* ============================================================= */
 
-/* 
+/* Descomentá y personalizá según tu diseño:
 form {}
 input, select, textarea, button {}
 button {}
 button:hover {}
 */
 
-/* ===== IMÁGENES ===== */
+/* ============================================================= */
+/* ====================== ESTILOS PARA IMÁGENES ================= */
+/* ============================================================= */
 
 img {
-  object-fit: contain; /* Ajustar la imagen sin recortarla */
+  object-fit: contain; /* Mantener proporción sin recortar */
 }
 
-/* ===== LISTAS ===== */
+/* ============================================================= */
+/* ======================= ESTILOS DE LISTAS ==================== */
+/* ============================================================= */
 
 li {
-  list-style: none; /* Eliminar viñetas de listas */
+  list-style: none; /* Elimina viñetas o números */
 }
-/* ul, ol {} */
 
-/* ===== ENLACES ===== */
+/* ul, ol {}  -> Personalización futura si se desea */
+
+/* ============================================================= */
+/* ======================= ESTILOS DE ENLACES =================== */
+/* ============================================================= */
 
 a {
-  text-decoration: none; /* Eliminar subrayado de enlaces */
+  text-decoration: none; /* Quitar subrayado */
 }
 a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Subrayado en hover para feedback visual */
 }
 
-/* ===== ENCABEZADOS ===== */
+/* ============================================================= */
+/* ===================== ENCABEZADOS H1 - H6 ==================== */
+/* ============================================================= */
 
 h1 {
   font-size: 2.5rem;
-  font-weight: var(--peso-black); 
-  color: var(--color-texto-secundario);
-}
-h2 {
-  font-size: 2rem;
-  font-weight: var(--peso-bold); 
-  color: var(--color-texto-secundario);
-}
-h3 {
-  font-size: 1.75rem;
-}
-h4 {
-  font-size: 1.5rem;
-}
-h5 {
-  font-size: 1.25rem;
-  font-weight: var(--peso-light); 
-  color: var(--color-texto-secundario);
-}
-h6 {
-  font-size: 1rem;
-  font-weight: var(--peso-light); 
+  font-weight: var(--peso-black);
   color: var(--color-texto-secundario);
 }
 
-/* ===== TEXTO Y PÁRRAFOS ===== */
+h2 {
+  font-size: 2rem;
+  font-weight: var(--peso-bold);
+  color: var(--color-texto-secundario);
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+  font-weight: var(--peso-light);
+  color: var(--color-texto-secundario);
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: var(--peso-light);
+  color: var(--color-texto-secundario);
+}
+
+/* ============================================================= */
+/* ===================== TEXTO Y PÁRRAFOS ======================= */
+/* ============================================================= */
+
 p {
   font-weight: var(--peso-light);
 }
 
 em {
   font-style: italic;
-  font-weight: var(--peso-light); /* Light Italic */
+  font-weight: var(--peso-light);
 }
 
 strong {
   font-weight: var(--peso-bold);
   color: var(--color-texto-secundario);
 }
+
 small {
-  font-size: 0.875rem;
+  font-size: 0.875rem; /* Tamaño más pequeño para aclaraciones o notas */
 }
 
-/* ===== SECCIONES SEMÁNTICAS ===== */
-/* 
-header, footer, section, article, aside, nav, main {
-}
+/* ============================================================= */
+/* ===================== SECCIONES SEMÁNTICAS =================== */
+/* ============================================================= */
+
+/* Puedes personalizar según tu layout:
+header, footer, section, article, aside, nav, main {}
 */
