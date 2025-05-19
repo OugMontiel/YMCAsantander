@@ -47,6 +47,7 @@
 
   /* Bordes */
   --color-borde: #e0e0e0; /* Divisores y bordes sutiles */
+  --color-borde-secundario: var(--color-espiritualidad); /* Bordes para Historia */
 
   /* ===================== ESTADOS DEL SISTEMA ===================== */
   /* Colores para mensajes de éxito, error, advertencia, etc. */
@@ -104,6 +105,7 @@ body {
   font-weight: var(--peso-regular);
   font-size: 1rem;
   color: var(--color-texto-principal);
+  background-color: var(--color-fondo);
 }
 
 /* ============================================================= */
@@ -188,6 +190,7 @@ h6 {
 
 p {
   font-weight: var(--peso-light);
+  text-align: justify;
 }
 
 em {
