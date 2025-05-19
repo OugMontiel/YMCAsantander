@@ -21,10 +21,7 @@
 }
 
 .video h1 {
-  font-size: 2.5rem;
-  font-weight: 600;
   margin-bottom: 0.5rem;
-  color: var(--color-texto-secundario);
 }
 
 .video p {
@@ -41,7 +38,7 @@
   width: 100%;
 
   border-radius: 12px;
-  box-shadow: 0 10px 25px var(--color-fonde-shadow);
+  box-shadow: 0 10px 25px var(--color-fondo-shadow);
 }
 
 .videoContenido iframe {

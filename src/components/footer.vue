@@ -134,10 +134,7 @@ footer {
 
 .navBar h3 {
   padding: 0 1rem 0 0;
-  font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: var(--color-texto-principal);
-  color: var(--color-texto-principal);
   border-bottom: 1px solid var(--color-borde);
 }
 
@@ -153,7 +150,7 @@ footer {
 }
 .navLink:hover,
 .navLink:focus-visible {
-  background-color: var(--color-secundario-hover);
+  background-color: var(--color-hover-secundario);
   color: var(--color-fondo);
   outline: none;
   text-decoration: underline;

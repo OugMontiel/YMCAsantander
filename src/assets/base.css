@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap");
 @import "tailwindcss";
 @import "@nuxt/ui";
 
 :root {
+  /* === Colores === */
+
   /* paleta de colores YMCA  */
   --color-transparencia: #0082b7; /* Pantone 640 C */
   --color-confianza: #005a8f; /* Pantone 7462 C */
@@ -16,53 +19,152 @@
   --color-pasion: #d41f26; /* Pantone 1795 C */
   --color-generosidad: #fb7eb4; /* Pantone 211 C */
 
-  /* paleta de colores funcionales (imprescindibles para fondos, textos, bordes) */
+  /* paleta de colores funcionales (fondos, textos, bordes) */
+  
+  /* Fondos */
   --color-fondo: #ffffff; /* Blanco puro para fondo */
   --color-fondo-secundario: #f5f5f5; /* Gris claro para secciones */
   --color-fondo-texto: #f5f5f594; /* Gris claro para fondo de texto */
-  --color-fonde-shadow: #00000033; /* Gris oscuro para sombras */
+  --color-fondo-shadow: #00000033; /* Gris oscuro para sombras */
+
+  /* Textos */
   --color-texto-principal: #1c1c1c; /* Gris oscuro para textos principales */
   --color-texto-secundario: var(--color-confianza);
+
+  /* Bordes */
   --color-borde: #e0e0e0; /* Gris claro para bordes y divisores */
 
   /* Paleta de colores Estados del sistema */
-  --color-exito: #28a745; /* Verde éxito - Confirmaciones */
-  --color-error: #dc3545; /* Rojo error - Validaciones */
-  --color-advertencia: #ffc107; /* Amarillo alerta - Warnings */
-  --color-info: #17a2b8; /* Azul claro - Informaciones */
+  --color-sistema-exito: #28a745; /* Verde éxito - Confirmaciones */
+  --color-sistema-error: #dc3545; /* Rojo error - Validaciones */
+  --color-sistema-advertencia: #ffc107; /* Amarillo alerta - Warnings */
+  --color-sistema-info: #17a2b8; /* Azul claro - Informaciones */
 
   /* paleta de olores de interacción (botones, enlaces, hover, focus) */
-  --color-primario: var(--color-confianza); /* Azul principal para botones y enlaces */
-  --color-primario-hover: #004070;
-  --color-secundario: var(--color-calidez); /* Para botones alternativos */
-  --color-secundario-hover: #e6a700;
-  --color-focus: #009ee3; /* Para resaltar inputs */
+  
+  /* Botones */
+  --color-botones-primario: var(--color-confianza); /* Azul principal para botones y enlaces */
+  --color-botones-secundario: var(--color-calidez); /* Para botones alternativos */
+  
+  /* enlaces  */
+  --color-enlace-primario: var(--color-confianza); /* Azul principal para enlaces */
+  --color-enlace-secundario: var(--color-calidez); /* Para enlaces alternativos */
+
+  /* hover */
+  --color-hover-primario: #004070;
+  --color-hover-secundario: #e6a700;
+  
+  /* focus */
+  --color-focus-primario:#009ee3; /* Para resaltar inputs */
 
   /*Transparencias útiles (si usas overlays o modales) */
   --overlay-negro: rgba(0, 0, 0, 0.5);
   --overlay-blanco: rgba(255, 255, 255, 0.8);
+
+  /* === Fuentes === */
+  --fuente-principal: "Nunito", sans-serif;
+
+  --peso-light: 300;
+  --peso-regular: 400;
+  --peso-bold: 700;
+  --peso-black: 900;
 }
 
-/* Estilos globales */
+/* ===== Estilos globales ===== */
 * {
   padding: 0; /* Eliminar padding por defecto */
   margin: 0; /* Eliminar margen por defecto */
   border: 0; /* Eliminar borde por defecto */
   box-sizing: border-box; /* Incluir padding y borde en el tamaño total */
-  font-weight: normal;
 }
 
-/* Estilos para imágenes */
+body {
+  font-family: var(--fuente-principal);
+  font-weight: var(--peso-regular);
+  font-size: 1rem;
+  color: var(--color-texto-principal);
+}
+
+/* ===== FORMULARIOS ===== */
+
+/* 
+form {}
+input, select, textarea, button {}
+button {}
+button:hover {}
+*/
+
+/* ===== IMÁGENES ===== */
+
 img {
   object-fit: contain; /* Ajustar la imagen sin recortarla */
 }
 
-/* Estilos para listas */
+/* ===== LISTAS ===== */
+
 li {
   list-style: none; /* Eliminar viñetas de listas */
 }
+/* ul, ol {} */
 
-/* Estilos para enlaces */
+/* ===== ENLACES ===== */
+
 a {
   text-decoration: none; /* Eliminar subrayado de enlaces */
 }
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== ENCABEZADOS ===== */
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: var(--peso-black); 
+  color: var(--color-texto-secundario);
+}
+h2 {
+  font-size: 2rem;
+  font-weight: var(--peso-bold); 
+  color: var(--color-texto-secundario);
+}
+h3 {
+  font-size: 1.75rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+h5 {
+  font-size: 1.25rem;
+  font-weight: var(--peso-light); 
+  color: var(--color-texto-secundario);
+}
+h6 {
+  font-size: 1rem;
+  font-weight: var(--peso-light); 
+  color: var(--color-texto-secundario);
+}
+
+/* ===== TEXTO Y PÁRRAFOS ===== */
+p {
+  font-weight: var(--peso-light);
+}
+
+em {
+  font-style: italic;
+  font-weight: var(--peso-light); /* Light Italic */
+}
+
+strong {
+  font-weight: var(--peso-bold);
+  color: var(--color-texto-secundario);
+}
+small {
+  font-size: 0.875rem;
+}
+
+/* ===== SECCIONES SEMÁNTICAS ===== */
+/* 
+header, footer, section, article, aside, nav, main {
+}
+*/

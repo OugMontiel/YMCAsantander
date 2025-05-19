@@ -63,10 +63,7 @@ const items = [img1, img2, img3, img4, img5];
 }
 
 .homeBienvenidaContent h1 {
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: var(--color-texto-secundario);
-  text-shadow: 1px 1px 4px var(--color-fonde-shadow);
+  text-shadow: 1px 1px 4px var(--color-fondo-shadow);
 }
 
 .homeBienvenidaContent p {
@@ -75,21 +72,12 @@ const items = [img1, img2, img3, img4, img5];
   text-align: justify;
 }
 
-.homeBienvenidaContent strong {
-  color: var(--color-texto-secundario);
-  font-weight: bold;
-}
-
 /* Responsivo */
 @media (max-width: 800px) {
   .homeBienvenidaContent {
     width: 90%;
     padding: 1.5rem;
     bottom: 1rem;
-  }
-
-  .homeBienvenidaContent h1 {
-    font-size: 2rem;
   }
 }
 @media (min-width: 1024px) {

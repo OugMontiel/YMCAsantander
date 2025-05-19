@@ -45,10 +45,7 @@
   text-align: center;
 }
 .programasTitulo h1 {
-  font-size: 2.5rem;
-  font-weight: 600;
   margin-bottom: 0.5rem;
-  color: var(--color-texto-secundario);
 }
 
 .programasTitulo p {
@@ -65,14 +62,11 @@
   background: var(--color-fondo-texto);
   padding: 1rem;
   border-radius: 8px;
-  box-shadow: 0 2px 6px var(--color-fonde-shadow);
+  box-shadow: 0 2px 6px var(--color-fondo-shadow);
   flex: 1 1 300px;
 }
 
 .programa h2 {
-  font-size: 1.5rem;
-  font-weight: 500;
   margin-bottom: 0.5rem;
-  color: var(--color-texto-secundario);
 }
 </style>

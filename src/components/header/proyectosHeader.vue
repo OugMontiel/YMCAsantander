@@ -51,12 +51,12 @@ export default {
 
 .navProyectosLink:hover,
 .navProyectosLink:focus-visible {
-  background-color: var(--color-primario-hover);
+  background-color: var(--color-hover-primario);
   color: var(--color-fondo);
   outline: none;
 }
 
 .active {
-  color: var(--color-primario-hover);
+  color: var(--color-hover-primario);
 }
 </style>
