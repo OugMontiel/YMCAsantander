@@ -2,7 +2,7 @@
   <section class="MisionYVision">
     <div class="MisionYVisionContenido">
       <div class="mision">
-        <h2>MISIÓN DE LA YMCA SANTANDER</h2>
+        <h2>MISIÓN</h2>
         <p>
           <strong>YMCA Santander</strong> trabaja por el desarrollo juvenil y la transformación social. Su misión es inspirar y crear
           oportunidades para una vida digna, especialmente entre poblaciones vulnerables, promoviendo el empoderamiento de jóvenes y mujeres
@@ -10,16 +10,26 @@
         </p>
       </div>
       <div class="vision">
-        <h2>VISIÓN DE LA YMCA SANTANDER</h2>
+        <h2>VISIÓN</h2>
         <p>
           YMCA Santander busca consolidarse como un referente en el desarrollo juvenil y la transformación social, promoviendo el liderazgo,
-          la inclusión y el bienestar comunitario. A través de programas sostenibles y de alto impacto. <strong>VISION 2030</strong> de la
-          YMCA es una estrategia global adoptada en el Consejo Mundial de julio de 2022, con el objetivo de empoderar comunidades y
-          transformar vidas. Se basa en cuatro pilares fundamentales: Bienestar Comunitario: Fomentar el desarrollo integral de los jóvenes
-          en cuerpo, mente y espíritu. Planeta Sostenible: Canalizar el compromiso juvenil hacia la justicia climática y la sostenibilidad.
-          Mundo Justo: Amplificar las voces y acciones de los jóvenes en sus comunidades. Impacto Social: Implementar programas estratégicos
-          alineados con los Objetivos de Desarrollo Sostenible de la ONU
+          la inclusión y el bienestar comunitario mediante programas sostenibles y de alto impacto.
         </p>
+
+        <p>
+          <strong>VISIÓN 2030</strong> de la YMCA es una estrategia global adoptada en el Consejo Mundial de julio de 2022, con el objetivo
+          de empoderar comunidades y transformar vidas. Esta visión se fundamenta en cuatro pilares clave:
+        </p>
+
+        <ul>
+          <li><strong>Bienestar Comunitario:</strong> Fomentar el desarrollo integral de los jóvenes en cuerpo, mente y espíritu.</li>
+          <li><strong>Planeta Sostenible:</strong> Canalizar el compromiso juvenil hacia la justicia climática y la sostenibilidad.</li>
+          <li><strong>Mundo Justo:</strong> Amplificar las voces y acciones de los jóvenes en sus comunidades.</li>
+          <li>
+            <strong>Impacto Social:</strong> Implementar programas estratégicos alineados con los Objetivos de Desarrollo Sostenible de la
+            ONU.
+          </li>
+        </ul>
       </div>
     </div>
     <div class="MisionYVisionVideo">
@@ -62,5 +72,37 @@
   flex-direction: column;
   justify-content: space-evenly;
   gap: 2rem;
+}
+
+/* xs - Teléfonos pequeños */
+@media (max-width: 480px) {
+  
+}
+
+/* sm - Teléfonos estándar */
+@media (max-width: 576px) {
+  .MisionYVision {
+    flex-direction: column;
+    padding: 1em;
+  }
+  .MisionYVisionVideo {
+    width: 100%;
+  }
+}
+
+/* md - Tablets */
+@media (max-width: 768px) {
+}
+
+/* lg - Laptops pequeñas */
+@media (max-width: 992px) {
+}
+
+/* xl - Laptops / desktops medianos */
+@media (max-width: 1200px) {
+}
+
+/* xxl - Pantallas grandes */
+@media (min-width: 1201px) {
 }
 </style>

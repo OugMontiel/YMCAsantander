@@ -2,7 +2,6 @@
   <section class="timeLine">
     <h1>HISTORIA DE LA YMCA</h1>
     <div class="timeLineMundial">
-      <h2>HISTORIA DE LA YMCA MUNDIAL</h2>
       <p>
         <strong>YMCA</strong> es un movimiento mundial con <strong>173 años de historia</strong>. Su fundador
         <strong>Georges Williams</strong> nació en Inglaterra en 1821. A los 20 años, dejó la granja en la que se crió y se mudó a Londres
@@ -20,7 +19,7 @@
     </div>
 
     <div class="timeLineColombia">
-      <h2>HISTORIA DE LA YMCA COLOMBIA</h2>
+      <h2>YMCA COLOMBIA</h2>
       <p>
         En <strong>1963</strong> se dieron los primeros pasos para establecer una <strong>YMCA</strong> en Bogotá, con la ayuda del Comité
         Internacional de la YMCA de USA y Canadá. En <strong>1964</strong>, la Constitución fue aceptada y se comenzó a trabajar en sedes
@@ -35,7 +34,7 @@
     </div>
 
     <div class="timeLineSantander">
-      <h2>HISTORIA DE LA YMCA SANTANDER</h2>
+      <h2>YMCA SANTANDER</h2>
       <p>
         La <strong>ACJ Santander</strong> fue fundada el <strong>5 de octubre de 1995</strong> en la ciudad de Bucaramanga por iniciativa de
         la <strong>Federación Colombiana de ACJs</strong>. Se inician labores en la comunidad con programas de capacitación a madres
@@ -61,37 +60,88 @@
   padding: 1em;
 }
 .timeLine h1 {
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
-.timeLineMundial{
+.timeLineMundial {
   padding-right: 3em;
   padding-bottom: 1em;
   margin-right: 3em;
   margin-bottom: 1em;
-  border-radius: 0 0 2em 0 ;
-  border-right: 3px solid var(--color-borde-secundario); 
-  border-bottom: 2px solid var(--color-borde-secundario);
+  border-radius: 0 0 2em 0;
+  border-right: 3px solid var(--color-borde-secundario);
+  border-bottom: 3px solid var(--color-borde-secundario);
 }
 
-.timeLineColombia{
+.timeLineColombia {
   padding-left: 3em;
   padding-bottom: 1em;
   margin-left: 3em;
   margin-bottom: 1em;
-  border-radius: 0 0 0 2em ;
-  border-left: 3px solid var(--color-borde-secundario); 
-  border-bottom: 2px solid var(--color-borde-secundario);
+  border-radius: 0 0 0 2em;
+  border-left: 3px solid var(--color-borde-secundario);
+  border-bottom: 3px solid var(--color-borde-secundario);
 }
 
-.timeLineSantander{
+.timeLineSantander {
   padding-right: 3em;
   padding-bottom: 1em;
   margin-right: 3em;
   margin-bottom: 1em;
-  border-radius: 0 0 2em 0 ;
-  border-right: 3px solid var(--color-borde-secundario); 
-  border-bottom: 2px solid var(--color-borde-secundario);
+  border-radius: 0 0 2em 0;
+  border-right: 3px solid var(--color-borde-secundario);
+  border-bottom: 3px solid var(--color-borde-secundario);
 }
 
+/* xs - Teléfonos pequeños */
+@media (max-width: 480px) {
+  .timeLineMundial {
+    padding-right: 1em;
+    margin-right: 0;
+  }
+
+  .timeLineColombia {
+    padding-left: 1em;
+    margin-left: 0;
+  }
+
+  .timeLineSantander {
+    padding-right: 1em;
+    margin-right: 0;
+  }
+}
+
+/* sm - Teléfonos estándar */
+@media (max-width: 576px) {
+  .timeLineMundial {
+    padding-right: 1.5em;
+    margin-right: .5em;
+  }
+
+  .timeLineColombia {
+    padding-left: 1.5em;
+    margin-left: .5em;
+  }
+
+  .timeLineSantander {
+    padding-right: 1.5em;
+    margin-right: .5em;
+  }
+}
+
+/* md - Tablets */
+@media (max-width: 768px) {
+}
+
+/* lg - Laptops pequeñas */
+@media (max-width: 992px) {
+}
+
+/* xl - Laptops / desktops medianos */
+@media (max-width: 1200px) {
+}
+
+/* xxl - Pantallas grandes */
+@media (min-width: 1201px) {
+}
 </style>

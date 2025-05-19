@@ -1,5 +1,5 @@
 <script>
-import imgQueSomos from "@/assets/img/about/queSomos.png";
+import imgQueSomos from "@/assets/img/about/queSomos.jpg";
 
 export default {
   name: "QueSomos",
@@ -30,6 +30,7 @@ export default {
 
 <style scoped>
 .Somos {
+  position: relative;
   display: flex;
   justify-content: center;
 }
@@ -47,5 +48,45 @@ export default {
 }
 .SomosContenido p {
   max-width: 50em;
+}
+
+/* xs - Teléfonos pequeños */
+@media (max-width: 480px) {
+  
+}
+
+/* sm - Teléfonos estándar */
+@media (max-width: 576px) {
+  .aboutImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  .SomosContenido {
+    background-color: var(--color-fondo-texto);
+    border-radius: 1em;
+    padding: 0.5em;
+    margin: 0.5em;
+  }
+}
+
+/* md - Tablets */
+@media (max-width: 768px) {
+}
+
+/* lg - Laptops pequeñas */
+@media (max-width: 992px) {
+}
+
+/* xl - Laptops / desktops medianos */
+@media (max-width: 1200px) {
+}
+
+/* xxl - Pantallas grandes */
+@media (min-width: 1201px) {
 }
 </style>

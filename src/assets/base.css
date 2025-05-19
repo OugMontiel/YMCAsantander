@@ -133,6 +133,7 @@ img {
 
 li {
   list-style: none; /* Elimina viñetas o números */
+  font-weight: var(--peso-light);
 }
 
 /* ul, ol {}  -> Personalización futura si se desea */
