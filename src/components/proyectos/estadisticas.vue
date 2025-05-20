@@ -1,94 +1,65 @@
 <template>
-  <section class="estadisticas">
-    <h2 class="estadisticas__titulo">Estadísticas de Impacto</h2>
-    <p class="estadisticas__descripcion">
-      Conoce el alcance de nuestros proyectos y cómo contribuimos al desarrollo comunitario desde YMCA.
-    </p>
-    <div class="estadisticas__grid">
-      <div class="estadisticas__item">
-        <div class="estadisticas__icono">&#128188;</div>
-        <h3 class="estadisticas__subtitulo">Proyectos Totales</h3>
-        <p class="estadisticas__valor">30</p>
+  <section class="proyectoEstadistica">
+    <h1 class="estadisticaTitulo">Estadísticas de Impacto</h1>
+    <p class="estadisticaDescripcion">Conoce el alcance de nuestros proyectos y cómo contribuimos al desarrollo comunitario desde YMCA.</p>
+    <div class="estadisticas">
+      <div class="estadisticaItem">
+        <div class="itemIcono">&#128188;</div>
+        <h4 class="itemSubTitulo">Proyectos Curso</h4>
+        <h2 class="itemValor">2</h2>
       </div>
-      <div class="estadisticas__item">
-        <div class="estadisticas__icono">&#128640;</div>
-        <h3 class="estadisticas__subtitulo">En Curso</h3>
-        <p class="estadisticas__valor">5</p>
+      <div class="estadisticaItem">
+        <div class="itemIcono">&#128640;</div>
+        <h4 class="itemSubTitulo">voluntarios</h4>
+        <h2 class="itemValor">+50</h2>
       </div>
-      <div class="estadisticas__item">
-        <div class="estadisticas__icono">&#9989;</div>
-        <h3 class="estadisticas__subtitulo">Finalizados</h3>
-        <p class="estadisticas__valor">25</p>
-      </div>
-      <div class="estadisticas__item">
-        <div class="estadisticas__icono">&#128101;</div>
-        <h3 class="estadisticas__subtitulo">Beneficiarios</h3>
-        <p class="estadisticas__valor">+12,000</p>
+      <div class="estadisticaItem">
+        <div class="itemIcono">&#128101;</div>
+        <h4 class="itemSubTitulo">Beneficiarios</h4>
+        <h2 class="itemValor">+150</h2>
       </div>
     </div>
   </section>
 </template>
 
 <style>
+.proyectoEstadistica {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .estadisticas {
-  background-color: #f9f9f9;
-  padding: 60px 20px;
-  text-align: center;
-  font-family: Arial, sans-serif;
-}
-
-.estadisticas__titulo {
-  font-size: 32px;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.estadisticas__descripcion {
-  max-width: 700px;
-  margin: 0 auto 40px;
-  color: #666;
-  font-size: 16px;
-}
-
-.estadisticas__grid {
+  padding: 2em ;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 30px;
 }
 
-.estadisticas__item {
-  background: white;
-  padding: 30px 20px;
+.estadisticaItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 1em;
   width: 250px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 1em;
+  box-shadow: 0 4px 10px var(--color-fondo-shadow);
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
 }
 
-.estadisticas__item:hover {
+.estadisticaItem:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 18px var(--color-hover-secundario);
 }
 
-.estadisticas__icono {
+.itemIcono {
   font-size: 40px;
-  margin-bottom: 15px;
-  color: #3a7bd5;
-}
-
-.estadisticas__subtitulo {
-  font-size: 18px;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.estadisticas__valor {
-  font-size: 28px;
-  font-weight: bold;
-  color: #222;
 }
 
 /* xs - Teléfonos pequeños */
