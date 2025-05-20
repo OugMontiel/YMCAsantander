@@ -99,7 +99,7 @@
 
 /* xl - Laptops / desktops medianos */
 @media (max-width: 1200px) {
-    .MisionYVision {
+  .MisionYVision {
     flex-direction: column;
     padding: 1em;
   }

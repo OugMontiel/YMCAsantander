@@ -139,7 +139,7 @@
 
 /* xl - Laptops / desktops medianos */
 @media (max-width: 1200px) {
-   .timeLineMundial {
+  .timeLineMundial {
     padding-right: 2em;
     margin-right: 1em;
   }
@@ -158,7 +158,7 @@
 /* xxl - Pantallas grandes */
 @media (min-width: 1201px) {
   .timeLine {
-  padding: 2em;
-}
+    padding: 2em;
+  }
 }
 </style>

@@ -56,7 +56,6 @@ export default {
   max-width: 40%;
   padding: 2em;
   margin: 15em;
-  
 
   background-color: var(--color-fondo-texto);
   border-radius: 1em;
