@@ -203,3 +203,5 @@ Información de contacto para soporte o preguntas relacionadas con el proyecto.
 - logos de los programas 
 - Info paz y ciudadania 
 - eslogan de la YMCA (Implementar en pantallas agrandes)
+- actualizar archivo proyectosData.js 
+- actualizar archivo proyectos.jpg (Algo donde esten logos de varios proyectos o algo asi)
