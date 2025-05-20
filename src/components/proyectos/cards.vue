@@ -104,10 +104,12 @@ export default {
   margin-bottom: 0.5rem;
 }
 /* xs - Teléfonos pequeños */
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+}
 
 /* sm - Teléfonos estándar */
-@media (max-width: 576px) {}
+@media (max-width: 576px) {
+}
 
 /* md - Tablets */
 @media (max-width: 768px) {
@@ -121,18 +123,17 @@ export default {
 }
 
 /* lg - Laptops pequeñas */
-@media (max-width: 992px) {}
+@media (max-width: 992px) {
+}
 
 /* xl - Laptops / desktops medianos */
-@media (max-width: 1200px) {}
+@media (max-width: 1200px) {
+}
 
 /* xxl - Pantallas grandes */
 @media (min-width: 1201px) {
   .proyectosCardContenido {
-  flex-direction: row;
- 
+    flex-direction: row;
+  }
 }
-}
-
-
 </style>
