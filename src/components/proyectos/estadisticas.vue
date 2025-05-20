@@ -90,4 +90,23 @@
   font-weight: bold;
   color: #222;
 }
+
+/* xs - Teléfonos pequeños */
+@media (max-width: 480px) {}
+
+/* sm - Teléfonos estándar */
+@media (max-width: 576px) {}
+
+/* md - Tablets */
+@media (max-width: 768px) {}
+
+/* lg - Laptops pequeñas */
+@media (max-width: 992px) {}
+
+/* xl - Laptops / desktops medianos */
+@media (max-width: 1200px) {}
+
+/* xxl - Pantallas grandes */
+@media (min-width: 1201px) {}
+
 </style>
