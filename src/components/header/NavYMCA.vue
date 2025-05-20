@@ -19,8 +19,9 @@ export default {
         {name: "Inicio", to: "/"},
         {name: "¿Quiénes Somos?", to: "/about"},
         {name: "Programas", to: "/proyectos"},
-        {name: "Voluntariado", to: "/Voluntariado"},
-        {name: "Publicaciones", to: "/Publicaciones"},
+        {name: "experiencia", to: "/experiencia"},
+        {name: "aporta", to: "/aporta"},
+        {name: "social", to: "/social"},
       ],
     };
   },

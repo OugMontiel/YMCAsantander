@@ -12,26 +12,28 @@ import SocialHeader from "../components/header/socialHeader.vue";
 import LegalHeader from "../components/header/legalHeader.vue";
 
 // vistas legales
+import Esal from "../views/legal/Esal.vue"; // Inicio de la vista legal
 import Privacidad from "../views/legal/Privacidad.vue";
 import TerminosYCondiciones from "../views/legal/TerminosYCondiciones.vue";
 import PoliticaDeCookies from "../views/legal/PoliticaDeCookies.vue";
-import Esal from "../views/legal/Esal.vue";
 
 // Vistas Proyectos
-import Programas from "../views/proyectos/programas.vue";
+import Proyectos from "../views/proyectos/proyectos.vue";
 import PazaLaPaz from "../views/proyectos/pazaLaPaz.vue";
 import MisionPazYCiudadania from "../views/proyectos/misionPazYCiudadania.vue";
 
 // vistas sociales
+import Social from "../views/social/social.vue";
 import Publicaciones from "../views/social/publicaciones.vue";
 import Voluntariado from "../views/social/voluntariado.vue";
 
 // vistas de aportes
-import Socio from "../views/aporta/socio.vue";
+import Socio from "../views/aporta/socio.vue"; // Inicio de la vista de aportes
 import Donar from "../views/aporta/donar.vue";
 import HazteVoluntario from "../views/aporta/hazteVoluntario.vue";
 
 // vistas de experiencia
+import Experiencia from "../views/experiencias/experiencia.vue";
 import AreaInternacional from "../views/experiencias/areaInternacional.vue";
 import experienciasLocales from "../views/experiencias/experienciasLocales.vue";
 
@@ -54,6 +56,11 @@ const router = createRouter({
       component: ExperienciaHeader,
       children: [
         {
+          path: "",
+          name: "experienciaInicio",
+          component: Experiencia,
+        },
+        {
           path: "areaInternacional",
           name: "areaInternacional",
           component: AreaInternacional,
@@ -72,8 +79,8 @@ const router = createRouter({
       children: [
         {
           path: "",
-          name: "programas",
-          component: Programas,
+          name: "ProyectosInicio",
+          component: Proyectos,
         },
         {
           path: "pazaLaPaz",
@@ -93,8 +100,13 @@ const router = createRouter({
       component: AporteHeader,
       children: [
         {
-          path: "socio",
-          name: "socio",
+          path: "",
+          name: "aportaInicio",
+          component: Socio,
+        },
+        {
+          path: "Socio",
+          name: "Socio",
           component: Socio,
         },
         {
@@ -115,6 +127,11 @@ const router = createRouter({
       component: SocialHeader,
       children: [
         {
+          path: "",
+          name: "socialInicio",
+          component: Social,
+        },
+        {
           path: "voluntariado",
           name: "voluntariado",
           component: Voluntariado,
@@ -132,6 +149,11 @@ const router = createRouter({
       component: LegalHeader,
       children: [
         {
+          path: "",
+          name: "esal",
+          component: Esal,
+        },
+        {
           path: "Privacidad",
           name: "Privacidad",
           component: Privacidad,
@@ -145,11 +167,6 @@ const router = createRouter({
           path: "politicaDeCookies",
           name: "politicaDeCookies",
           component: PoliticaDeCookies,
-        },
-        {
-          path: "esal",
-          name: "esal",
-          component: Esal,
         },
       ],
     },

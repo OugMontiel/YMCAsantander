@@ -1,5 +1,23 @@
+<script>
+import SubHeader from "@/components/header/SubHeader.vue";
+
+export default {
+  name: "ExperienciaHeader",
+  components: {SubHeader},
+  data() {
+    return {
+      experienciaLinks: [
+        {name: "areaInternacional", to: "/experiencia/areaInternacional"},
+        {name: "experienciasLocales", to: "/experiencia/experienciasLocales"},
+      ],
+    };
+  },
+};
+</script>
+
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div>
+    <SubHeader :links="experienciaLinks" />
+    <router-view />
   </div>
 </template>
