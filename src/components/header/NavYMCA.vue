@@ -86,6 +86,9 @@ export default {
 }
 
 @media (max-width: 770px) {
+  .nav {
+    z-index: 100;
+  }
   .navList {
     position: fixed;
     top: 0;
