@@ -25,21 +25,17 @@ export default {
 .subHeader {
   width: 100%;
   padding: 0.2em 0;
-  background-color: var(--color-fondo);
+  background-color: var(--color-fondo-secundario);
 }
 
 .subNav {
   display: flex;
-  justify-content: center;
-  gap: 3em;
-  font-size: 1.1em;
-  font-weight: 500;
+  justify-content: space-evenly;
 }
 
 .subNavLink {
   color: var(--color-texto-principal);
   text-decoration: none;
-  font-weight: 500;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   transition:
@@ -49,12 +45,13 @@ export default {
 
 .subNavLink:hover,
 .subNavLink:focus-visible {
-  background-color: var(--color-hover-primario);
+  background-color: var(--color-hover-secundario);
   color: var(--color-fondo);
   outline: none;
 }
 
 .active {
-  color: var(--color-hover-primario);
+  background-color: var(--color-hover-secundario);
+  color: var(--color-texto-principal-blanco);
 }
 </style>

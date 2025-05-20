@@ -43,6 +43,7 @@
 
   /* Textos */
   --color-texto-principal: #1c1c1c; /* Texto general */
+  --color-texto-principal-blanco: var(--color-fondo); /* Texto blanco para fondos oscuros */
   --color-texto-secundario: var(--color-confianza); /* Énfasis o subtítulos */
 
   /* Bordes */
@@ -69,8 +70,8 @@
   --color-enlace-secundario: var(--color-calidez);
 
   /* Hover (al pasar el mouse) */
-  --color-hover-primario: #004070;
-  --color-hover-secundario: #e6a700;
+  --color-hover-primario: var(--color-calidez);
+  --color-hover-secundario: var(--color-espiritualidad);
 
   /* Focus (cuando se selecciona un input) */
   --color-focus-primario: #009ee3;

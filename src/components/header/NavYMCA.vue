@@ -80,7 +80,7 @@ export default {
 
 .navLink:hover,
 .navLink:focus-visible {
-  background-color: var(--color-hover-secundario);
+  background-color: var(--color-hover-primario);
   color: var(--color-fondo);
   outline: none;
 }
