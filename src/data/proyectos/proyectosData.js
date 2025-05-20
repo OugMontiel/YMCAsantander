@@ -1,28 +1,20 @@
 // src/data/proyectosData.js
+import imgProyectos from "@/assets/img/proyectos/proyectos.jpg";
+import imgApp from "@/assets/img/proyectos/proyectos.jpg"; // asegúrate que esta imagen exista
 
 export default [
   {
     id: 1,
-    titulo: "Gestión de Usuarios",
-    descripcion: "Sistema de registro y autenticación para miembros de YMCA.",
-    img: "/images/proyecto-usuarios.jpg",
+    titulo: "Paza La Paz",
+    descripcion: "Es un proyecto dirigido a jóvenes entre 14 y 28 años en situación de vulnerabilidad social. Busca contribuir con la construcción de Paz y la transformación del conflicto social en Colombia, generando oportunidades para el empoderamiento y la inclusión de los y las jóvenes.",
+    img: imgProyectos,
+    to: "/proyectos/pazaLaPaz"
   },
   {
     id: 2,
-    titulo: "App Móvil",
-    descripcion: "Aplicación nativa para seguimiento de entrenamientos.",
-    img: "/images/proyecto-app.jpg",
-  },
-  {
-    id: 3,
-    titulo: "Panel de Control",
-    descripcion: "Dashboard para métricas y estadísticas en tiempo real.",
-    img: "/images/proyecto-dashboard.jpg",
-  },
-  {
-    id: 4,
-    titulo: "E-commerce",
-    descripcion: "Tienda online para venta de membresías y productos.",
-    img: "/images/proyecto-ecommerce.jpg",
+    titulo: "Mision y voluntariado",
+    descripcion: "El proyecto busca la promoción del bienestar comunitario, sostenibilidad ambiental y justicia social, a través del fortalecimiento de la acción voluntaria inspirada en los valores cristianos.",
+    img: imgApp,
+    to: "/proyectos/misionPazYCiudadania"
   },
 ];
