@@ -1,58 +1,123 @@
+<script>
+import titulo from "@/components/proyectos/pazaLaPaz/titulo.vue";
+import descripsion from "@/components/proyectos/pazaLaPaz/descripsion.vue";
+import beneficios from "@/components/proyectos/pazaLaPaz/beneficios.vue";
+
+export default {
+  name: "pazaLaPaz",
+  components: {
+    descripsion,
+    titulo,
+  },
+};
+</script>
 <template>
-  <div class="pazaLaPaz">
-    <h2 class="section-title">Paza la Paz</h2>
+  <main class="pazaLaPaz">
+    <titulo />
 
-    <h3 class="description-title">DESCRIPCIÓN</h3>
-    <p class="description">
-      Es un proyecto dirigido a jóvenes entre <strong>14 y 28 años</strong> en situación de vulnerabilidad social. Busca contribuir con la
-      construcción de paz y la transformación del conflicto social en Colombia, generando oportunidades para el empoderamiento y la
-      inclusión de los jóvenes en <strong>Bucaramanga</strong> y su área metropolitana.
-    </p>
+    <section class="Descripcion">
+      <descripsion />
+    </section>
 
-    <h3 class="benefits-title">¿Por qué ser parte del programa Paza La Paz?</h3>
-    <ul class="benefits-list">
-      <li>Te ayuda a desarrollar habilidades para trabajar en equipo, gestionar positivamente conflictos.</li>
-      <li>Incrementa la confianza en ti mismo y en los demás.</li>
-      <li>Reconoce los valores, criterios y actitudes de un líder YMCA: incluyente, sensible, socialmente responsable.</li>
-      <li>Impacta positivamente tu comunidad.</li>
-      <li>Identifica oportunidades de emprendimiento y tu vocación.</li>
-    </ul>
+    <section class="Beneficios">
+      <Beneficios/>
+    </section>
 
-    <h3 class="methodology-title">Metodología</h3>
-    <p>
-      Para lograrlo, se realizan procesos formativos con metodologías innovadoras basadas en la educación experiencial, en tres componentes
-      o áreas específicas de trabajo:
-    </p>
+    <section class="metodologia">
+      <h2>Metodología</h2>
+      <p>Se desarrollan procesos formativos con metodologías basadas en la educación experiencial, divididos en tres áreas:</p>
+      <div class="componentes">
+        <article>
+          <h3>Convivencia y Paz</h3>
+          <p>Jóvenes que gestionan soluciones pacíficas en sus entornos.</p>
+        </article>
+        <article>
+          <h3>Organización y Participación Juvenil</h3>
+          <p>Entrenamiento para descubrir talentos y construir un proyecto de vida.</p>
+        </article>
+        <article>
+          <h3>Emprendimiento Juvenil</h3>
+          <p>Participación en proyectos sociales y económicos que fortalecen habilidades y sentido de vida.</p>
+        </article>
+      </div>
+    </section>
 
-    <h4 class="component-title">Convivencia y Paz</h4>
-    <p>Los y las jóvenes ofrecen soluciones pacíficas como gestores de paz y convivencia en sus familias y contextos.</p>
+    <section class="aliados">
+      <h2>Aliados Estratégicos</h2>
+      <div class="logos">
+        <img src="/LogoAzul.png" alt="UDI" />
+        <img src="/LogoAzul.png" alt="UNAD" />
+        <img src="/LogoAzul.png" alt="UMB" />
+        <img src="/LogoAzul.png" alt="Fe y Alegría" />
+        <img src="/LogoAzul.png" alt="Fundación Bolívar Davivienda" />
+        <img src="/LogoAzul.png" alt="HORYZON" />
+        <img src="/LogoAzul.png" alt="AMERICAN EXPRESS" />
+      </div>
+    </section>
 
-    <h4 class="component-title">Organización y Participación Juvenil</h4>
-    <p>
-      Entrenamiento para jóvenes y adultos, fortaleciendo el proyecto de vida por medio del descubrimiento de talentos y habilidades que
-      pueden aplicar en los programas sociales.
-    </p>
-
-    <h4 class="component-title">Emprendimiento Juvenil</h4>
-    <p>
-      Los y las jóvenes participan en emprendimientos sociales y económicos que permiten fortalecer sus habilidades sociales y su sentido de
-      vida.
-    </p>
-
-    <h3 class="allies-title">ALIADOS ESTRATÉGICOS</h3>
-    <p>Logos de las diferentes organizaciones que apoyan a la realización del proyecto Paza la Paz:</p>
-    <ul class="allies-list">
-      <li>UDI</li>
-      <li>UNAD</li>
-      <li>UMB</li>
-      <li>Fe y Alegría</li>
-      <li>Fundación Bolívar Davivienda</li>
-      <li>HORYZON</li>
-      <li>AMERICAN EXPRESS</li>
-    </ul>
-
-    <h3 class="testimonials-title">TESTIMONIOS</h3>
-    <p class="testimonial-video">VIDEO MAGALY</p>
-    <p class="testimonial-written">Agregar testimonio escrito</p>
-  </div>
+    <section class="testimonios">
+      <h2>Testimonios</h2>
+      <div class="videoTestimonio">
+        <img src="/LogoAzul.png" alt="Video de Magaly" />
+        <p>VIDEO MAGALY</p>
+      </div>
+      <div class="textoTestimonio">
+        <p>Agregar testimonio escrito aquí.</p>
+      </div>
+    </section>
+  </main>
 </template>
+
+<style scoped>
+
+
+.componentes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.componentes article {
+  background: #f0f4f8;
+  padding: 1rem;
+  border-left: 4px solid #00b3a4;
+  border-radius: 8px;
+}
+
+.aliados .logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.aliados img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  background: #f3f3f3;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.testimonios {
+  margin-top: 2rem;
+}
+
+.videoTestimonio,
+.textoTestimonio {
+  background: #eef6f7;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.videoTestimonio img {
+  width: 50px;
+  height: 50px;
+}
+</style>
