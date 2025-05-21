@@ -20,7 +20,7 @@ export default {
     </section>
 
     <section class="Beneficios">
-      <Beneficios/>
+      <Beneficios />
     </section>
 
     <section class="metodologia">
@@ -69,8 +69,6 @@ export default {
 </template>
 
 <style scoped>
-
-
 .componentes {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

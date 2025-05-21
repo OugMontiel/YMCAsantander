@@ -1,8 +1,8 @@
 <template>
   <section class="pazBeneficios">
     <div class="beneficiosHeader">
+      <img src="/LogoAzul.png" alt="Logo decorativo Paza la Paz" class="logoBeneficiosHeader" />
       <h2>¿Por qué ser parte del programa?</h2>
-      <img src="/LogoAzul.png" alt="Logo decorativo Paza la Paz" class="logoDecorativo" />
     </div>
     <div class="beneficiosGrid">
       <div class="beneficioCard">
@@ -32,33 +32,26 @@
 <style scoped>
 .pazBeneficios {
   padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .beneficiosHeader {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   align-items: center;
   gap: 1rem;
+
   margin-bottom: 2rem;
-  flex-wrap: wrap;
 }
 
-.beneficiosHeader h2 {
-  font-size: 2rem;
-  color: var(--color-texto-secundario);
-  flex: 1;
-  min-width: 200px;
-}
-
-.logoDecorativo {
+.logoBeneficiosHeader {
   width: 60px;
   height: auto;
 }
 
 .beneficiosGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 1rem;
 }
 
