@@ -31,7 +31,7 @@
 }
 
 .estadisticas {
-  padding: 2em ;
+  padding: 2em;
   width: 100%;
   display: flex;
   flex-wrap: wrap;

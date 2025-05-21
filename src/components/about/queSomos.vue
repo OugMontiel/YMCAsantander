@@ -33,82 +33,68 @@ export default {
   position: relative;
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 
-.aboutImg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
 .SomosContenido {
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: start;
   align-items: center;
   text-align: justify;
   gap: 1rem;
-  padding: 1em;
 
-  max-width: 40%;
-  padding: 2em;
-  margin: 15em;
-
-  background-color: var(--color-fondo-texto);
-  border-radius: 1em;
+  max-width: 65%;
+  margin: 0.5em;
 }
+.SomosContenido h2,
 .SomosContenido p {
-  max-width: 50em;
-}
-
-/* xs - Teléfonos pequeños */
-@media (max-width: 480px) {
-}
-
-/* sm - Teléfonos estándar */
-@media (max-width: 576px) {
-  .SomosContenido {
-    padding: 0.5em;
-    margin: 0.5em;
-  }
-}
-
-/* md - Tablets */
-@media (max-width: 768px) {
-  .SomosContenido {
-    padding: 1em;
-    margin: 0.5em;
-  }
-}
-
-/* lg - Laptops pequeñas */
-@media (max-width: 992px) {
-  .Somos {
-    justify-content: right;
-  }
-  .SomosContenido {
-    max-width: 50%;
-    padding: 1em;
-    margin: 1em;
-  }
-}
-
-/* xl - Laptops / desktops medianos */
-@media (max-width: 1200px) {
-  .Somos {
-    justify-content: right;
-  }
-  .SomosContenido {
-    max-width: 45%;
-    padding: 2em;
-    margin: 11em;
-  }
+  background-color: var(--color-fondo-texto);
+  padding: 1em;
+  border-radius: 1em;
 }
 
 /* xxl - Pantallas grandes */
 @media (min-width: 1201px) {
+}
+
+/* xl - Laptops / desktops medianos */
+@media (max-width: 1200px) {
+}
+
+/* lg - Laptops pequeñas */
+@media (max-width: 992px) {
+}
+/* md - Tablets */
+@media (max-width: 768px) {
+  .SomosContenido {
+    max-width: 75%;
+  }
+}
+/* sm - Teléfonos estándar */
+@media (max-width: 576px) {
+  .SomosContenido {
+    max-width: 100%;
+  }
+}
+/* xs - Teléfonos pequeños */
+@media (max-width: 480px) {
+  .Somos {
+    flex-direction: column;
+  }
+  .SomosContenido {
+    position: relative;
+    max-width: 100%;
+    gap: 0.5rem;
+  }
+  .SomosContenido h2,
+  .SomosContenido p {
+    background-color: var(--color-fondo);
+    padding: 0.5em;
+  }
 }
 </style>
