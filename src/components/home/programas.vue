@@ -1,3 +1,23 @@
+<script>
+import {ref, onMounted} from "vue";
+import proyectosData from "@/data/proyectos/proyectosData.js";
+
+export default {
+  name: "ProyectosCard",
+  setup() {
+    const proyectos = ref([]);
+
+    onMounted(() => {
+      proyectos.value = proyectosData;
+    });
+
+    return {
+      proyectos,
+    };
+  },
+};
+</script>
+
 <template>
   <!-- Presentación de programas -->
   <section class="programas">
@@ -8,23 +28,13 @@
         juvenil y el compromiso comunitario.
       </p>
     </div>
-
     <div class="programasContenido">
-      <article class="programa">
-        <h2>Paza La Paz</h2>
-        <p>
-          Es un proyecto dirigido a jóvenes entre 14 y 28 años en situación de vulnerabilidad social. Busca contribuir con la construcción
-          de Paz y la transformación del conflicto social en Colombia, generando oportunidades para el empoderamiento y la inclusión de los
-          y las jóvenes.
-        </p>
-      </article>
-
-      <article class="programa">
-        <h2>Mision y voluntariado</h2>
-        <p>
-          El proyecto busca la promoción del bienestar comunitario, sostenibilidad ambiental y justicia social, a través del fortalecimiento
-          de la acción voluntaria inspirada en los valores cristianos.
-        </p>
+      <article class="programa" v-for="proyecto in proyectos" :key="proyecto.id || proyecto.titulo">
+        <img :src="proyecto.img" :alt="`Imagen del proyecto: ${proyecto.titulo}`" class="proyectoImagen" />
+        <div class="proyectosCardItemContenido">
+          <h2>{{ proyecto.titulo }}</h2>
+          <p>{{ proyecto.descripcion }}</p>
+        </div>
       </article>
     </div>
   </section>

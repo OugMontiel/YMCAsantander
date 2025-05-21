@@ -7,8 +7,8 @@ export default {
   data() {
     return {
       proyectoLinks: [
-        {name: "pazaLaPaz", to: "/proyectos/pazaLaPaz"},
-        {name: "misionPazYCiudadania", to: "/proyectos/misionPazYCiudadania"},
+        {name: "Paza La Paz", to: "/proyectos/pazaLaPaz"},
+        {name: "Mision Paz Y Ciudadania", to: "/proyectos/misionPazYCiudadania"},
       ],
     };
   },
