@@ -1,14 +1,27 @@
-// subir.js
-const fs = require('fs-extra');
-const path = require('path');
+import fs from 'fs-extra';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const origen = path.resolve(__dirname, './dist');
-const destino = 'C:/Users/gogoe/AppData/Roaming/Code/User/globalStorage/humy2833.ftp-simple/remote-workspace-temp/3fd4ee5048d1e932e58f724ec2fe72d9/public_html'; // Ruta local del FTP
+const destino = 'T:/GitHub/YMCAsantanderFTP/public_html';
 
-fs.copy(origen, destino, { overwrite: true }, (err) => {
-  if (err) {
-    console.error('❌ Error al copiar los archivos:', err);
-  } else {
+async function copiarBuild() {
+  try {
+    const existeOrigen = await fs.pathExists(origen);
+    if (!existeOrigen) {
+      console.error(`❌ La carpeta origen no existe: ${origen}`);
+      return;
+    }
+    console.log(`📂 Carpeta origen encontrada: ${origen}`);
+
+    await fs.copy(origen, destino, { overwrite: true });
     console.log('✅ ¡Build copiado exitosamente a la carpeta FTP local!');
+  } catch (err) {
+    console.error('❌ Error al copiar los archivos:', err);
   }
-});
+}
+
+copiarBuild();
