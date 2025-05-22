@@ -1,7 +1,7 @@
 <script setup>
 import {RouterView} from "vue-router";
 import Header from "@/components/header.vue";
-import Footer from "@/components/Footer.vue";
+import Footer from "@/components/footer.vue";
 </script>
 
 <template>
@@ -23,5 +23,28 @@ import Footer from "@/components/Footer.vue";
 
 .mainContent {
   flex: 1;
+}
+
+/* xxl - Pantallas grandes */
+@media (min-width: 1201px) {
+}
+
+/* xl - Laptops / desktops medianos */
+@media (max-width: 1200px) {
+}
+
+/* lg - Laptops pequeñas */
+@media (max-width: 992px) {
+}
+/* md - Tablets */
+@media (max-width: 768px) {
+}
+
+/* sm - Teléfonos estándar */
+@media (max-width: 576px) {
+}
+
+/* xs - Teléfonos pequeños */
+@media (max-width: 480px) {
 }
 </style>

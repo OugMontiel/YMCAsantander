@@ -71,19 +71,47 @@ const items = [img1, img2, img3, img4, img5];
   line-height: 1.6;
   text-align: justify;
 }
+/* xxl - Pantallas grandes */
+@media (min-width: 1201px) {
+}
 
-/* Responsivo */
-@media (max-width: 800px) {
+/* xl - Laptops / desktops medianos */
+@media (max-width: 1200px) {
+}
+
+/* lg - Laptops pequeñas */
+@media (max-width: 992px) {
+  .homeBienvenidaContent {
+    bottom: auto;
+    top: 2rem;
+  }
+}
+/* md - Tablets */
+@media (max-width: 768px) {
   .homeBienvenidaContent {
     width: 90%;
     padding: 1.5rem;
     bottom: 1rem;
   }
 }
-@media (min-width: 1024px) {
+
+/* sm - Teléfonos estándar */
+@media (max-width: 576px) {
   .homeBienvenidaContent {
-    bottom: auto;
-    top: 10rem;
+    padding: 1em;
+  }
+}
+
+/* xs - Teléfonos pequeños */
+@media (max-width: 480px) {
+  .homeBienvenidaContent {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    padding: 0 2rem;
+
+    z-index: 0;
   }
 }
 </style>
