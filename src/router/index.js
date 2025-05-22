@@ -144,7 +144,7 @@ const router = createRouter({
       ],
     },
     {
-      path: "/legal",
+      path: "/Esal",
       name: "vistasLegales",
       component: LegalHeader,
       children: [

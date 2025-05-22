@@ -64,6 +64,7 @@
   /* Botones */
   --color-botones-primario: var(--color-confianza);
   --color-botones-secundario: var(--color-calidez);
+  --color-botones-tercero: var(--color-seguridad);
 
   /* Enlaces */
   --color-enlace-primario: var(--color-confianza);
