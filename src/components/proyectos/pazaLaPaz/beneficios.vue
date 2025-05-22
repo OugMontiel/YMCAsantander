@@ -56,14 +56,16 @@
 }
 
 .beneficioCard {
-  background-color: #e6fffa;
-  border-left: 5px solid #00b3a4;
-  padding: 1.2rem;
-  border-radius: 10px;
+  background-color: var(--color-fondo-secundario);
+  padding: 1rem;
+  border-left: 5px solid var(--color-hover-primario);
+  border-radius: 1em;
+
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  gap: 0.5rem;
+
+  box-shadow: 0 2px 6px var(--color-fondo-shadow);
   transition: transform 0.2s ease;
 }
 
@@ -76,13 +78,9 @@
   height: 40px;
   object-fit: contain;
   flex-shrink: 0;
-  margin-top: 0.2rem;
 }
 
 .beneficioCard p {
-  margin: 0;
-  font-size: 1rem;
-  color: var(--color-texto-principal);
-  line-height: 1.5;
+  text-align: left;
 }
 </style>
