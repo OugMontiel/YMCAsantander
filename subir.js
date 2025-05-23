@@ -6,7 +6,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const origen = path.resolve(__dirname, './dist');
-const destino = 'T:/GitHub/YMCAsantanderFTP/public_html';
+const destino = 'C:/Github/FtpYmcaSantander/public_html';
+
 
 async function copiarBuild() {
   try {
