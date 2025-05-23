@@ -22,7 +22,7 @@ export default {
 
 <template>
   <div class="esal">
-    <h2 >Documentación ESAL</h2>
+    <h2>Documentación ESAL</h2>
 
     <div class="docuemntosEsal">
       <div class="itemEsal" v-for="(doc, index) in documentos" :key="index">
@@ -100,7 +100,6 @@ export default {
 
 .btn.descargar {
   background-color: var(--color-botones-tercero);
-  
 }
 
 .btn.cerrar {
@@ -115,9 +114,9 @@ export default {
   width: 100%;
   height: 100%;
   z-index: 90;
-  
+
   background-color: var(--color-fondo-shadow);
-  
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -134,7 +133,7 @@ export default {
 .modalHeader,
 .modalFooter {
   padding: 1rem;
-  
+
   display: flex;
   justify-content: space-between;
   align-items: center;
