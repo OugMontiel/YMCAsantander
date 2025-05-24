@@ -93,6 +93,9 @@ footer {
   display: flex;
   justify-content: center;
 }
+.footerLogo {
+  padding: 2em 0;
+}
 .footerLogo p {
   padding-left: 0.8rem;
   color: var(--color-texto-principal);
@@ -118,6 +121,7 @@ footer {
 }
 
 .navLink {
+  display: inline-block;
   color: var(--color-texto-principal);
   text-decoration: none;
   font-weight: 500;
@@ -152,11 +156,13 @@ footer {
   .footerInfo {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    padding: 0;
   }
 
   .footerLogo {
     max-width: none;
-    
+    padding-top: 0;
+
     grid-column: 1 / 4;
     grid-row: 1 / 2;
 
@@ -167,29 +173,43 @@ footer {
   }
 
   .navBar {
-    padding: 1.5rem 0 1.5rem 1.5rem;
+    align-items: center;
+  }
+  .navBar ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navBar li {
+    text-align: center;
   }
 }
 /* md - Tablets */
 @media (max-width: 768px) {
   .footerInfo {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, auto);
+    grid-template-columns: repeat(2, auto);
   }
 
   .footerLogo {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
+    grid-column: 1 / 3;
   }
-
-  .navBar {
-    align-items: center;
+  .navBar:last-child {
+    grid-column: 1 / 3;
   }
 }
 
 /* sm - Teléfonos estándar */
 @media (max-width: 576px) {
+  .footerInfo {
+    grid-template-columns: 1fr;
+  }
+  .footerLogo {
+    grid-column: 1 / 2;
+  }
+  .navBar:last-child {
+    grid-column: 1 / 2;
+  }
 }
 
 /* xs - Teléfonos pequeños */
