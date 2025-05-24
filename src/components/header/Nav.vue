@@ -58,4 +58,33 @@ export default {
   color: var(--color-fondo);
   outline: none;
 }
+
+/* xxl - Pantallas grandes */
+@media (min-width: 1201px) {
+}
+
+/* xl - Laptops / desktops medianos */
+@media (max-width: 1200px) {
+}
+
+/* lg - Laptops pequeñas */
+@media (max-width: 992px) {
+  .navList {
+    gap: 1rem;
+  }
+  .navLink {
+    padding: 0.5rem 0.5rem;
+  }
+}
+/* md - Tablets */
+@media (max-width: 768px) {
+}
+
+/* sm - Teléfonos estándar */
+@media (max-width: 576px) {
+}
+
+/* xs - Teléfonos pequeños */
+@media (max-width: 480px) {
+}
 </style>
