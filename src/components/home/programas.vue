@@ -74,6 +74,13 @@ export default {
   border-radius: 8px;
   box-shadow: 0 2px 6px var(--color-fondo-shadow);
   flex: 1 1 300px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.proyectoImagen {
+  max-height: 620px;
 }
 
 .programa h2 {
