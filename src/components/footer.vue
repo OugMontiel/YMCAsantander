@@ -1,17 +1,47 @@
 <script>
-import logoChico from "@/assets/logos/LogoAzul.png";
-import logoGrande from "@/assets/logos/LogoAzul.png";
+import Logo from "@/assets/logos/LogoBlanco.png";
 import FondoDinamico from "@/components/fondos/fondoDinamico.vue";
+import Desarrollador from "@/components/util/desarrollador.vue";
 
 export default {
   name: "footer",
   components: {
     FondoDinamico,
+    Desarrollador,
   },
   data() {
     return {
-      logoChico,
-      logoGrande,
+      Logo,
+      secciones: [
+        {
+          titulo: "YMCA Santander",
+          links: [
+            {name: "Inicio", to: "/"},
+            {name: "¿Quiénes Somos?", to: "/about"},
+            {name: "Programas", to: "/proyectos"},
+            {name: "Experiencia", to: "/experiencia"},
+            {name: "Aporta", to: "/aporta"},
+            {name: "Social", to: "/social"},
+          ],
+        },
+        {
+          titulo: "Legal",
+          links: [
+            {name: "Aviso de privacidad", to: "/avisoPrivacidad"},
+            {name: "Términos y condiciones", to: "/terminosYCondiciones"},
+            {name: "Política de cookies", to: "/politicaDeCookies"},
+            {name: "ESAL", to: "/esal"},
+          ],
+        },
+        {
+          titulo: "Conócenos",
+          links: [
+            {name: "Hazte socio", to: "/Socio"},
+            {name: "Donar ahora", to: "/donar"},
+            {name: "Hazte voluntario", to: "/voluntariado"},
+          ],
+        },
+      ],
     };
   },
 };
@@ -19,109 +49,61 @@ export default {
 
 <template>
   <footer>
-    <!-- Fondo dinámico -->
     <FondoDinamico />
-    <!-- Sección de información principal del pie de página -->
     <div class="footerInfo">
-      <!-- Logo y mensaje inspirador -->
       <div class="footerLogo">
         <router-link to="/" class="logoLink">
-          <img :src="logoGrande" alt="YMCA - Logo principal" :class="{logoDesktop: true, logoMobile: false}" loading="eager" />
-          <img :src="logoChico" alt="YMCA - Logo móvil" :class="{logoMobile: true, logoDesktop: false}" loading="eager" />
+          <img :src="Logo" alt="YMCA - Logo principal" class="logoDesktop" loading="eager" />
         </router-link>
         <p>Un mensaje bonito que inspire a todos los que lo lean.</p>
       </div>
 
-      <!-- Sección de enlaces -->
-
-      <!-- Navegación principal -->
-
-      <nav class="navBar navYMCA">
-        <h3>YMCA Santander</h3>
+      <!-- Secciones de navegación dinámicas -->
+      <nav v-for="(seccion, i) in secciones" :key="i" class="navBar">
+        <h3>{{ seccion.titulo }}</h3>
         <ul>
-          <li><router-link to="/" class="navLink">Inicio</router-link></li>
-          <li><router-link to="/about" class="navLink">¿Quiénes somos?</router-link></li>
-          <li><router-link to="/Programas" class="navLink">Programas</router-link></li>
-          <li><router-link to="/Voluntariado" class="navLink">Voluntariado</router-link></li>
-          <li><router-link to="/Publicaciones" class="navLink">Publicaciones</router-link></li>
-        </ul>
-      </nav>
-
-      <!-- Navegación legal -->
-
-      <nav class="navBar navLegal">
-        <h3>Legal</h3>
-        <ul>
-          <li><router-link to="/avisoPrivacidad" class="navLink">Aviso de privacidad</router-link></li>
-          <li><router-link to="/terminosYCondiciones" class="navLink">Términos y condiciones</router-link></li>
-          <li><router-link to="/politicaDeCookies" class="navLink">Política de cookies</router-link></li>
-          <li><router-link to="/esal" class="navLink">esal</router-link></li>
-        </ul>
-      </nav>
-
-      <!-- Navegación de participación -->
-
-      <nav class="navBar navConocenos">
-        <h3>Conocenos</h3>
-        <ul>
-          <li><router-link to="/Socio" class="navLink">Hazte socio</router-link></li>
-          <li><router-link to="/donar" class="navLink">Donar ahora</router-link></li>
-          <li><router-link to="/voluntariado" class="navLink">Hazte voluntario</router-link></li>
+          <li v-for="(link, j) in seccion.links" :key="j">
+            <router-link :to="link.to" class="navLink">{{ link.name }}</router-link>
+          </li>
         </ul>
       </nav>
     </div>
 
-    <!-- Créditos del desarrollador -->
-    <div class="footerDesarrollador">
-      <p>© 2023 YMCA. Todos los derechos reservados.</p>
-      <p>
-        Desarrollado por
-        <a href="#">Diego Alejandro Montiel Flórez</a>
-      </p>
-    </div>
+    <Desarrollador />
   </footer>
 </template>
 
 <style>
+/* Estilos generales iguales a los que ya tienes */
+
 footer {
   position: relative;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.footerDesarrollador {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
 
-  color: var(--color-texto-secundario);
-  color: var(--color-texto-secundario);
-  border-top: 1px solid var(--color-borde);
-}
 .footerInfo {
   display: flex;
   justify-content: space-around;
-  padding: 2.5rem 0 1rem 0; /* responsive */
-  padding: 2.5rem 0 1rem 0; /* responsive */
+  padding: 2.5rem 0 1rem 0;
   flex: 1;
 }
-
+.logoLink {
+  display: flex;
+  justify-content: center;
+}
+.footerLogo {
+  padding: 2em 0;
+}
 .footerLogo p {
-  padding: 0 0 0 0.8rem;
+  padding-left: 0.8rem;
   color: var(--color-texto-principal);
 }
 
-.footerLogo p {
-  padding: 0 0 0 0.8rem;
-  color: var(--color-texto-principal);
-}
-.logoMobile {
-  display: none;
-}
 .logoDesktop {
   display: block;
-  width: 20rem; /* responsive */
+  width: 20rem;
 }
 
 .navBar {
@@ -139,6 +121,7 @@ footer {
 }
 
 .navLink {
+  display: inline-block;
   color: var(--color-texto-principal);
   text-decoration: none;
   font-weight: 500;
@@ -148,6 +131,7 @@ footer {
     color 0.2s ease,
     background-color 0.2s ease;
 }
+
 .navLink:hover,
 .navLink:focus-visible {
   background-color: var(--color-hover-secundario);
@@ -156,19 +140,29 @@ footer {
   text-decoration: underline;
 }
 
-@media (max-width: 940px) {
+/* xxl - Pantallas grandes */
+@media (min-width: 1201px) {
+}
+
+/* xl - Laptops / desktops medianos */
+@media (max-width: 1200px) {
+  .footerLogo {
+    max-width: 320px;
+  }
+}
+
+/* lg - Laptops pequeñas */
+@media (max-width: 992px) {
   .footerInfo {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
-    grid-template-rows: repeat(2, auto); /* dos filas automáticas */
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
-    grid-template-rows: repeat(2, auto); /* dos filas automáticas */
-    padding: 2rem 0 0 0; /* responsive */
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0;
   }
-  /* Primer hijo: ocupa la primera columna y abarca las 3 filas */
+
   .footerLogo {
-    grid-column: 1 / 4;
-    grid-row: 1 / 2;
+    max-width: none;
+    padding-top: 0;
+
     grid-column: 1 / 4;
     grid-row: 1 / 2;
 
@@ -177,30 +171,48 @@ footer {
     justify-content: center;
     align-items: center;
   }
-  .navBar {
-    padding: 1.5rem 0 1.5rem 1.5rem;
-    padding: 1.5rem 0 1.5rem 1.5rem;
-  }
-  .logoDesktop {
-    width: 15rem;
-  }
-}
 
-@media (max-width: 670px) {
-  .footerDesarrollador {
-    flex-direction: column;
-  }
-  .footerInfo {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, auto);
-  }
-  .footerLogo {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-  }
   .navBar {
     align-items: center;
   }
+  .navBar ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navBar li {
+    text-align: center;
+  }
+}
+/* md - Tablets */
+@media (max-width: 768px) {
+  .footerInfo {
+    grid-template-columns: repeat(2, auto);
+  }
+
+  .footerLogo {
+    grid-column: 1 / 3;
+  }
+  .navBar:last-child {
+    grid-column: 1 / 3;
+  }
+}
+
+/* sm - Teléfonos estándar */
+@media (max-width: 576px) {
+  .footerInfo {
+    grid-template-columns: 1fr;
+  }
+  .footerLogo {
+    grid-column: 1 / 2;
+  }
+  .navBar:last-child {
+    grid-column: 1 / 2;
+  }
+}
+
+/* xs - Teléfonos pequeños */
+@media (max-width: 480px) {
 }
 </style>

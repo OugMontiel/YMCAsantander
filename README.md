@@ -71,11 +71,11 @@ Para trabajar en este proyecto de desarrollo web para la YMCA Santander, es nece
 
 ## Instalación
 
-A continuación, se describen los pasos necesarios para clonar el repositorio, instalar las dependencias y lanzar el proyecto en modo desarrollo. Este proyecto no requiere realizar un proceso de build para comenzar a trabajar, ya que está pensado para un entorno de desarrollo directo con Vite y Nuxt.
+A continuación, se detallan los pasos necesarios para clonar el repositorio, configurar el entorno de Node.js, instalar las dependencias y ejecutar el proyecto en modo desarrollo. Este proyecto está preparado para funcionar directamente con **Vite** y **Nuxt**, sin requerir un proceso de build previo.
 
 ### 1. Clonar el repositorio
 
-Primero, debes clonar el repositorio desde GitHub (o la plataforma correspondiente). Ejecuta el siguiente comando en la terminal:
+Clona el repositorio desde GitHub ejecutando el siguiente comando en tu terminal:
 
 ```bash
 git clone https://github.com/OugMontiel/YMCAsantander
@@ -83,27 +83,62 @@ git clone https://github.com/OugMontiel/YMCAsantander
 
 ### 2. Acceder al directorio del proyecto
 
+Cambia al directorio del proyecto clonado:
+
 ```bash
 cd YMCAsantander
 ```
 
-### 3. Instalar dependencias
+### 3. Configurar la versión de Node.js
 
-Una vez dentro del directorio del proyecto, instala las dependencias necesarias ejecutando:
+Si estás utilizando `nvm` (Node Version Manager), puedes instalar y usar la versión recomendada de Node.js (v23):
+
+```bash
+nvm install 23
+nvm use 23
+```
+
+> **Nota:** Aunque el proyecto fue probado con Node.js v23.9 y npm v10.8.2, puedes usar cualquier versión 18.x compatible.
+
+### 4. Instalar dependencias
+
+Instala las dependencias necesarias para el proyecto:
 
 ```bash
 npm install
 ```
 
-### 4. Lanzar el entorno de desarrollo
+### 5. Ejecutar el entorno de desarrollo
 
-Con las dependencias instaladas, puedes iniciar el entorno de desarrollo con el siguiente comando:
+Inicia el entorno de desarrollo con el siguiente comando:
 
 ```bash
 npm run dev
 ```
 
-Esto levantará el servidor local y podrás acceder al proyecto desde el navegador, generalmente en `http://localhost:3000`.
+Una vez iniciado, el proyecto estará disponible en tu navegador en la dirección: [http://localhost:3000](http://localhost:3000)
+
+---
+
+## 🧾 Resumen de comandos
+
+```bash
+# Clonar el repositorio
+git clone https://github.com/OugMontiel/YMCAsantander
+
+# Acceder al directorio del proyecto
+cd YMCAsantander
+
+# Instalar y usar Node.js versión 23.9 con NVM
+nvm install 23
+nvm use 23
+
+# Instalar dependencias
+npm install
+
+# Ejecutar el entorno de desarrollo
+npm run dev
+```
 
 
 ## Estructura del Proyecto
