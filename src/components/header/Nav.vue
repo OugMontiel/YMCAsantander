@@ -40,18 +40,6 @@ export default {
     background-color 0.2s ease;
 }
 
-.navList2 {
-  display: flex;
-}
-
-.marcaNav {
-  display: none;
-}
-
-.LogoNav {
-  display: none;
-}
-
 .navLink:hover,
 .navLink:focus-visible {
   background-color: var(--color-hover-primario);

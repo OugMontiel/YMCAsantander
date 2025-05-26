@@ -1,6 +1,13 @@
 <script>
+import Logo from "@/components/header/logo.vue";
+import FondoDinamico from "@/components/fondos/fondoDinamico.vue";
+
 export default {
-  name: "MenuYMCA",
+  name: "MenuLateral",
+  components: {
+    Logo,
+    FondoDinamico,
+  },
   props: {
     links: {
       type: Array,
@@ -11,58 +18,77 @@ export default {
 </script>
 
 <template>
-  <nav class="nav" aria-label="Navegación principal">
-    <!-- boton de cierre -->
+  <section class="menuLateral" aria-label="Menú lateral">
+    <div class="Lateral">
+      <!-- fondo dinamico -->
+      <FondoDinamico />
 
-    <!-- logo -->
+      <!-- Botón de cierre -->
+      <button class="cierreBtn" @click.stop="$emit('close-menu')" aria-label="Cerrar menú lateral">
+        <UIcon name="material-symbols-light:close" class="menu-icon" width="2em" />
+      </button>
 
-    <!-- nav -->
-    <ul class="navList" @click.self="$emit('close-menu')">
-      <li v-for="link in links" :key="link.name" class="navItem">
-        <router-link :to="link.to" class="navLink" active-class="active">
-          {{ link.name }}
-        </router-link>
-      </li>
-    </ul>
-  </nav>
+      <!-- Logo -->
+      <Logo class="LogoLateral" />
+
+      <!-- Navegación -->
+      <nav class="nav" aria-label="Menú lateral de navegación">
+        <ul class="navList" @click="$emit('close-menu')">
+          <li class="navItem" v-for="link in links" :key="link.name">
+            <router-link class="navLink" :to="link.to" active-class="active" aria-current="page">
+              {{ link.name }}
+            </router-link>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </section>
 </template>
 
 <style scoped>
-.nav {
-  position: absolute; /* <-- Este es el cambio más importante */
-  top: 0;
-  right: 0; /* <-- Añade esto */
-  width: 100%; 
-  height: 100vh;
-  z-index: 100;
-}
-
-.navList {
+.menuLateral {
   position: fixed;
   top: 0;
   right: 0;
-  
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+
+  background-color: var(--overlay-negro);
+}
+.Lateral {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  height: 100%;
+  background-color: var(--color-fondo);
+  box-shadow: -2px 0 8px var(--color-fondo-shadow);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1em;
+
+  padding: 1rem 2rem;
+}
+
+.nav {
+  flex: 1;
+}
+.cierreBtn {
+  align-self: flex-end;
+}
+
+.navList {
+  height: 100%;
 
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 
   list-style: none;
-
-  padding: 2rem;
-  width: 60%;
-  height: 100vh;
-  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
-
-  background-color: var(--color-fondo);
-  transform: translateX(0);
-  transition: transform 0.3s ease-in-out;
-}
-
-.navList2 {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
 }
 
 .navLink {
@@ -71,8 +97,6 @@ export default {
   font-weight: 500;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
-  text-align: center;
-  font-size: 1.1rem;
   transition:
     color 0.2s ease,
     background-color 0.2s ease;
@@ -85,11 +109,26 @@ export default {
   outline: none;
 }
 
-.marcaNav {
-  color: var(--color-texto-secundario);
+/* xxl - Pantallas grandes */
+@media (min-width: 1201px) {
 }
 
-.LogoNav {
-  display: block;
+/* xl - Laptops / desktops medianos */
+@media (max-width: 1200px) {
+}
+
+/* lg - Laptops pequeñas */
+@media (max-width: 992px) {
+}
+/* md - Tablets */
+@media (max-width: 768px) {
+}
+
+/* sm - Teléfonos estándar */
+@media (max-width: 576px) {
+}
+
+/* xs - Teléfonos pequeños */
+@media (max-width: 480px) {
 }
 </style>

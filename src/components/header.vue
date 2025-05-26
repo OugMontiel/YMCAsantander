@@ -56,7 +56,7 @@ export default {
     <Navegacion class="navDesktop" :links="navLinks" />
 
     <!-- Menú lateral para pantallas pequeñas -->
-    <MenuLateral class="navMobil" :links="navLinks" v-show="isMenuOpen" />
+    <MenuLateral class="navMobil" :links="navLinks" v-show="isMenuOpen" @close-menu="isMenuOpen = false" />
 
     <!-- Botón solo visible en pantallas pequeñas -->
     <button class="menuButton" @click.stop="toggleMenu" :aria-expanded="isMenuOpen.toString()" aria-label="Menú de navegación">
@@ -118,8 +118,7 @@ export default {
     border: none;
     padding: 0.5rem;
     cursor: pointer;
-    color: var(--color-texto-principal);
-    z-index: 100;
+    color: var(--color-texto-principal-blanco);
   }
 }
 
