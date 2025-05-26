@@ -1,23 +1,11 @@
 <script>
-import logoUDI from "/LogoAzul.png";
-import logoUNAD from "/LogoAzul.png";
-import logoUMB from "/LogoAzul.png";
-import logoFe from "/LogoAzul.png";
-import logoBolivar from "/LogoAzul.png";
-import logoHoryzon from "/LogoAzul.png";
-import logoAmex from "/LogoAzul.png";
+import {aliados} from "@/data/proyectos/aliados.js";
 
 export default {
   name: "Aliados",
   data() {
     return {
-      logoUDI,
-      logoUNAD,
-      logoUMB,
-      logoFe,
-      logoBolivar,
-      logoHoryzon,
-      logoAmex,
+      aliados,
     };
   },
 };
@@ -27,16 +15,11 @@ export default {
   <section class="pazAliados">
     <h2>Aliados Estratégicos</h2>
     <div class="logos">
-      <img :src="logoUDI" alt="UDI" />
-      <img :src="logoUNAD" alt="UNAD" />
-      <img :src="logoUMB" alt="UMB" />
-      <img :src="logoFe" alt="Fe y Alegría" />
-      <img :src="logoBolivar" alt="Fundación Bolívar Davivienda" />
-      <img :src="logoHoryzon" alt="HORYZON" />
-      <img :src="logoAmex" alt="AMERICAN EXPRESS" />
+      <img v-for="(aliado, index) in aliados" :key="index" :src="aliado.logo" :alt="aliado.nombre" />
     </div>
   </section>
 </template>
+
 <style scoped>
 .pazAliados {
   text-align: center;
