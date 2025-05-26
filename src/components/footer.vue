@@ -55,7 +55,7 @@ export default {
         <router-link to="/" class="logoLink">
           <img :src="Logo" alt="YMCA - Logo principal" class="logoDesktop" loading="eager" />
         </router-link>
-        <p>Un mensaje bonito que inspire a todos los que lo lean.</p>
+        <p>YMCA Inspirando Oportunidades.</p>
       </div>
 
       <!-- Secciones de navegación dinámicas -->
