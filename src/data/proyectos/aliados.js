@@ -1,12 +1,12 @@
 // src/data/aliadosData.js
 
-import logoUDI from "@/assets/img/proyectos/logosAliados/udi.png";
-import logoUNAD from "@/assets/img/proyectos/logosAliados/unad.png";
-import logoFe from "@/assets/img/proyectos/logosAliados/feYAlegria.png";
-import logoUniminuto from "@/assets/img/proyectos/logosAliados/corporaciónUniversitariaMinutoDeDios.png";
-import logoHoryzon from "@/assets/img/proyectos/logosAliados/horyzon.png"; 
-import logoUis from "@/assets/img/proyectos/logosAliados/universidadIndustrialDeSantander.png"; 
-import logoUts from "@/assets/img/proyectos/logosAliados/uts.png"; 
+import logoUDI from "@/assets/img/proyectos/pazaLaPaz/logosAliados/udi.png";
+import logoUNAD from "@/assets/img/proyectos/pazaLaPaz/logosAliados/unad.png";
+import logoFe from "@/assets/img/proyectos/pazaLaPaz/logosAliados/feYAlegria.png";
+import logoUniminuto from "@/assets/img/proyectos/pazaLaPaz/logosAliados/corporaciónUniversitariaMinutoDeDios.png";
+import logoHoryzon from "@/assets/img/proyectos/pazaLaPaz/logosAliados/horyzon.png"; 
+import logoUis from "@/assets/img/proyectos/pazaLaPaz/logosAliados/universidadIndustrialDeSantander.png"; 
+import logoUts from "@/assets/img/proyectos/pazaLaPaz/logosAliados/uts.png"; 
 
 
 import logoUMB from "/LogoAzul.png"; // reemplázalo si hay un logo diferente
