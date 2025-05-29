@@ -50,6 +50,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 }
 .programasTitulo {
   text-align: center;
@@ -65,7 +66,10 @@ export default {
 .programasContenido {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
   gap: 2rem;
+
+  width: 100%;
 }
 
 .programa {
@@ -78,6 +82,8 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  max-width: 460px;
 }
 .proyectoImagen {
   max-height: 620px;
