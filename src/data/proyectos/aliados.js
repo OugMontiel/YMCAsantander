@@ -41,7 +41,7 @@ export default [
   {
     id: 5,
     nombre: "Fundación Bolívar Davivienda",
-    logo: logoBolivar,
+    logo: logoFundacionBolivar,
   },
   {
     id: 6,
