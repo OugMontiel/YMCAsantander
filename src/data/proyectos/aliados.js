@@ -10,8 +10,12 @@ import logoUts from "@/assets/img/proyectos/logosAliados/uts.png";
 
 
 import logoUMB from "/LogoAzul.png"; // reemplázalo si hay un logo diferente
-import logoBolivar from "/LogoAzul.png"; // reemplázalo si hay un logo diferente
+import logoFundacionBolivar from "/LogoAzul.png"; // reemplázalo si hay un logo diferente
 import logoAmex from "/LogoAzul.png"; // reemplázalo si hay un logo diferente
+
+import logoColegioAngulo from "/LogoAzul.png"; // reemplázalo si hay un logo diferente
+import logoMisecGifmmSantenader from "/LogoAzul.png"; // reemplázalo si hay un logo diferente
+import logoWorldVision from "/LogoAzul.png"; // reemplázalo si hay un logo diferente
 
 export default [
   {

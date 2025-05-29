@@ -1,7 +1,7 @@
 <template>
   <section class="proyectoEstadistica">
     <h1 class="estadisticaTitulo">Estadísticas de Impacto</h1>
-    <p class="estadisticaDescripcion">Conoce el alcance de nuestros proyectos y cómo contribuimos al desarrollo comunitario desde YMCA.</p>
+    <p class="estadisticaDescripcion">Conoce el alcance de nuestros proyectos y cómo contribuimos al desarrollo comunitario desde YMCA Santander.</p>
     <div class="estadisticas">
       <div class="estadisticaItem">
         <div class="itemIcono">&#128188;</div>
