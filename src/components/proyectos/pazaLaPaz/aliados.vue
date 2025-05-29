@@ -1,5 +1,5 @@
 <script>
-import {aliados} from "@/data/proyectos/aliados.js";
+import aliados from "@/data/proyectos/aliados.js";
 
 export default {
   name: "Aliados",
