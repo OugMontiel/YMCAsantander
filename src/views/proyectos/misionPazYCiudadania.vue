@@ -1,16 +1,16 @@
 <script>
-import MisionDescripcion from '@/components/proyectos/misionPazYCiudadania/descripcion.vue'
-import ImpactoIniciativas from '@/components/proyectos/misionPazYCiudadania/impactoIniciativas.vue'
-import Testimonios from '@/components/proyectos/misionPazYCiudadania/testimonios.vue'
+import MisionDescripcion from "@/components/proyectos/misionPazYCiudadania/descripcion.vue";
+import ImpactoIniciativas from "@/components/proyectos/misionPazYCiudadania/impactoIniciativas.vue";
+import Testimonios from "@/components/proyectos/misionPazYCiudadania/testimonios.vue";
 
 export default {
-  name: 'PazYCiudadania',
+  name: "PazYCiudadania",
   components: {
     MisionDescripcion,
     ImpactoIniciativas,
-    Testimonios
-  }
-}
+    Testimonios,
+  },
+};
 </script>
 <template>
   <div class="pazYCiudadania">
@@ -21,4 +21,3 @@ export default {
     <Testimonios />
   </div>
 </template>
-

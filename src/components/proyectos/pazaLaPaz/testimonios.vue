@@ -31,16 +31,17 @@ export default {
   <section class="pazTestimonios">
     <h2>Testimonios</h2>
 
-    <UCarousel 
-    :items="testimonios" 
-     :ui="{
-    item: 'flex justify-center basis-full sm:basis-1/2 md:basis-1/2 lg:basis-1/3 xl:basis-1/4',
-    wrapper: 'gap-[1em]'
-  }"
-    :autoplay="{delay: 2000}" 
-    loop 
-    indicators 
-    class="px-4">
+    <UCarousel
+      :items="testimonios"
+      :ui="{
+        item: 'flex justify-center basis-full sm:basis-1/2 md:basis-1/2 lg:basis-1/3 xl:basis-1/4',
+        wrapper: 'gap-[1em]',
+      }"
+      :autoplay="{delay: 2000}"
+      loop
+      indicators
+      class="px-4"
+    >
       <template #default="{item: testimonio}">
         <TestimonioCard
           :nombre="testimonio.nombre"
