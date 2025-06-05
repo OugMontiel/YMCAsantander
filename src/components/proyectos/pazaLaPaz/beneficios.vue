@@ -1,7 +1,6 @@
 <template>
   <section class="pazBeneficios">
     <div class="beneficiosHeader">
-      <img src="/LogoAzul.png" alt="Logo decorativo Paza la Paz" class="logoBeneficiosHeader" />
       <h2>¿Por qué ser parte del programa?</h2>
     </div>
     <div class="beneficiosGrid">
@@ -30,10 +29,6 @@
 </template>
 
 <style scoped>
-.pazBeneficios {
-  padding: 2rem;
-}
-
 .beneficiosHeader {
   display: flex;
   flex-wrap: wrap;
@@ -42,6 +37,9 @@
   gap: 1rem;
 
   margin-bottom: 2rem;
+  padding: 2rem;
+
+  text-align: center;
 }
 
 .logoBeneficiosHeader {
@@ -82,5 +80,29 @@
 
 .beneficioCard p {
   text-align: left;
+}
+
+/* xxl - Pantallas grandes */
+@media (min-width: 1201px) {
+}
+
+/* xl - Laptops / desktops medianos */
+@media (max-width: 1200px) {
+}
+
+/* lg - Laptops pequeñas */
+@media (max-width: 992px) {
+}
+
+/* md - Tablets */
+@media (max-width: 768px) {
+}
+
+/* sm - Teléfonos estándar */
+@media (max-width: 576px) {
+}
+
+/* xs - Teléfonos pequeños */
+@media (max-width: 480px) {
 }
 </style>

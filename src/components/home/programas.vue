@@ -65,7 +65,10 @@ export default {
 .programasContenido {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
   gap: 2rem;
+
+  width: 100%;
 }
 
 .programa {
@@ -74,6 +77,15 @@ export default {
   border-radius: 8px;
   box-shadow: 0 2px 6px var(--color-fondo-shadow);
   flex: 1 1 300px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  max-width: 460px;
+}
+.proyectoImagen {
+  max-height: 620px;
 }
 
 .programa h2 {

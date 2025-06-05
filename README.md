@@ -236,6 +236,8 @@ Información de contacto para soporte o preguntas relacionadas con el proyecto.
 
 - Un triangulo Blanco.. para fonde del logo y que no se vea afectado por el cambio de color del fondo 
 - logos de los programas 
+ - paza la paz ... Logo
+ - misionPazYCiudadania ... logo
 - Info paz y ciudadania 
 - eslogan de la YMCA (Implementar en pantallas agrandes)
 - actualizar archivo proyectosData.js 

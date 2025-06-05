@@ -21,10 +21,11 @@ export default {
 <style scoped>
 .card {
   background: var(--color-fondo-secundario);
-
   padding: 2rem;
   border-radius: 50%;
   aspect-ratio: 1 / 1;
+  width: 18rem;
+
   overflow: hidden;
   box-shadow: 0 2px 8px var(--color-fondo-shadow);
 
@@ -67,5 +68,29 @@ export default {
 .btn:focus {
   outline: 2px dashed var(--color-hover-primario);
   outline-offset: 3px;
+}
+
+/* xxl - Pantallas grandes */
+@media (min-width: 1201px) {
+}
+
+/* xl - Laptops / desktops medianos */
+@media (max-width: 1200px) {
+}
+
+/* lg - Laptops pequeñas */
+@media (max-width: 992px) {
+}
+
+/* md - Tablets */
+@media (max-width: 768px) {
+}
+
+/* sm - Teléfonos estándar */
+@media (max-width: 576px) {
+}
+
+/* xs - Teléfonos pequeños */
+@media (max-width: 480px) {
 }
 </style>

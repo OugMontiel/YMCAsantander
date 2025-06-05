@@ -19,7 +19,7 @@ export default {
     <img :src="imgProyectos" alt="" srcset="" />
     <div class="incioContenido">
       <h1>Proyectos YMCA</h1>
-      <p>Aquí podrás encontrar todos los proyectos que hemos realizado en YMCA, desde el año 2018 hasta la fecha.</p>
+      <p>Aquí podrás encontrar los proyectos que hemos realizado en YMCA Santander</p>
       <!-- cars de los proyectos -->
       <div class="ProyectosInicioCards">
         <Cards />

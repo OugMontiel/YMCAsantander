@@ -156,4 +156,35 @@ export default {
     transform: translateY(0);
   }
 }
+
+/* xxl - Pantallas grandes */
+@media (min-width: 1201px) {
+}
+
+/* xl - Laptops / desktops medianos */
+@media (max-width: 1200px) {
+}
+
+/* lg - Laptops pequeñas */
+@media (max-width: 992px) {
+}
+/* md - Tablets */
+@media (max-width: 768px) {
+  .infoEsal {
+    text-align: left;
+  }
+}
+
+/* sm - Teléfonos estándar */
+@media (max-width: 576px) {
+  .infoEsal {
+    text-align: center;
+    flex-direction: column;
+    gap: 0.5em;
+  }
+}
+
+/* xs - Teléfonos pequeños */
+@media (max-width: 480px) {
+}
 </style>
