@@ -1,4 +1,5 @@
 <script>
+import TituloCiudadania from "@/components/proyectos/misionPazYCiudadania/tituloPYC.vue";
 import MisionDescripcion from "@/components/proyectos/misionPazYCiudadania/descripcion.vue";
 import ImpactoIniciativas from "@/components/proyectos/misionPazYCiudadania/impactoIniciativas.vue";
 import Testimonios from "@/components/proyectos/misionPazYCiudadania/testimonios.vue";
@@ -9,13 +10,14 @@ export default {
     MisionDescripcion,
     ImpactoIniciativas,
     Testimonios,
+    TituloCiudadania,
   },
 };
 </script>
+
 <template>
   <div class="pazYCiudadania">
-    <h2 class="section-title">MISIÓN, PAZ y CIUDADANÍA</h2>
-
+    <TituloCiudadania />
     <MisionDescripcion />
     <ImpactoIniciativas />
     <Testimonios />
