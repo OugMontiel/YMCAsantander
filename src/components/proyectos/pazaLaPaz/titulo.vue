@@ -1,6 +1,19 @@
+<script>
+import logoPLP from "@/assets/img/proyectos/PazaLaPaz/pazaLaPaz.jpg";
+
+export default {
+  name: "Titulo paza la paz",
+  data() {
+    return {
+      logoPLP,
+    };
+  },
+};
+</script>
+
 <template>
   <div class="pazHeader">
-    <img src="/LogoAzul.png" alt="Logo Paza la Paz" class="logopazHeader" />
+    <!-- <img :src="logoPLP" alt="Logo Paza la Paz" class="logopazHeader" /> -->
     <h1>Paza la Paz</h1>
   </div>
 </template>

@@ -1,32 +1,25 @@
+<script setup>
+import  beneficios  from '@/data/proyectos/beneficiosPrograma.js'
+</script>
+
 <template>
   <section class="pazBeneficios">
     <div class="beneficiosHeader">
       <h2>¿Por qué ser parte del programa?</h2>
     </div>
     <div class="beneficiosGrid">
-      <div class="beneficioCard">
-        <img src="/LogoAzul.png" alt="Trabajo en equipo" class="iconoImg" />
-        <p>Desarrollas habilidades para trabajar en equipo y gestionar conflictos.</p>
-      </div>
-      <div class="beneficioCard">
-        <img src="/LogoAzul.png" alt="Confianza y autoestima" class="iconoImg" />
-        <p>Incrementas tu confianza y autoestima.</p>
-      </div>
-      <div class="beneficioCard">
-        <img src="/LogoAzul.png" alt="Valores YMCA" class="iconoImg" />
-        <p>Aprendes los valores de un líder YMCA: inclusión, sensibilidad y responsabilidad.</p>
-      </div>
-      <div class="beneficioCard">
-        <img src="/LogoAzul.png" alt="Impacto comunitario" class="iconoImg" />
-        <p>Impactas positivamente tu comunidad.</p>
-      </div>
-      <div class="beneficioCard">
-        <img src="/LogoAzul.png" alt="Vocación y emprendimiento" class="iconoImg" />
-        <p>Identificas tu vocación y oportunidades de emprendimiento.</p>
+      <div
+        class="beneficioCard"
+        v-for="(beneficio, index) in beneficios"
+        :key="index"
+      >
+        <img :src="beneficio.icono" :alt="beneficio.alt" class="iconoImg" />
+        <p>{{ beneficio.texto }}</p>
       </div>
     </div>
   </section>
 </template>
+
 
 <style scoped>
 .beneficiosHeader {
