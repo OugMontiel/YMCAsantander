@@ -21,13 +21,14 @@ export default {
 <template>
   <section class="proyectosCard">
     <div class="proyectosCardContenido">
-      <article class="proyectosCardItem" v-for="proyecto in proyectos" :key="proyecto.id || proyecto.titulo">
+      <router-link class="proyectosCardItem" v-for="proyecto in proyectos" :key="proyecto.id || proyecto.titulo"  :to="proyecto.to" >
         <img :src="proyecto.img" :alt="`Imagen del proyecto: ${proyecto.titulo}`" class="proyectoImagen" />
         <div class="proyectosCardItemContenido">
           <h2>{{ proyecto.titulo }}</h2>
           <p>{{ proyecto.descripcion }}</p>
         </div>
-      </article>
+      
+      </router-link>
     </div>
   </section>
 </template>
@@ -73,6 +74,7 @@ export default {
   animation: fadeUp 1s ease;
   cursor: pointer;
   background: white;
+  text-decoration: none;
 }
 
 .proyectosCardItem:hover {

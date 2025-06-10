@@ -1,5 +1,5 @@
 <script>
-import logoPLP from "@/assets/img/proyectos/PazaLaPaz/pazaLaPaz.jpg";
+import logoPLP from "@/assets/img/proyectos/PazaLaPaz/LogoPazaLaPazAzul.png";
 
 export default {
   name: "Titulo paza la paz",
@@ -13,7 +13,7 @@ export default {
 
 <template>
   <div class="pazHeader">
-    <!-- <img :src="logoPLP" alt="Logo Paza la Paz" class="logopazHeader" /> -->
+    <img :src="logoPLP" alt="Logo Paza la Paz" class="logopazHeader" />
     <h1>Paza la Paz</h1>
   </div>
 </template>
