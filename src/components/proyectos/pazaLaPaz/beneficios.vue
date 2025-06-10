@@ -1,4 +1,5 @@
 <script setup>
+import { Icon } from "@iconify/vue";
 import  beneficios  from '@/data/proyectos/beneficiosPrograma.js'
 </script>
 
@@ -13,7 +14,7 @@ import  beneficios  from '@/data/proyectos/beneficiosPrograma.js'
         v-for="(beneficio, index) in beneficios"
         :key="index"
       >
-        <img :src="beneficio.icono" :alt="beneficio.alt" class="iconoImg" />
+        <Icon :icon="beneficio.icono" :alt="beneficio.alt" class="iconoImg" />
         <p>{{ beneficio.texto }}</p>
       </div>
     </div>

@@ -1,30 +1,27 @@
-// src/data/beneficiosPrograma.js
-import logoAzul from '/LogoAzul.png'
-
 export default [
   {
     alt: 'Trabajo en equipo',
     texto: 'Desarrollas habilidades para trabajar en equipo y gestionar conflictos.',
-    icono: logoAzul,
+    icono: 'material-symbols-light:group',
   },
   {
     alt: 'Confianza y autoestima',
     texto: 'Incrementas tu confianza y autoestima.',
-    icono: logoAzul,
+    icono: 'material-symbols-light:self-improvement',
   },
   {
     alt: 'Valores YMCA',
     texto: 'Aprendes los valores de un líder YMCA: inclusión, sensibilidad y responsabilidad.',
-    icono: logoAzul,
+    icono: 'material-symbols-light:diversity-3',
   },
   {
     alt: 'Impacto comunitario',
     texto: 'Impactas positivamente tu comunidad.',
-    icono: logoAzul,
+    icono: 'material-symbols-light:public',
   },
   {
     alt: 'Vocación y emprendimiento',
     texto: 'Identificas tu vocación y oportunidades de emprendimiento.',
-    icono: logoAzul,
+    icono: 'material-symbols-light:rocket-launch',
   },
 ]
