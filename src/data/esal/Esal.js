@@ -1,32 +1,53 @@
 // src/data/Esal.js
-
 export const documentosEsal = [
   {
+    titulo: "Certificación de cargos directivos y gerenciales",
+    archivo: "/esal/certificacionDeCargosDirectivosYGerencialesYmcaSantander.pdf",
+  },
+  {
     titulo: "Personería Jurídica",
-    archivo: "/esal/personeria_juridica_gobernacion_ster.pdf",
+    archivo: "/esal/personeriaJuridicaGobernacionSantander.pdf",
   },
   {
     titulo: "Certificado de Cámara de Comercio",
-    archivo: "/esal/2.CERTIFICADO CAMARA DE COMERCIO MAYO 21 DE 2024.pdf",
+    archivo: "/esal/certificadoCamaraDeComercioMayo21De2024.pdf",
   },
   {
     titulo: "Estados Financieros",
-    archivo: "/esal/3. ESTADOS FINANCIEROS 2023 YMCA SANTANDER.pdf",
+    archivo: "/esal/estadosFinancierosADic2024SantanderCompleto.pdf",
   },
   {
-    titulo: "Certificación 1",
-    archivo: "/esal/4. CERTIFICACION ANTECEDENTES JUDICIALES Y CADUCIDAD DE CONTRATOS (1).pdf",
+    titulo: "Certificación antecedentes judiciales",
+    archivo: "/esal/certificacionAntecedentesJudicialesYCaducidadDeContratos.pdf",
   },
   {
-    titulo: "Certificación 2",
-    archivo: "/esal/5. CERTIFICACION DE CUMPLIMIENTO DE REQUISITOS.pdf",
+    titulo: "Certificación de Cumplimiento de Requisitos",
+    archivo: "/esal/certificacionDeCumplimientoDeRequisitos.pdf",
   },
   {
-    titulo: "Acta de Asamblea",
-    archivo: "/esal/6. ACTA ASAMBLEA  GENERAL ORDINARIA No.86- MARZO 16 DE 2024.pdf",
+    titulo: "Acta Asamblea Ordinaria",
+    archivo: "/esal/actaAsambleaOrdinariaNo89MarzoDe2025YmcaSantander.pdf",
   },
   {
     titulo: "Informe de Gestión",
-    archivo: "/esal/7.INFORME EJECUTIVO DE GESTIÓN 2023.pdf",
+    archivo: "/esal/informeDeGestionAcjYmcaSantander.pdf",
   },
+
+  // Faltantes:
+
+
+  // {
+  //   titulo: "Memoria Económica",
+  //   archivo: "", // Falta cargar archivo
+  // },
+
+  // {
+  //   titulo: "Copia de Estatutos o Acta sobre actividad meritoria, no reembolso, excedentes y cargos directivos",
+  //   archivo: "", // Falta cargar archivo
+  // },
+
+  // {
+  //   titulo: "Acta sobre asignaciones permanentes (si aplica)",
+  //   archivo: "", // Falta cargar archivo
+  // }
 ];
