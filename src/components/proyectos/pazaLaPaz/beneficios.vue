@@ -1,6 +1,6 @@
 <script setup>
-import { Icon } from "@iconify/vue";
-import  beneficios  from '@/data/proyectos/beneficiosPrograma.js'
+import {Icon} from "@iconify/vue";
+import beneficios from "@/data/proyectos/beneficiosPrograma.js";
 </script>
 
 <template>
@@ -9,18 +9,13 @@ import  beneficios  from '@/data/proyectos/beneficiosPrograma.js'
       <h2>¿Por qué ser parte del programa?</h2>
     </div>
     <div class="beneficiosGrid">
-      <div
-        class="beneficioCard"
-        v-for="(beneficio, index) in beneficios"
-        :key="index"
-      >
+      <div class="beneficioCard" v-for="(beneficio, index) in beneficios" :key="index">
         <Icon :icon="beneficio.icono" :alt="beneficio.alt" class="iconoImg" />
         <p>{{ beneficio.texto }}</p>
       </div>
     </div>
   </section>
 </template>
-
 
 <style scoped>
 .beneficiosHeader {

@@ -21,13 +21,12 @@ export default {
 <template>
   <section class="proyectosCard">
     <div class="proyectosCardContenido">
-      <router-link class="proyectosCardItem" v-for="proyecto in proyectos" :key="proyecto.id || proyecto.titulo"  :to="proyecto.to" >
+      <router-link class="proyectosCardItem" v-for="proyecto in proyectos" :key="proyecto.id || proyecto.titulo" :to="proyecto.to">
         <img :src="proyecto.img" :alt="`Imagen del proyecto: ${proyecto.titulo}`" class="proyectoImagen" />
         <div class="proyectosCardItemContenido">
           <h2>{{ proyecto.titulo }}</h2>
           <p>{{ proyecto.descripcion }}</p>
         </div>
-      
       </router-link>
     </div>
   </section>

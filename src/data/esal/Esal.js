@@ -35,7 +35,6 @@ export const documentosEsal = [
 
   // Faltantes:
 
-
   // {
   //   titulo: "Memoria Económica",
   //   archivo: "", // Falta cargar archivo
