@@ -10,7 +10,7 @@ export const documentosEsal = [
   },
   {
     titulo: "Certificado de Cámara de Comercio",
-    archivo: "/esal/certificadoCamaraDeComercioMayo21De2024.pdf",
+    archivo: "/esal/certificadoCamaraDeComercioAbril2025.pdf",
   },
   {
     titulo: "Estados Financieros",
