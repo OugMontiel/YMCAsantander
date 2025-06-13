@@ -2,15 +2,15 @@
 import SubHeader from "@/components/header/SubHeader.vue";
 
 export default {
-  name: "leagalHeader",
+  name: "legalHeader",
   components: {SubHeader},
   data() {
     return {
       proyectoLinks: [
-        {name: "Esal", to: "/Esal"},
-        {name: "Privacidad", to: "/Esal/Privacidad"},
-        {name: "terminosYCondiciones", to: "/Esal/terminosYCondiciones"},
-        {name: "politicaDeCookies", to: "/Esal/politicaDeCookies"},
+        {name: "Esal", to: "/legal/Esal"},
+        {name: "Políticas y Aviso Legal", to: "/legal/Privacidad"},
+        {name: "Términos y Condiciones", to: "/legal/terminosYCondiciones"},
+        {name: "Política de Cookies", to: "/legal/politicaDeCookies"},
       ],
     };
   },

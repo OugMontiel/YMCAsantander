@@ -144,12 +144,17 @@ const router = createRouter({
       ],
     },
     {
-      path: "/Esal",
+      path: "/legal",
       name: "vistasLegales",
       component: LegalHeader,
       children: [
         {
           path: "",
+          name: "no ay vista legal",
+          redirect: "/legal/Esal",
+        },
+        {
+          path: "Esal",
           name: "esal",
           component: Esal,
         },
@@ -170,6 +175,7 @@ const router = createRouter({
         },
       ],
     },
+    {path: "/esal", redirect: "/legal/Esal"},
   ],
 });
 

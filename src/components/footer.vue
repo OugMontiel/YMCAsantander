@@ -27,10 +27,10 @@ export default {
         {
           titulo: "Legal",
           links: [
-            {name: "Aviso de privacidad", to: "/avisoPrivacidad"},
-            {name: "Términos y condiciones", to: "/terminosYCondiciones"},
-            {name: "Política de cookies", to: "/politicaDeCookies"},
-            {name: "ESAL", to: "/esal"},
+            {name: "Esal", to: "/legal/Esal"},
+            {name: "Políticas y Aviso Legal", to: "/legal/Privacidad"},
+            {name: "Términos y Condiciones", to: "/legal/terminosYCondiciones"},
+            {name: "Política de Cookies", to: "/legal/politicaDeCookies"},
           ],
         },
         {

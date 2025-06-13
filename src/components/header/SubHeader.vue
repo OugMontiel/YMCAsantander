@@ -31,6 +31,8 @@ export default {
 .subNav {
   display: flex;
   justify-content: space-evenly;
+
+  text-align: center;
 }
 
 .subNavLink {
