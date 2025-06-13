@@ -97,6 +97,7 @@ footer {
   padding: 2em 0;
 }
 .footerLogo p {
+  text-align: center;
   padding-left: 0.8rem;
   color: var(--color-texto-principal);
 }

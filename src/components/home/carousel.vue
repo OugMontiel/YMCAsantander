@@ -29,6 +29,7 @@ const items = [img1, img2, img3, img4, img5];
 .bienvenida {
   position: relative;
   width: 100%;
+  max-height: 70vh;
 }
 
 .homeCarousel {
