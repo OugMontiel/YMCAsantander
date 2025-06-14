@@ -18,7 +18,7 @@ export default {
       navLinks: [
         {name: "Inicio", to: "/"},
         {name: "¿Quiénes Somos?", to: "/about"},
-        {name: "Programas", to: "/proyectos"},
+        {name: "Liderazgo Juvenil", to: "/proyectos"},
         {name: "experiencia", to: "/experiencia"},
         {name: "aporta", to: "/aporta"},
         {name: "social", to: "/social"},

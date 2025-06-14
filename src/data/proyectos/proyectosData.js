@@ -13,7 +13,7 @@ export default [
   },
   {
     id: 2,
-    titulo: "Mision y voluntariado",
+    titulo: "Semillas de paz y bienestar Comunitario",
     descripcion:
       "El proyecto busca la promoción del bienestar comunitario, sostenibilidad ambiental y justicia social, a través del fortalecimiento de la acción voluntaria inspirada en los valores cristianos.",
     img: misionPazYCiudadania,
