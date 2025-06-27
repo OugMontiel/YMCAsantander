@@ -18,7 +18,7 @@ export default {
 </script>
 
 <template>
-  <router-link to="/" class="logoLink">
+  <router-link :to="{name: 'home'}" class="logoLink">
     <img v-if="!isMenuOpen" :src="logo" alt="YMCA - Logo" class="logo" loading="eager" />
   </router-link>
 </template>

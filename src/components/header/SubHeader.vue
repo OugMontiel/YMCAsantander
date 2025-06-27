@@ -14,7 +14,7 @@ export default {
 <template>
   <header class="subHeader">
     <nav class="subNav">
-      <router-link v-for="link in links" :key="link.name" :to="link.to" class="subNavLink" active-class="active">
+      <router-link v-for="link in links" :key="link.name" :to="{name: link.routeName}" class="subNavLink" active-class="active">
         {{ link.name }}
       </router-link>
     </nav>

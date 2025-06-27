@@ -16,12 +16,12 @@ export default {
     return {
       isMenuOpen: false,
       navLinks: [
-        { name: "Inicio", routeName: "home" },
-        { name: "¿Quiénes Somos?", routeName: "about" },
-        { name: "Programas", routeName: "proyectos" },
-        { name: "Experiencia", routeName: "experiencia" },
-        { name: "Aporta", routeName: "aporta" },
-        { name: "Social", routeName: "social" },
+        {name: "Inicio", routeName: "home"},
+        {name: "¿Quiénes Somos?", routeName: "about"},
+        {name: "Programas", routeName: "proyectos"},
+        {name: "Experiencia", routeName: "experiencia"},
+        {name: "Aporta", routeName: "aporta"},
+        {name: "Social", routeName: "social"},
       ],
     };
   },
