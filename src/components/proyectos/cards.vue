@@ -25,7 +25,7 @@ export default {
         class="proyectosCardItem"
         v-for="proyecto in proyectos"
         :key="proyecto.id || proyecto.titulo"
-        :to="{name = proyecto.routeName}"
+        :to="{name : proyecto.routeName}"
       >
         <img :src="proyecto.img" :alt="`Imagen del proyecto: ${proyecto.titulo}`" class="proyectoImagen" />
         <div class="proyectosCardItemContenido">
