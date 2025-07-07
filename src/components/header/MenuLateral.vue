@@ -35,7 +35,7 @@ export default {
       <nav class="nav" aria-label="Menú lateral de navegación">
         <ul class="navList" @click="$emit('close-menu')">
           <li class="navItem" v-for="link in links" :key="link.name">
-            <router-link class="navLink" :to="link.to" active-class="active" aria-current="page">
+            <router-link class="navLink" :to="{name: link.routeName}" active-class="active" aria-current="page">
               {{ link.name }}
             </router-link>
           </li>

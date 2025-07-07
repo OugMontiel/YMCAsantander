@@ -16,29 +16,29 @@ export default {
         {
           titulo: "YMCA Santander",
           links: [
-            {name: "Inicio", to: "/"},
-            {name: "¿Quiénes Somos?", to: "/about"},
-            {name: "Programas", to: "/proyectos"},
-            {name: "Experiencia", to: "/experiencia"},
-            {name: "Aporta", to: "/aporta"},
-            {name: "Social", to: "/social"},
+            {name: "Inicio", routeName: "home"},
+            {name: "¿Quiénes Somos?", routeName: "about"},
+            {name: "Programas", routeName: "proyectos"},
+            {name: "Experiencia", routeName: "experiencia"},
+            {name: "Aporta", routeName: "aporta"},
+            {name: "Social", routeName: "social"},
           ],
         },
         {
           titulo: "Legal",
           links: [
-            {name: "Esal", to: "/legal/Esal"},
-            {name: "Políticas y Aviso Legal", to: "/legal/Privacidad"},
-            {name: "Términos y Condiciones", to: "/legal/terminosYCondiciones"},
-            {name: "Política de Cookies", to: "/legal/politicaDeCookies"},
+            {name: "Aviso de privacidad", routeName: "Privacidad"},
+            {name: "Términos y condiciones", routeName: "terminosYCondiciones"},
+            {name: "Política de cookies", routeName: "politicaDeCookies"},
+            {name: "ESAL", routeName: "esal"},
           ],
         },
         {
           titulo: "Conócenos",
           links: [
-            {name: "Hazte socio", to: "/Socio"},
-            {name: "Donar ahora", to: "/donar"},
-            {name: "Hazte voluntario", to: "/voluntariado"},
+            {name: "Hazte socio", routeName: "Socio"},
+            {name: "Donar ahora", routeName: "donar"},
+            {name: "Hazte voluntario", routeName: "hazteVoluntario"},
           ],
         },
       ],
@@ -52,7 +52,7 @@ export default {
     <FondoDinamico />
     <div class="footerInfo">
       <div class="footerLogo">
-        <router-link to="/" class="logoLink">
+        <router-link :to="{name: 'home'}" class="logoLink">
           <img :src="Logo" alt="YMCA - Logo principal" class="logoDesktop" loading="eager" />
         </router-link>
         <p>YMCA Inspirando Oportunidades.</p>
@@ -63,7 +63,8 @@ export default {
         <h3>{{ seccion.titulo }}</h3>
         <ul>
           <li v-for="(link, j) in seccion.links" :key="j">
-            <router-link :to="link.to" class="navLink">{{ link.name }}</router-link>
+            <!-- Resolver dinámicamente el enlace usando el nombre de la ruta -->
+            <router-link :to="{name: link.routeName}" class="navLink">{{ link.name }}</router-link>
           </li>
         </ul>
       </nav>

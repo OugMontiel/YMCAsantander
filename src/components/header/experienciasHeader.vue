@@ -7,8 +7,8 @@ export default {
   data() {
     return {
       experienciaLinks: [
-        {name: "areaInternacional", to: "/experiencia/areaInternacional"},
-        {name: "experienciasLocales", to: "/experiencia/experienciasLocales"},
+        {name: "areaInternacional", routeName: "areaInternacional"},
+        {name: "experienciasLocales", routeName: "experienciasLocales"},
       ],
     };
   },

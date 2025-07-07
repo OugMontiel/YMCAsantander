@@ -7,8 +7,8 @@ export default {
   data() {
     return {
       proyectoLinks: [
-        {name: "voluntariado", to: "/social/voluntariado"},
-        {name: "publicaciones", to: "/social/publicaciones"},
+        {name: "voluntariado", routeName: "voluntariado"},
+        {name: "publicaciones", routeName: "publicaciones"},
       ],
     };
   },

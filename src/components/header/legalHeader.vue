@@ -7,10 +7,10 @@ export default {
   data() {
     return {
       proyectoLinks: [
-        {name: "Esal", to: "/legal/Esal"},
-        {name: "Políticas y Aviso Legal", to: "/legal/Privacidad"},
-        {name: "Términos y Condiciones", to: "/legal/terminosYCondiciones"},
-        {name: "Política de Cookies", to: "/legal/politicaDeCookies"},
+        {name: "Esal", routeName: "esal"},
+        {name: "Privacidad", routeName: "Privacidad"},
+        {name: "terminosYCondiciones", routeName: "terminosYCondiciones"},
+        {name: "politicaDeCookies", routeName: "politicaDeCookies"},
       ],
     };
   },

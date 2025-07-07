@@ -9,7 +9,7 @@ export default [
     descripcion:
       "Es un proyecto dirigido a jóvenes entre 14 y 28 años en situación de vulnerabilidad social. Busca contribuir a la construcción de Paz y la transformación del conflicto social en Colombia, generando oportunidades para el empoderamiento y la inclusión de los y las jóvenes.",
     img: pazaLaPaz,
-    to: "/proyectos/pazaLaPaz",
+    routeName: "pazaLaPaz",
   },
   {
     id: 2,
@@ -17,6 +17,6 @@ export default [
     descripcion:
       "El proyecto busca la promoción del bienestar comunitario, sostenibilidad ambiental y justicia social, a través del fortalecimiento de la acción voluntaria inspirada en los valores cristianos.",
     img: misionPazYCiudadania,
-    to: "/proyectos/misionPazYCiudadania",
+    routeName: "misionPazYCiudadania",
   },
 ];

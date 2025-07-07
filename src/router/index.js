@@ -54,6 +54,7 @@ const router = createRouter({
       path: "/experiencia",
       name: "experiencia",
       component: ExperienciaHeader,
+      redirect: {name: "experienciaInicio"},
       children: [
         {
           path: "",
@@ -76,6 +77,7 @@ const router = createRouter({
       path: "/proyectos",
       name: "proyectos",
       component: ProyectosHeader,
+      redirect: {name: "ProyectosInicio"},
       children: [
         {
           path: "",
@@ -98,6 +100,7 @@ const router = createRouter({
       path: "/aporta",
       name: "aporta",
       component: AporteHeader,
+      redirect: {name: "aportaInicio"},
       children: [
         {
           path: "",
@@ -125,6 +128,7 @@ const router = createRouter({
       path: "/social",
       name: "social",
       component: SocialHeader,
+      redirect: {name: "socialInicio"},
       children: [
         {
           path: "",
@@ -147,6 +151,7 @@ const router = createRouter({
       path: "/legal",
       name: "vistasLegales",
       component: LegalHeader,
+      redirect: {name: "esal"},
       children: [
         {
           path: "",
