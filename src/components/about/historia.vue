@@ -3,12 +3,13 @@
     <h1>HISTORIA DE LA YMCA</h1>
     <div class="timeLineMundial">
       <p>
-        <strong>YMCA</strong> es un movimiento mundial con <strong>173 años de historia</strong>. Su fundador
-        <strong>Georges Williams</strong> nació en Inglaterra en 1821. A los 20 años, dejó la granja en la que se crió y se mudó a Londres
-        donde encontró un trabajo en una fábrica de telas. Las largas jornadas de trabajo, que llegaban a alcanzar las 12 horas diarias, así
-        como carecer de un hogar y compartir un cuarto con otros empleados, le hacía sentir más nostalgia por estar lejos de su familia.
-        Formó junto con un grupo de amigos de los dormitorios la primera <strong>YMCA</strong>, en 1844.
+        <strong>YMCA</strong> es un movimiento mundial con <strong>{{ $aniosYMCA() }} años de historia</strong>. Su fundador
+        <strong>Georges Williams</strong> nació en Inglaterra en 1821. El movimiento fue fundado en Londres-Inglaterra, el
+        <strong> 6 de junio de 1844 </strong>por <strong> George Williams </strong> y un grupo de jóvenes cristianos. Sus contribuciones a
+        la humanidad han sido notables, desde la invención del baloncesto, voleibol, raquetbol, fútbol sala y los campamentos de verano con
+        fines formativos. Recibió el Premio Nobel de Paz en 1901 y 1946 por su ayuda a los refugiados durante la I y II guerra mundial.
       </p>
+
       <p>
         Ha sido reconocida por sus aportes en la formación de los y las jóvenes. Fue fundado en Londres-Inglaterra, el
         <strong>6 de junio de 1844</strong> por <strong>George Williams</strong> y un grupo de jóvenes cristianos. Sus contribuciones a la

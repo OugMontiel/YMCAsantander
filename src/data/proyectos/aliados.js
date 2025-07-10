@@ -1,12 +1,12 @@
 // src/data/aliadosData.js
 
-import logoUDI from "@/assets/img/proyectos/pazaLaPaz/logosAliados/udi.png";
-import logoUNAD from "@/assets/img/proyectos/pazaLaPaz/logosAliados/unad.png";
-import logoFe from "@/assets/img/proyectos/pazaLaPaz/logosAliados/feYAlegria.png";
-import logoUniminuto from "@/assets/img/proyectos/pazaLaPaz/logosAliados/corporaciónUniversitariaMinutoDeDios.png";
-import logoHoryzon from "@/assets/img/proyectos/pazaLaPaz/logosAliados/horyzon.png";
-import logoUis from "@/assets/img/proyectos/pazaLaPaz/logosAliados/universidadIndustrialDeSantander.png";
-import logoUts from "@/assets/img/proyectos/pazaLaPaz/logosAliados/uts.png";
+import logoUDI from "@/assets/img/proyectos/PazaLaPaz/logosAliados/udi.png";
+import logoUNAD from "@/assets/img/proyectos/PazaLaPaz/logosAliados/unad.png";
+import logoFe from "@/assets/img/proyectos/PazaLaPaz/logosAliados/feYAlegria.png";
+import logoUniminuto from "@/assets/img/proyectos/PazaLaPaz/logosAliados/corporaciónUniversitariaMinutoDeDios.png";
+import logoHoryzon from "@/assets/img/proyectos/PazaLaPaz/logosAliados/horyzon.png";
+import logoUis from "@/assets/img/proyectos/PazaLaPaz/logosAliados/universidadIndustrialDeSantander.png";
+import logoUts from "@/assets/img/proyectos/PazaLaPaz/logosAliados/uts.png";
 
 import logoUMB from "/LogoAzul.png"; // reemplázalo si hay un logo diferente
 import logoFundacionBolivar from "/LogoAzul.png"; // reemplázalo si hay un logo diferente

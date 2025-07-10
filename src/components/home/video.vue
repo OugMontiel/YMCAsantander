@@ -1,7 +1,6 @@
 <template>
   <section class="video">
     <h1>Video de presentación</h1>
-    <p>Este video presenta la misión y visión de la Fundación Paz Ciudadana, así como sus programas y proyectos.</p>
     <div class="videoContenido">
       <iframe src="https://www.youtube.com/embed/r3HPs-3oNYY" title="Video de presentación" frameborder="0" allowfullscreen></iframe>
     </div>
@@ -35,7 +34,7 @@
 
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 90%;
 
   border-radius: 12px;
   box-shadow: 0 10px 25px var(--color-fondo-shadow);

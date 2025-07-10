@@ -7,9 +7,9 @@ export default {
   data() {
     return {
       experienciaLinks: [
-        {name: "socio", to: "/aporta/socio"},
-        {name: "donar", to: "/aporta/donar"},
-        {name: "hazteVoluntario", to: "/aporta/hazteVoluntario"},
+        {name: "socio", routeName: "Socio"},
+        {name: "donar", routeName: "donar"},
+        {name: "hazteVoluntario", routeName: "hazteVoluntario"},
       ],
     };
   },

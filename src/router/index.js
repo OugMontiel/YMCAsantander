@@ -25,12 +25,41 @@ const router = createRouter({
       component: About,
     },
     {
-      path: "/Esal",
-      name: "vistasLegales",
-      component: LegalHeader,
+      path: "/proyectos",
+      name: "proyectos",
+      component: ProyectosHeader,
+      redirect: {name: "ProyectosInicio"},
       children: [
         {
           path: "",
+          name: "ProyectosInicio",
+          component: Proyectos,
+        },
+        {
+          path: "pazaLaPaz",
+          name: "pazaLaPaz",
+          component: PazaLaPaz,
+        },
+        {
+          path: "misionPazYCiudadania",
+          name: "misionPazYCiudadania",
+          component: MisionPazYCiudadania,
+        },
+      ],
+    },
+    {
+      path: "/legal",
+      name: "vistasLegales",
+      component: LegalHeader,
+      redirect: {name: "esal"},
+      children: [
+        {
+          path: "",
+          name: "no ay vista legal",
+          redirect: "/legal/Esal",
+        },
+        {
+          path: "Esal",
           name: "esal",
           component: Esal,
         },
@@ -43,6 +72,7 @@ const router = createRouter({
       name: "enConstruccion",
       component: EnConstruccion,
     },
+    {path: "/esal", redirect: "/legal/Esal"},
   ],
 });
 

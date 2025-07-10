@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@iconify-json/material-symbols-light": "^1.2.21",
+    "@iconify/vue": "^5.0.0",
     "@vitejs/plugin-vue": "^5.2.4",
     "prettier": "3.5.3",
     "vite": "^6.3.5",

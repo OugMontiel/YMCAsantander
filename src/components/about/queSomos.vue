@@ -17,12 +17,12 @@ export default {
     <div class="SomosContenido">
       <h2>¿QUIÉNES SOMOS?</h2>
       <p>
-        La ACJ YMCA es un movimiento mundial con 173 años de historia que ha sido reconocida por sus aportes en la formación de los y las
+        La YMCA es un movimiento mundial con {{ $aniosYMCA() }} años de historia, reconocida por sus aportes en la formación de los y las
         jóvenes.
       </p>
       <p>
         La creación del baloncesto, el voleibol, el raquetbol, los campamentos de verano, universidades e instituciones educativas y 2
-        premios nobel de paz han sido algunos de sus principales aportes a la humanidad.
+        premios nobel de paz han sido algunos de sus principales aportes a la humanidad
       </p>
     </div>
   </section>
@@ -34,6 +34,8 @@ export default {
   display: flex;
   justify-content: center;
   overflow: hidden;
+
+  max-height: 70vh;
 }
 
 .SomosContenido {
@@ -51,11 +53,16 @@ export default {
   max-width: 65%;
   margin: 0.5em;
 }
+
 .SomosContenido h2,
 .SomosContenido p {
   background-color: var(--color-fondo-texto);
   padding: 1em;
   border-radius: 1em;
+}
+
+.aboutImg {
+  object-fit: cover; /* o 'contain' dependiendo de cómo quieras recortar */
 }
 
 /* xxl - Pantallas grandes */
