@@ -1,4 +1,6 @@
 import {createRouter, createWebHistory} from "vue-router";
+// vistas de en construccion
+import EnConstruccion from "../components/util/EnConstruccion.vue"; // nuevo componente genérico
 
 // vistas principales
 import Home from "../views/home.vue";
@@ -53,23 +55,23 @@ const router = createRouter({
     {
       path: "/experiencia",
       name: "experiencia",
-      component: ExperienciaHeader,
+      component: EnConstruccion,
       redirect: {name: "experienciaInicio"},
       children: [
         {
           path: "",
           name: "experienciaInicio",
-          component: Experiencia,
+          component: EnConstruccion,
         },
         {
           path: "areaInternacional",
           name: "areaInternacional",
-          component: AreaInternacional,
+          component: EnConstruccion,
         },
         {
           path: "experienciasLocales",
           name: "experienciasLocales",
-          component: experienciasLocales,
+          component: EnConstruccion,
         },
       ],
     },
@@ -87,63 +89,63 @@ const router = createRouter({
         {
           path: "pazaLaPaz",
           name: "pazaLaPaz",
-          component: PazaLaPaz,
+          component: EnConstruccion,
         },
         {
           path: "misionPazYCiudadania",
           name: "misionPazYCiudadania",
-          component: MisionPazYCiudadania,
+          component: EnConstruccion,
         },
       ],
     },
     {
       path: "/aporta",
       name: "aporta",
-      component: AporteHeader,
+      component: EnConstruccion,
       redirect: {name: "aportaInicio"},
       children: [
         {
           path: "",
           name: "aportaInicio",
-          component: Socio,
+          component: EnConstruccion,
         },
         {
           path: "Socio",
           name: "Socio",
-          component: Socio,
+          component: EnConstruccion,
         },
         {
           path: "donar",
           name: "donar",
-          component: Donar,
+          component: EnConstruccion,
         },
         {
           path: "hazteVoluntario",
           name: "hazteVoluntario",
-          component: HazteVoluntario,
+          component: EnConstruccion,
         },
       ],
     },
     {
       path: "/social",
       name: "social",
-      component: SocialHeader,
+      component: EnConstruccion,
       redirect: {name: "socialInicio"},
       children: [
         {
           path: "",
           name: "socialInicio",
-          component: Social,
+          component: EnConstruccion,
         },
         {
           path: "voluntariado",
           name: "voluntariado",
-          component: Voluntariado,
+          component: EnConstruccion,
         },
         {
           path: "publicaciones",
           name: "publicaciones",
-          component: Publicaciones,
+          component: EnConstruccion,
         },
       ],
     },
@@ -166,21 +168,32 @@ const router = createRouter({
         {
           path: "Privacidad",
           name: "Privacidad",
-          component: Privacidad,
+          component: EnConstruccion,
         },
         {
           path: "terminosYCondiciones",
           name: "terminosYCondiciones",
-          component: TerminosYCondiciones,
+          component: EnConstruccion,
         },
         {
           path: "politicaDeCookies",
           name: "politicaDeCookies",
-          component: PoliticaDeCookies,
+          component: EnConstruccion,
         },
       ],
     },
-    {path: "/esal", redirect: "/legal/Esal"},
+    {
+      path: "/esal", 
+      redirect: "/legal/Esal"
+    },
+
+
+    // 🚧 CUALQUIER OTRA RUTA que existía antes, ahora muestra "En Construcción"
+    {
+      path: "/:catchAll(.*)",
+      name: "enConstruccion",
+      component: EnConstruccion,
+    },
   ],
 });
 

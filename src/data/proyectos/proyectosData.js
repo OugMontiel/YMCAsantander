@@ -1,5 +1,5 @@
 // src/data/proyectosData.js
-import pazaLaPaz from "@/assets/img/proyectos/PazaLaPaz/pazaLaPaz.jpg";
+import pazaLaPaz from "@/assets/img/proyectos/pazaLaPaz/pazaLaPaz.jpg";
 import misionPazYCiudadania from "@/assets/img/proyectos/misionPazYCiudadania/misionPazYCiudadania.jpg"; // asegúrate que esta imagen exista
 
 export default [
