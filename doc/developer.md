@@ -19,12 +19,13 @@ Aquí tienes una versión mejor estructurada y más clara de tu documentación p
 ### Breakpoints Estándar:
 | Clase          | Mínimo (px) | Dispositivo Típico               | Enfoque de Desarrollo |
 |----------------|-------------|-----------------------------------|-----------------------|
-| `xs`          | < 576       | Móviles pequeños                 | Mobile-first          |
-| `sm`          | ≥ 576       | Móviles grandes/medianos         | Optimización básica   |
-| `md`          | ≥ 768       | Tablets                          | Diseño intermedio     |
-| `lg`          | ≥ 992       | Laptops                          | Versión estándar      |
-| `xl`          | ≥ 1200      | Desktops                         | Experiencia completa  |
-| `xxl`         | ≥ 1400      | Monitores ultra-wide/4K          | seccion de desarrollo |
+| `xs`          | < 480       | Móviles pequeños                 | Mobile-first          |
+| `sm`          | <= 576       | Móviles grandes/medianos         | Optimización básica   |
+| `md`          | <= 768       | Tablets                          | Diseño intermedio     |
+| `lg`          | <= 992       | Laptops                          | Versión estándar      |
+| `xl`          | <= 1200      | Desktops                         | Experiencia completa  |
+|               | 1201 a 1399  |                                  | Desarrollo inicial    |
+| `xxl`         | >= 1400      | Monitores ultra-wide/4K          | Extra grande          |
 
 ### Normas de Implementación:
 - **Desarrollo inicial en XXL**: Todos los componentes deben diseñarse primero para resoluciones ≥1400px.
