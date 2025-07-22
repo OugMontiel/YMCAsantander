@@ -1,5 +1,5 @@
 <script>
-import logoPLP from "@/assets/img/proyectos/pazaLaPaz/LogoPazaLaPazAzul.png";
+import logoPLP from "@/assets/img/proyectos/PazaLaPaz/LogoPazaLaPazAzul.png";
 
 export default {
   name: "Titulo paza la paz",

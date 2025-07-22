@@ -18,7 +18,7 @@
       <div class="estadisticaItem">
         <div class="itemIcono">&#128101;</div>
         <h4 class="itemSubTitulo">Beneficiarios</h4>
-        <h2 class="itemValor">+150</h2>
+        <h2 class="itemValor">+300</h2>
       </div>
     </div>
   </section>

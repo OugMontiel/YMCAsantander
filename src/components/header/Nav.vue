@@ -75,4 +75,29 @@ export default {
 /* xs - Teléfonos pequeños */
 @media (max-width: 480px) {
 }
+
+/* Cambios hechos por Sara: Estilos específicos para móviles (teléfonos pequeños) */
+@media (max-width: 575px) {
+  .navlist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--color-hover-primario); /* Asegura contraste */
+    gap: 0.75rem; /* Espaciado uniforme */
+    padding: 1rem;
+  }
+
+  .navlist a,
+  .navlink-hover-visible {
+    color: white; /* o var(--color-blanco) si tienes esa variable */
+    font-weight: var(--peso-light);
+    text-decoration: none;
+  }
+
+  .navlist a:hover {
+    color: var(--color-secundario); /* Opcional: hover contrastado */
+  }
+}
 </style>

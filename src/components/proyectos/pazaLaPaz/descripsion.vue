@@ -1,5 +1,5 @@
 <script>
-import imgProyecto from "@/assets/img/proyectos/pazaLaPaz/pazaLaPaz.jpg";
+import imgProyecto from "@/assets/img/proyectos/PazaLaPaz/pazaLaPaz.jpg";
 import beneficios from "@/components/proyectos/pazaLaPaz/beneficios.vue";
 
 export default {

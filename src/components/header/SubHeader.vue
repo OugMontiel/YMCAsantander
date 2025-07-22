@@ -28,6 +28,29 @@ export default {
   background-color: var(--color-fondo-secundario);
 }
 
+/* Cambios hechos por Sara */
+.subheader {
+  width: 100%;
+  padding: 2.8rem 0;
+  background-color: var(--color-fondo-secundario);
+
+  /* Scroll horizontal si hay desbordamiento */
+  overflow-x: auto;
+  white-space: nowrap;
+
+  /* Estilos base consistentes */
+  font-weight: var(--peso-light);
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 575px) {
+  .subheader {
+    font-size: 0.875rem;
+    padding: 1rem 0;
+  }
+}
+
 .subNav {
   display: flex;
   justify-content: space-evenly;

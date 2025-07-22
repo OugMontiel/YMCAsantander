@@ -4,7 +4,7 @@ import FondoDinamico from "@/components/fondos/fondoDinamico.vue";
 import Desarrollador from "@/components/util/desarrollador.vue";
 
 export default {
-  name: "footer",
+  name: "Appfooter",
   components: {
     FondoDinamico,
     Desarrollador,
@@ -48,7 +48,7 @@ export default {
 </script>
 
 <template>
-  <footer>
+  <div class="footer">
     <FondoDinamico />
     <div class="footerInfo">
       <div class="footerLogo">
@@ -71,13 +71,16 @@ export default {
     </div>
 
     <Desarrollador />
-  </footer>
+  </div>
+
+  <AppFooter />
 </template>
+
 
 <style>
 /* Estilos generales iguales a los que ya tienes */
 
-footer {
+.footer {
   position: relative;
   display: flex;
   flex-direction: column;
