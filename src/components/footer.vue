@@ -48,7 +48,7 @@ export default {
 </script>
 
 <template>
-  <div class="footer">
+  <div class="footer"> <!-- por que Usar un div ?? .. Cuando este es el AppFooter -->
     <FondoDinamico />
     <div class="footerInfo">
       <div class="footerLogo">
@@ -73,7 +73,7 @@ export default {
     <Desarrollador />
   </div>
 
-  <AppFooter />
+  <AppFooter /> <!-- ¿Que quiere decir esto? Esto es una referencia Circular ? o es una llamada a un componente -->
 </template>
 
 

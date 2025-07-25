@@ -69,7 +69,7 @@ export default {
 }
 
 /* sm - Teléfonos estándar */
-@media (max-width: 576px) {
+@media (max-width: 576px) { /* aquí */
 }
 
 /* xs - Teléfonos pequeños */
@@ -77,7 +77,7 @@ export default {
 }
 
 /* Cambios hechos por Sara: Estilos específicos para móviles (teléfonos pequeños) */
-@media (max-width: 575px) {
+@media (max-width: 575px) {  /* usa los elemntos ya definidos ... no de debes redefinir ... Borrar esto ya que aqui no hace nada este codigo */
   .navlist {
     display: flex;
     flex-direction: column;
