@@ -1,45 +1,42 @@
-Aquí tienes una versión mejor estructurada y más clara de tu documentación para desarrolladores:
 # Documentación para Desarrolladores
 
 ## Flujo de Trabajo con Git Flow
 
-### Reglas Básicas:
-1. **Se utilizará Git Flow** como metodología estándar para el control de versiones.
-2. **Protección de ramas**:
-   - Las ramas `main` (producción) y `develop` (desarrollo) están protegidas.
-   - Todo merge requiere **pull request** y **aprobación** del responsable técnico.
-3. **Proceso estándar**:
-   ```bash
-   git flow feature start NOMBRE-DE-LA-FEATURE
-   git flow feature finish NOMBRE-DE-LA-FEATURE
-   ```
+Seguimos el estándar Git Flow como se describe en:  
+[**Git Flow Workflow - Atlassian**](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
+
+### Estructura de Ramas Principales
+- `Producion` ➔ **Producción** (solo releases estables)
+- `main` ➔ **Desarrollo** (integración de features)
+
+### Reglas Clave
+1. **Nunca hacer commit directo** en `main` o `Producion`
+2. **Squash merge** recomendado para PRs (opcional)
+4. Revisión de código antes de hacer el pr
 
 ## Guía de Diseño Responsive
 
-### Breakpoints Estándar:
-| Clase          | Mínimo (px) | Dispositivo Típico               | Enfoque de Desarrollo |
-|----------------|-------------|-----------------------------------|-----------------------|
-| `xs`          | < 480       | Móviles pequeños                 | Mobile-first          |
-| `sm`          | <= 576       | Móviles grandes/medianos         | Optimización básica   |
-| `md`          | <= 768       | Tablets                          | Diseño intermedio     |
-| `lg`          | <= 992       | Laptops                          | Versión estándar      |
-| `xl`          | <= 1200      | Desktops                         | Experiencia completa  |
-|               | 1201 a 1399  |                                  | Desarrollo inicial    |
-| `xxl`         | >= 1400      | Monitores ultra-wide/4K          | Extra grande          |
+enfoque principal es **desktop-first (para pantallas grandes)** y luego escalas hacia abajo.
 
-### Normas de Implementación:
-- **Desarrollo inicial en XXL**: Todos los componentes deben diseñarse primero para resoluciones ≥1400px.
-- **Mobile-first**: Aplicar estilos base para móviles y usar media-queries progresivas (`min-width`).
-- **Pruebas obligatorias**: Verificar en al todos los dispositivos.
+#### 📌 **Puntos clave:**  
+1. **Base en escritorio grande (≥1400px)**: Estilos iniciales sin media query.  
+2. **Escalas hacia abajo** con `max-width` para adaptar a pantallas más pequeñas.  
+3. **Orden descendente**: Desde el viewport más grande al más pequeño.  
+4. **Pruebas obligatorias**: Verificar en al todos los dispositivos o viewport.
 
-### Ejemplo en Uso
+### platilla de Uso
 
-```js
-/* xxl - Pantallas grandes */
-@media (min-width: 1201px) {
+```css
+/* -------------------------------------------- */
+/* BASE: Escritorio XXL (≥1400px) - Sin media query */
+/* -------------------------------------------- */
+
+/* xxl - Pantallas extra grandes  */
+@media (max-width: 1400px) { 
+  /* Ajustes para laptops grandes */
 }
 
-/* xl - Laptops / desktops medianos */
+/* xxl - Pantallas grandes */
 @media (max-width: 1200px) {
 }
 
