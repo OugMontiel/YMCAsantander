@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node versionar.js && node subir.js",
     "preview": "vite preview",
     "format": "prettier --write src/",
     "deploy": "vite build && gh-pages -d dist"
