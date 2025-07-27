@@ -12,7 +12,7 @@ export default defineConfig({
     ui(),
     vueDevTools(),
   ],
-  base: '/YMCAsantander/',
+  base: './',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
