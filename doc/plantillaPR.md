@@ -10,7 +10,7 @@
 - [ ] 📚 Docs : []  
 
 ## 🔍 Revisar
-Listar lo que se debe revizar en el código.
+Listar lo que se debe revisar en el código.
 1.  
 
 ## 🌟 Áreas afectadas 
