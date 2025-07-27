@@ -4,53 +4,59 @@ import FondoDinamico from "@/components/fondos/fondoDinamico.vue";
 import Desarrollador from "@/components/util/desarrollador.vue";
 
 export default {
-  name: "Appfooter",
+  name: "Footer",
   components: {
     FondoDinamico,
     Desarrollador,
   },
+
   data() {
-    return {
-      Logo,
-      secciones: [
-        {
-          titulo: "YMCA Santander",
-          links: [
-            {name: "Inicio", routeName: "home"},
-            {name: "¿Quiénes Somos?", routeName: "about"},
-            {name: "Programas", routeName: "proyectos"},
-            {name: "Experiencia", routeName: "experiencia"},
-            {name: "Aporta", routeName: "aporta"},
-            {name: "Social", routeName: "social"},
-          ],
-        },
-        {
-          titulo: "Legal",
-          links: [
-            {name: "Aviso de privacidad", routeName: "Privacidad"},
-            {name: "Términos y condiciones", routeName: "terminosYCondiciones"},
-            {name: "Política de cookies", routeName: "politicaDeCookies"},
-            {name: "ESAL", routeName: "esal"},
-          ],
-        },
-        {
-          titulo: "Conócenos",
-          links: [
-            {name: "Hazte socio", routeName: "Socio"},
-            {name: "Donar ahora", routeName: "donar"},
-            {name: "Hazte voluntario", routeName: "hazteVoluntario"},
-          ],
-        },
+  const secciones = [
+    {
+      titulo: "YMCA Santander",
+      links: [
+        { name: "Inicio", routeName: "home" },
+        { name: "¿Quiénes Somos?", routeName: "about" },
+        { name: "Programas", routeName: "proyectos" },
+        { name: "Experiencia", routeName: "experiencia" },
+        { name: "Aporta", routeName: "aporta" },
+        { name: "Social", routeName: "social" },
       ],
-    };
-  },
+    },
+    {
+      titulo: "Legal",
+      links: [
+        { name: "Aviso de privacidad", routeName: "privacidad" },
+        { name: "Términos y condiciones", routeName: "terminosYCondiciones" },
+        { name: "Política de cookies", routeName: "politicaDeCookies" },
+        { name: "ESAL", routeName: "esal" },
+      ],
+    },
+    {
+      titulo: "Conócenos",
+      links: [
+        { name: "Hazte socio", routeName: "Socio" },
+        { name: "Donar ahora", routeName: "donar" },
+        { name: "Hazte voluntario", routeName: "hazteVoluntario" },
+      ],
+    },
+  ];
+
+  return {
+    Logo,
+    secciones,
+    legalLinks: secciones.find((s) => s.titulo === "Legal").links,
+  };
+}
 };
 </script>
 
 <template>
   <div class="footer">
     <FondoDinamico />
+
     <div class="footerInfo">
+      <!-- LOGO Y TEXTO - PRIMERA COLUMNA -->
       <div class="footerLogo">
         <router-link :to="{name: 'home'}" class="logoLink">
           <img :src="Logo" alt="YMCA - Logo principal" class="logoDesktop" loading="eager" />
@@ -63,7 +69,6 @@ export default {
         <h3>{{ seccion.titulo }}</h3>
         <ul>
           <li v-for="(link, j) in seccion.links" :key="j">
-            <!-- Resolver dinámicamente el enlace usando el nombre de la ruta -->
             <router-link :to="{name: link.routeName}" class="navLink">{{ link.name }}</router-link>
           </li>
         </ul>
@@ -72,9 +77,8 @@ export default {
 
     <Desarrollador />
   </div>
-
-  <AppFooter />
 </template>
+
 
 
 <style>
@@ -88,41 +92,50 @@ export default {
 }
 
 .footerInfo {
-  display: flex;
-  justify-content: space-around;
-  padding: 2.5rem 0 1rem 0;
-  flex: 1;
-}
-.logoLink {
-  display: flex;
-  justify-content: center;
-}
-.footerLogo {
-  padding: 2em 0;
-}
-.footerLogo p {
-  text-align: center;
-  padding-left: 0.8rem;
-  color: var(--color-texto-principal);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 2.5rem 1rem;
+  justify-content: flex-start;
 }
 
-.logoDesktop {
-  display: block;
-  width: 20rem;
+.footerLogo,
+.navBar {
+  flex: 1 1 200px;
+}
+
+.footerLogo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footerLogo p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--color-texto-principal);
 }
 
 .navBar {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  list-style: none;
+  align-items: center;
+  text-align: center;
 }
 
 .navBar h3 {
-  padding: 0 1rem 0 0;
+  padding: 0;
   margin-bottom: 1rem;
   border-bottom: 1px solid var(--color-borde);
+  text-align: center;
 }
 
 .navLink {
@@ -143,6 +156,16 @@ export default {
   color: var(--color-fondo);
   outline: none;
   text-decoration: underline;
+}
+
+.footerLegal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 2rem 1rem;
+  border-top: 1px solid var(--color-borde);
+  background-color: var(--color-fondo-secundario);
 }
 
 /* xxl - Pantallas grandes */
@@ -167,14 +190,13 @@ export default {
   .footerLogo {
     max-width: none;
     padding-top: 0;
-
-    grid-column: 1 / 4;
-    grid-row: 1 / 2;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+  }
+
+  .logoLink {
+    justify-content: center;
   }
 
   .navBar {

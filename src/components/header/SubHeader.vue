@@ -1,7 +1,7 @@
 <!-- SubHeader.vue -->
 <script>
 export default {
-  name: "SubHeader",
+  name: "Subheader",
   props: {
     links: {
       type: Array,
@@ -12,7 +12,7 @@ export default {
 </script>
 
 <template>
-  <header class="subHeader">
+  <header class="subheader">
     <nav class="subNav">
       <router-link v-for="link in links" :key="link.name" :to="{name: link.routeName}" class="subNavLink" active-class="active">
         {{ link.name }}
@@ -22,11 +22,6 @@ export default {
 </template>
 
 <style scoped>
-.subHeader {
-  width: 100%;
-  padding: 0.2em 0;
-  background-color: var(--color-fondo-secundario);
-}
 
 /* Cambios hechos por Sara */
 .subheader {

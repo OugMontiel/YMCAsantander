@@ -3,6 +3,9 @@ import FondoDinamico from "@/components/fondos/fondoDinamico.vue";
 import Logo from "@/components/header/logo.vue";
 import Navegacion from "@/components/header/Nav.vue";
 import MenuLateral from "@/components/header/MenuLateral.vue";
+import LoginButton from "@/components/auth/LoginButton.vue";
+import SubHeader from "@/components/header/SubHeader.vue";
+
 
 export default {
   name: "Header",
@@ -11,6 +14,8 @@ export default {
     Logo,
     Navegacion,
     MenuLateral,
+    LoginButton,
+    SubHeader,
   },
   data() {
     return {
@@ -23,6 +28,12 @@ export default {
         {name: "Aporta", routeName: "aporta"},
         {name: "Social", routeName: "social"},
       ],
+      subNavLinks: [
+      { name: "Esal", routeName: "esal" },
+      { name: "Privacidad", routeName: "privacidad" },
+      { name: "Términos y Condiciones", routeName: "terminosYCondiciones" },
+      { name: "Política de Cookies", routeName: "politicaDeCookies" },
+    ]
     };
   },
   methods: {
@@ -46,22 +57,33 @@ export default {
 
 <template>
   <header class="header">
-    <!-- fondo dinamico -->
+    <!-- Fondo dinámico -->
     <FondoDinamico />
 
-    <!-- logo -->
-    <logo />
+    <!-- Contenedor principal superior -->
+    <div class="header-top nav-flex">
+      <Logo />
+      <Navegacion :links="navLinks" />
+      <LoginButton class="login-button" />
 
-    <!-- Navegación horizontal para pantallas grandes -->
-    <Navegacion class="navDesktop" :links="navLinks" />
+      <!-- Menú hamburguesa para móvil -->
+      <button
+        class="menuButton"
+        @click.stop="toggleMenu"
+        :aria-expanded="isMenuOpen.toString()"
+        aria-label="Menú de navegación"
+      >
+        <UIcon name="material-symbols-light:menu-rounded" class="menu-icon" width="2em" />
+      </button>
+    </div>
 
-    <!-- Menú lateral para pantallas pequeñas -->
-    <MenuLateral class="navMobil" :links="navLinks" v-show="isMenuOpen" @close-menu="isMenuOpen = false" />
-
-    <!-- Botón solo visible en pantallas pequeñas -->
-    <button class="menuButton" @click.stop="toggleMenu" :aria-expanded="isMenuOpen.toString()" aria-label="Menú de navegación">
-      <UIcon name="material-symbols-light:menu-rounded" class="menu-icon" width="2em" />
-    </button>
+    <!-- Menú lateral en móvil -->
+    <MenuLateral
+      class="navMobil"
+      :links="navLinks"
+      v-show="isMenuOpen"
+      @close-menu="isMenuOpen = false"
+    />
   </header>
 </template>
 
@@ -81,9 +103,34 @@ export default {
   display: block;
 }
 
+/* nuevo */
+.nav-flex {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+} 
+
 .navMobil,
 .menuButton {
   display: none;
+}
+
+.subheader-inline {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-left: auto; /* los empuja a la derecha */
+  font-size: 0.85rem;
+  color: white;
+}
+
+.subheader-inline a {
+  color: white;
+  text-decoration: none;
+}
+
+.subheader-inline a:hover {
+  text-decoration: underline;
 }
 
 /* xxl - Pantallas grandes */
@@ -107,6 +154,24 @@ export default {
   .navMobil {
     display: block;
   }
+
+  .login-button {
+  margin-left: 1rem;
+  background: transparent;
+  color: var(--color-texto-principal-blanco); /* Nuevo */
+  border: 1px solid white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Pendiente verificar que el botón no se esconda en móviles - nuevo */
+@media (max-width: 768px) {
+  .login-button {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
 
   .header {
     justify-content: space-around;
