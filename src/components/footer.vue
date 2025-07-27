@@ -55,7 +55,7 @@ export default {
         <router-link :to="{name: 'home'}" class="logoLink">
           <img :src="Logo" alt="YMCA - Logo principal" class="logoDesktop" loading="eager" />
         </router-link>
-        <p>YMCA Inspirando Oportunidades.</p>
+        <p>Inspirando Oportunidades.</p>
       </div>
 
       <!-- Secciones de navegación dinámicas -->
@@ -100,7 +100,7 @@ footer {
 .footerLogo p {
   text-align: center;
   padding-left: 0.8rem;
-  color: var(--color-texto-principal);
+  color: var(--color-texto-principal-blanco);
 }
 
 .logoDesktop {
