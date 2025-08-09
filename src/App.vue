@@ -2,6 +2,7 @@
 import {RouterView} from "vue-router";
 import Header from "@/components/header.vue";
 import Footer from "@/components/footer.vue";
+import WhatsappButton from "@/components/util/WhatsappButton.vue";
 </script>
 
 <template>
@@ -12,6 +13,7 @@ import Footer from "@/components/footer.vue";
     </main>
     <Footer />
   </div>
+  <WhatsappButton /> <!-- Botón flotante -->
 </template>
 
 <style scoped>
