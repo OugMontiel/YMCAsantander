@@ -36,7 +36,7 @@
   flex-direction: column;
   align-items: center;
   align-content: center;
-  padding: 2rem;
+  padding: 2rem 6rem;
   gap: 1.5rem;
 
   text-align: center;
@@ -58,6 +58,9 @@
 }
 /* md - Tablets */
 @media (max-width: 768px) {
+.privacidad {
+  padding: 2rem 4rem;
+}
 }
 
 /* sm - Teléfonos estándar */
@@ -66,5 +69,8 @@
 
 /* xs - Teléfonos pequeños */
 @media (max-width: 480px) {
+  .privacidad {
+    padding: 2rem;
+  }
 }
 </style>

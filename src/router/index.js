@@ -168,7 +168,7 @@ const router = createRouter({
         {
           path: "Privacidad",
           name: "Privacidad",
-          component: EnConstruccion,
+          component: Privacidad,
         },
         {
           path: "terminosYCondiciones",
