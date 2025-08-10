@@ -3,6 +3,6 @@ export default defineNuxtConfig({
     '@nuxt/ui'
   ],
   ui: {
-    icons: 'all' // Permite usar cualquier colección instalada de Iconify
+    icons: true
   }
 })
