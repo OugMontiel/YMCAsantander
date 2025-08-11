@@ -92,7 +92,7 @@ export default {
 }
 
 .navLink {
-  color: var(--color-texto-principal);
+  color: var(--color-texto-principal-blanco);
   text-decoration: none;
   font-weight: 500;
   padding: 0.5rem 1rem;
