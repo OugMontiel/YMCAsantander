@@ -22,16 +22,20 @@ export default {
 </template>
 
 <style scoped>
-.subHeader {
+.subHeader { 
   width: 100%;
   padding: 0.2em 0;
   background-color: var(--color-fondo-secundario);
+
+  /* Scroll horizontal si hay desbordamiento */
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
 .subNav {
   display: flex;
   justify-content: space-evenly;
-
+  
   text-align: center;
 }
 
@@ -41,8 +45,8 @@ export default {
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   transition:
-    color 0.2s ease,
-    background-color 0.2s ease;
+  color 0.2s ease,
+  background-color 0.2s ease;
 }
 
 .subNavLink:hover,
@@ -55,5 +59,12 @@ export default {
 .active {
   background-color: var(--color-hover-secundario);
   color: var(--color-texto-principal-blanco);
+}
+/* Responsive */
+@media (max-width: 575px) { 
+  .subHeader { 
+    font-size: 0.875rem;
+    padding: 1rem 0;
+  }
 }
 </style>
