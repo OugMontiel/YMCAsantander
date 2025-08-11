@@ -48,7 +48,7 @@ export default {
 </script>
 
 <template>
-  <div class="footer"> <!-- por que Usar un div ?? .. Cuando este es el AppFooter -->
+  <footer> 
     <FondoDinamico />
     <div class="footerInfo">
       <div class="footerLogo">
@@ -68,19 +68,16 @@ export default {
           </li>
         </ul>
       </nav>
-    </div>
+      </div>
 
-    <Desarrollador />
-  </div>
-
-  <AppFooter /> <!-- ¿Que quiere decir esto? Esto es una referencia Circular ? o es una llamada a un componente -->
+      <Desarrollador />
+    </footer>
 </template>
-
 
 <style>
 /* Estilos generales iguales a los que ya tienes */
 
-.footer {
+footer {
   position: relative;
   display: flex;
   flex-direction: column;
