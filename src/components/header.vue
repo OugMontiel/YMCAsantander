@@ -98,7 +98,7 @@ export default {
 @media (max-width: 992px) {
 }
 /* md - Tablets */
-@media (max-width: 768px) { /* Sara El archvo que afecto .. no es visible depues de esta medida .. src/components/header/Nav.vue ... No es el archivo correcto */
+@media (max-width: 768px) {
   .navDesktop {
     display: none;
   }
