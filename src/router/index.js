@@ -129,7 +129,7 @@ const router = createRouter({
     {
       path: "/social",
       name: "social",
-      component: Social,
+      component: EnConstruccion,
       redirect: {name: "socialInicio"},
       children: [
         {
