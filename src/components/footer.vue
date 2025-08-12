@@ -163,7 +163,7 @@ footer {
 
   .footerLogo {
     max-width: none;
-    padding-top: 0;
+    padding-top: 1.5em;
 
     grid-column: 1 / 4;
     grid-row: 1 / 2;
