@@ -1,1 +1,1 @@
-<template>hola desde social.vue</template>
+<template>hola Te saluda montiel desde social.vue</template>

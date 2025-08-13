@@ -4,7 +4,7 @@ import FondoDinamico from "@/components/fondos/fondoDinamico.vue";
 import Desarrollador from "@/components/util/desarrollador.vue";
 
 export default {
-  name: "footer",
+  name: "Appfooter",
   components: {
     FondoDinamico,
     Desarrollador,
@@ -48,14 +48,14 @@ export default {
 </script>
 
 <template>
-  <footer>
+  <footer> 
     <FondoDinamico />
     <div class="footerInfo">
       <div class="footerLogo">
         <router-link :to="{name: 'home'}" class="logoLink">
           <img :src="Logo" alt="YMCA - Logo principal" class="logoDesktop" loading="eager" />
         </router-link>
-        <p>YMCA Inspirando Oportunidades.</p>
+        <p>Inspirando Oportunidades.</p>
       </div>
 
       <!-- Secciones de navegación dinámicas -->
@@ -68,10 +68,10 @@ export default {
           </li>
         </ul>
       </nav>
-    </div>
+      </div>
 
-    <Desarrollador />
-  </footer>
+      <Desarrollador />
+    </footer>
 </template>
 
 <style>
@@ -100,7 +100,7 @@ footer {
 .footerLogo p {
   text-align: center;
   padding-left: 0.8rem;
-  color: var(--color-texto-principal);
+  color: var(--color-texto-principal-blanco);
 }
 
 .logoDesktop {
@@ -163,7 +163,7 @@ footer {
 
   .footerLogo {
     max-width: none;
-    padding-top: 0;
+    padding-top: 1.5em;
 
     grid-column: 1 / 4;
     grid-row: 1 / 2;

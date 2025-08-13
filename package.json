@@ -1,24 +1,26 @@
 {
   "name": "ymcasantander",
-  "version": "0.0.0",
+  "version": "1.4.0",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node versionar.js && node subir.js",
-    "preview": "vite preview",
-    "format": "prettier --write src/"
+    "build": "vite build && cp dist/index.html dist/404.html",
+    "lint:format": "prettier --write src/",
+    "deploy:preview": "npm run build && gh-pages -d dist",
+    "deploy:production": "npm run build && node subir.js"
   },
   "dependencies": {
     "@nuxt/ui": "^3.1.2",
-    "@nuxt/ui-pro": "^3.1.2",
     "vue": "^3.5.14",
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
+    "@iconify-json/logos": "^1.2.5",
     "@iconify-json/material-symbols-light": "^1.2.21",
     "@iconify/vue": "^5.0.0",
     "@vitejs/plugin-vue": "^5.2.4",
+    "gh-pages": "^6.3.0",
     "prettier": "3.5.3",
     "vite": "^6.3.5",
     "vite-plugin-vue-devtools": "^7.7.6"

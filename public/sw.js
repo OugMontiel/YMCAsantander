@@ -1,4 +1,4 @@
-// Nuevo Service Worker para deshabilitar cache
+// Service Worker para deshabilitar cache
 
 self.addEventListener('install', event => {
     // No se cachea nada

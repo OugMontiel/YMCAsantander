@@ -52,7 +52,7 @@ export default {
   right: 0;
   width: 100%;
   height: 100%;
-  z-index: 100;
+  z-index: 110;
 
   background-color: var(--overlay-negro);
 }
@@ -92,7 +92,7 @@ export default {
 }
 
 .navLink {
-  color: var(--color-texto-principal);
+  color: var(--color-texto-principal-blanco);
   text-decoration: none;
   font-weight: 500;
   padding: 0.5rem 1rem;
