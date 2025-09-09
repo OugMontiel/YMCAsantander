@@ -1,20 +1,20 @@
 // src/data/aliadosData.js
 
-import logoUDI from "@/assets/img/proyectos/pazaLaPaz/logosAliados/udi.png";
-import logoUNAD from "@/assets/img/proyectos/pazaLaPaz/logosAliados/unad.png";
-import logoFe from "@/assets/img/proyectos/pazaLaPaz/logosAliados/feYAlegria.png";
-import logoUniminuto from "@/assets/img/proyectos/pazaLaPaz/logosAliados/corporaciónUniversitariaMinutoDeDios.png";
-import logoHoryzon from "@/assets/img/proyectos/pazaLaPaz/logosAliados/horyzon.png";
-import logoUis from "@/assets/img/proyectos/pazaLaPaz/logosAliados/universidadIndustrialDeSantander.png";
-import logoUts from "@/assets/img/proyectos/pazaLaPaz/logosAliados/uts.png";
+import logoUDI from "@/assets/img/proyectos/pazaLaPaz/logosAliados/udi.webp";
+import logoUNAD from "@/assets/img/proyectos/pazaLaPaz/logosAliados/unad.webp";
+import logoFe from "@/assets/img/proyectos/pazaLaPaz/logosAliados/feYAlegria.webp";
+import logoUniminuto from "@/assets/img/proyectos/pazaLaPaz/logosAliados/corporaciónUniversitariaMinutoDeDios.webp";
+import logoHoryzon from "@/assets/img/proyectos/pazaLaPaz/logosAliados/horyzon.webp";
+import logoUis from "@/assets/img/proyectos/pazaLaPaz/logosAliados/universidadIndustrialDeSantander.webp";
+import logoUts from "@/assets/img/proyectos/pazaLaPaz/logosAliados/uts.webp";
 
-import logoUMB from "/LogoAzul.png"; // reemplázalo si hay un logo diferente
-import logoFundacionBolivar from "/LogoAzul.png"; // reemplázalo si hay un logo diferente
-import logoAmex from "/LogoAzul.png"; // reemplázalo si hay un logo diferente
+import logoUMB from "/LogoAzul.webp"; // reemplázalo si hay un logo diferente
+import logoFundacionBolivar from "/LogoAzul.webp"; // reemplázalo si hay un logo diferente
+import logoAmex from "/LogoAzul.webp"; // reemplázalo si hay un logo diferente
 
-import logoColegioAngulo from "/LogoAzul.png"; // reemplázalo si hay un logo diferente
-import logoMisecGifmmSantenader from "/LogoAzul.png"; // reemplázalo si hay un logo diferente
-import logoWorldVision from "/LogoAzul.png"; // reemplázalo si hay un logo diferente
+import logoColegioAngulo from "/LogoAzul.webp"; // reemplázalo si hay un logo diferente
+import logoMisecGifmmSantenader from "/LogoAzul.webp"; // reemplázalo si hay un logo diferente
+import logoWorldVision from "/LogoAzul.webp"; // reemplázalo si hay un logo diferente
 
 export default [
   {

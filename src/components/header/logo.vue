@@ -1,5 +1,5 @@
 <script>
-import logo from "@/assets/logos/LogoBlanco.png";
+import logo from "@/assets/logos/LogoBlanco.webp";
 
 export default {
   name: "LogoYMCA",

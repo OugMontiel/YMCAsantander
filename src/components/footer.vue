@@ -1,5 +1,5 @@
 <script>
-import Logo from "@/assets/logos/LogoBlanco.png";
+import Logo from "@/assets/logos/LogoBlanco.webp";
 import FondoDinamico from "@/components/fondos/fondoDinamico.vue";
 import Desarrollador from "@/components/util/desarrollador.vue";
 
