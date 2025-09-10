@@ -1,9 +1,9 @@
 <script setup lang="js">
-import img1 from "@/assets/img/carousel/fotoCarousel1.jpg";
-import img2 from "@/assets/img/carousel/fotoCarousel2.jpg";
-import img3 from "@/assets/img/carousel/fotoCarousel3.jpg";
-import img4 from "@/assets/img/carousel/fotoCarousel4.jpg";
-import img5 from "@/assets/img/carousel/fotoCarousel5.jpg";
+import img1 from "@/assets/img/carousel/fotoCarousel1.webp";
+import img2 from "@/assets/img/carousel/fotoCarousel2.webp";
+import img3 from "@/assets/img/carousel/fotoCarousel3.webp";
+import img4 from "@/assets/img/carousel/fotoCarousel4.webp";
+import img5 from "@/assets/img/carousel/fotoCarousel5.webp";
 
 const items = [img1, img2, img3, img4, img5];
 </script>
@@ -11,7 +11,7 @@ const items = [img1, img2, img3, img4, img5];
 <template>
   <section class="bienvenida" aria-label="Bienvenida YMCA Santander">
     <UCarousel v-slot="{item}" loop auto-scroll :items="items" :ui="{item: 'basis-full shrink-0'}" class="homeCarousel">
-      <img :src="item" alt="Imagen del carrusel YMCA" class="w-full aspect-[16/9] object-cover" />
+      <img :src="item" alt="Imagen del carrusel YMCA" class="w-full aspect-[16/9] object-cover" loading="eager" />
     </UCarousel>
 
     <div class="homeBienvenidaContent">

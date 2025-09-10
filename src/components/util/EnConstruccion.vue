@@ -24,7 +24,9 @@ export default {
     <h1 class="titulo">🚧 En Construcción</h1>
     <p class="mensaje">{{ mensaje }}</p>
 
-    <button v-if="mostrarBotonInicio" @click="irInicio" class="boton">Ir al inicio</button>
+    <button v-if="mostrarBotonInicio" @click="irInicio" class="boton" aria-label="Ir al inicio de la página" aria-controls="home">
+      Ir al inicio
+    </button>
   </div>
 </template>
 

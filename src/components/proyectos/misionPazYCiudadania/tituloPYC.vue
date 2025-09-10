@@ -1,6 +1,6 @@
 <template>
   <div class="pazYCiudadniaHeader">
-    <img src="/LogoAzul.png" alt="Logo Mision Paz Y Ciudadania" class="logopazYCiudadniaHeader" />
+    <img v-lazy="{src: '/LogoAzul.webp'}" alt="Logo Mision Paz Y Ciudadania" class="logopazYCiudadniaHeader" />
     <h1>mision Paz Y Ciudadania</h1>
   </div>
 </template>

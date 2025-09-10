@@ -1,7 +1,7 @@
 <script>
-import Azul from "@/assets/fondos/fondoAzulOpc1.png";
-import Morado from "@/assets/fondos/fondoMoradoOpc1.png";
-import Naranja from "@/assets/fondos/fondoNaranjaOpc1.png";
+import Azul from "@/assets/fondos/fondoAzulOpc1.webp";
+import Morado from "@/assets/fondos/fondoMoradoOpc1.webp";
+import Naranja from "@/assets/fondos/fondoNaranjaOpc1.webp";
 
 export default {
   name: "fondoDinamico",

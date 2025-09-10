@@ -1,5 +1,5 @@
 <script>
-import imgProyectos from "@/assets/img/proyectos/proyectos.jpg";
+import imgProyectos from "@/assets/img/proyectos/proyectos.webp";
 import Cards from "@/components/proyectos/cards.vue";
 
 export default {
@@ -16,7 +16,7 @@ export default {
 </script>
 <template>
   <section class="inicioProyecto">
-    <img :src="imgProyectos" alt="" srcset="" />
+    <img v-lazy="{src: imgProyectos}" alt="" srcset="" />
     <div class="incioContenido">
       <h1>Proyectos YMCA</h1>
       <p>Aquí podrás encontrar los proyectos que hemos realizado en YMCA Santander</p>

@@ -1,5 +1,5 @@
 <script>
-import imgProyecto from "@/assets/img/proyectos/pazaLaPaz/pazaLaPaz.jpg";
+import imgProyecto from "@/assets/img/proyectos/pazaLaPaz/pazaLaPaz.webp";
 import beneficios from "@/components/proyectos/pazaLaPaz/beneficios.vue";
 
 export default {
@@ -26,7 +26,7 @@ export default {
       <beneficios />
     </div>
     <div class="logoContainer">
-      <img :src="imgProyecto" alt="Logo de Paza la Paz" class="logoPazDescripcion" />
+      <img v-lazy="{src: imgProyecto}" alt="Logo de Paza la Paz" class="logoPazDescripcion" />
     </div>
   </section>
 </template>

@@ -1,5 +1,5 @@
 <script>
-import imgQueSomos from "@/assets/img/about/queSomos.jpg";
+import imgQueSomos from "@/assets/img/about/queSomos.webp";
 
 export default {
   name: "QueSomos",
@@ -12,7 +12,7 @@ export default {
 </script>
 <template>
   <section class="Somos">
-    <img :src="imgQueSomos" alt="Imagen Quiénes Somos" class="aboutImg" />
+    <img v-lazy="{src: imgQueSomos}" alt="Imagen Quiénes Somos" class="aboutImg" />
 
     <div class="SomosContenido">
       <h2>¿QUIÉNES SOMOS?</h2>

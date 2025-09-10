@@ -15,7 +15,7 @@ export default {
   <section class="pazAliados">
     <h2>Aliados Estratégicos</h2>
     <div class="logos">
-      <img v-for="(aliado, index) in aliados" :key="index" :src="aliado.logo" :alt="aliado.nombre" />
+      <img v-for="(aliado, index) in aliados" :key="index" v-lazy="{src: aliado.logo}" :alt="aliado.nombre" />
     </div>
   </section>
 </template>

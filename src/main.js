@@ -1,6 +1,7 @@
 import "./assets/base.css";
 
 import {createApp} from "vue";
+import VueLazyLoad from "vue3-lazyload";
 import App from "./App.vue";
 import router from "./router";
 import ui from "@nuxt/ui/vue-plugin";
@@ -14,5 +15,27 @@ app.config.globalProperties.$aniosYMCA = calcularAniosYMCA;
 
 app.use(router);
 app.use(ui);
+app.use(VueLazyLoad, {
+  loading: "", // Placeholder mientras carga (opcional)
+  error: "", // Imagen en caso de error (opcional)
+  observerOptions: {
+    rootMargin: "0px",
+    threshold: 0.1,
+  },
+  delay: 200,
+  log: true,
+  logLevel: "info",
+  lifecycle: {
+    loading(el) {
+      console.log("imagen cargando:", el);
+    },
+    error(el) {
+      console.log("error al cargar:", el);
+    },
+    loaded(el) {
+      console.log("imagen cargada:", el);
+    },
+  },
+});
 
 app.mount("#app");
