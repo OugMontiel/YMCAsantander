@@ -27,31 +27,31 @@ export default [
     nombre: "UNAD",
     logo: logoUNAD,
   },
-  {
-    id: 3,
-    nombre: "UMB",
-    logo: logoUMB,
-  },
+  // {
+  //   id: 3,
+  //   nombre: "UMB",
+  //   logo: logoUMB,
+  // },
   {
     id: 4,
     nombre: "Fe y Alegría",
     logo: logoFe,
   },
-  {
-    id: 5,
-    nombre: "Fundación Bolívar Davivienda",
-    logo: logoFundacionBolivar,
-  },
+  // {
+  //   id: 5,
+  //   nombre: "Fundación Bolívar Davivienda",
+  //   logo: logoFundacionBolivar,
+  // },
   {
     id: 6,
     nombre: "HORYZON",
     logo: logoHoryzon,
   },
-  {
-    id: 7,
-    nombre: "AMERICAN EXPRESS",
-    logo: logoAmex,
-  },
+  // {
+  //   id: 7,
+  //   nombre: "AMERICAN EXPRESS",
+  //   logo: logoAmex,
+  // },
   {
     id: 8,
     nombre: "Corporación Universitaria Minuto de Dios",
