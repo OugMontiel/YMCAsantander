@@ -24,7 +24,7 @@ export default {
       <FondoDinamico />
 
       <!-- Botón de cierre -->
-      <button class="cierreBtn" @click.stop="$emit('close-menu')" aria-label="Cerrar menú lateral">
+      <button class="cierreBtn" @click.stop="$emit('close-menu')" aria-label="Cerrar menú lateral" aria-controls="navMobil">
         <UIcon name="material-symbols-light:close" class="menu-icon" width="2em" />
       </button>
 

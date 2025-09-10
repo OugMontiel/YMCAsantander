@@ -45,6 +45,7 @@ export default {
     >
       <template #default="{item: testimonio}">
         <TestimonioCard
+          id="videoModal"
           :nombre="testimonio.nombre"
           :cita="testimonio.cita"
           :foto="testimonio.foto"

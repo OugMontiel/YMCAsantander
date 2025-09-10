@@ -19,10 +19,14 @@ export default {
 </script>
 
 <template>
-  <div class="modal" v-if="visible" @click.self="cerrar">
+  <div class="modal" v-if="visible" @click.self="cerrar" id="videoModal" role="dialog" aria-modal="true" aria-labelledby="videoTitle">
     <div class="modal-content">
-      <iframe :src="videoUrl" frameborder="0" allowfullscreen></iframe>
-      <button @click="cerrar">Cerrar</button>
+      <!-- Título oculto para accesibilidad -->
+      <h2 id="videoTitle" class="sr-only">Reproductor de video</h2>
+
+      <iframe :src="videoUrl" frameborder="0" allowfullscreen title="Video de YouTube"></iframe>
+
+      <button @click="cerrar" aria-label="Cerrar video">✖</button>
     </div>
   </div>
 </template>
@@ -53,5 +57,16 @@ export default {
 }
 .modal-content button {
   margin-top: 1rem;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 </style>

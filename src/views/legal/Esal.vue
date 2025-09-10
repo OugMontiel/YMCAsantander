@@ -27,25 +27,61 @@ export default {
     <div class="docuemntosEsal">
       <div class="itemEsal" v-for="(doc, index) in documentos" :key="index">
         <div class="infoEsal">
-          <h4>{{ doc.titulo }}</h4>
+          <h4 id="doc-{{index}}">{{ doc.titulo }}</h4>
           <div class="botones">
-            <button @click="verDocumento(doc)" class="btn ver">Ver</button>
-            <a :href="doc.archivo" target="_blank" download class="btn descargar"> Descargar </a>
+            <!-- Botón Ver -->
+            <button
+              @click="verDocumento(doc)"
+              class="btn ver"
+              :aria-label="`Ver documento ${doc.titulo}`"
+              :aria-describedby="`doc-${index}`"
+            >
+              Ver
+            </button>
+
+            <!-- Enlace Descargar -->
+            <a
+              :href="doc.archivo"
+              target="_blank"
+              download
+              class="btn descargar"
+              :aria-label="`Descargar documento ${doc.titulo}`"
+              :aria-describedby="`doc-${index}`"
+            >
+              Descargar
+            </a>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Modal para ver el documento -->
-    <div v-if="documentoActual" class="modalOverlay" @click.self="cerrarModal">
+    <div v-if="documentoActual" class="modalOverlay" @click.self="cerrarModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
       <div class="modal">
         <div class="modalHeader">
-          <h4>{{ documentoActual.titulo }}</h4>
-          <button class="btn cerrar" @click="cerrarModal">X</button>
+          <h4 id="modalTitle">{{ documentoActual.titulo }}</h4>
+          <button class="btn cerrar" @click="cerrarModal" aria-label="Cerrar visor de documento">✖</button>
         </div>
-        <embed :src="documentoActual.archivo" width="100%" height="500px" class="visor" />
+
+        <embed
+          :src="documentoActual.archivo"
+          width="100%"
+          height="500px"
+          class="visor"
+          type="application/pdf"
+          aria-label="Visor del documento PDF"
+        />
+
         <div class="modalFooter">
-          <a :href="documentoActual.archivo" target="_blank" download class="btn descargar"> Descargar PDF </a>
+          <a
+            :href="documentoActual.archivo"
+            target="_blank"
+            download
+            class="btn descargar"
+            :aria-label="`Descargar documento ${documentoActual.titulo}`"
+          >
+            Descargar PDF
+          </a>
         </div>
       </div>
     </div>

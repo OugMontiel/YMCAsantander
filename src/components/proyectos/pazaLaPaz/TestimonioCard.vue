@@ -14,7 +14,15 @@ export default {
     <img class="foto" v-lazy="{src: foto}" :alt="`Foto de ${nombre}`" />
     <h3>{{ nombre }}</h3>
     <p class="cita">"{{ cita }}"</p>
-    <button class="btn" @click="$emit('ver-video', videoUrl)" role="button" :aria-label="`Ver video de ${nombre}`">▶ Ver video</button>
+    <button
+      class="btn"
+      @click="$emit('ver-video', videoUrl)"
+      :aria-label="`Ver video de ${nombre}`"
+      aria-haspopup="dialog"
+      aria-controls="videoModal"
+    >
+      ▶ Ver video
+    </button>
   </div>
 </template>
 

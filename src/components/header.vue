@@ -56,10 +56,16 @@ export default {
     <Navegacion class="navDesktop" :links="navLinks" />
 
     <!-- Menú lateral para pantallas pequeñas -->
-    <MenuLateral class="navMobil" :links="navLinks" v-show="isMenuOpen" @close-menu="isMenuOpen = false" />
+    <MenuLateral id="navMobil" class="navMobil" :links="navLinks" v-show="isMenuOpen" @close-menu="isMenuOpen = false" />
 
     <!-- Botón solo visible en pantallas pequeñas -->
-    <button class="menuButton" @click.stop="toggleMenu" :aria-expanded="isMenuOpen.toString()" aria-label="Menú de navegación">
+    <button
+      class="menuButton"
+      @click.stop="toggleMenu"
+      :aria-expanded="isMenuOpen.toString()"
+      aria-label="Menú de navegación"
+      aria-controls="navMobil"
+    >
       <UIcon name="material-symbols-light:menu-rounded" class="menu-icon" width="2em" />
     </button>
   </header>

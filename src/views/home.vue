@@ -14,7 +14,7 @@ export default {
 </script>
 
 <template>
-  <div class="home">
+  <div id="home" class="home">
     <!-- Carrusel -->
     <section class="bienvenida">
       <Carousel />
