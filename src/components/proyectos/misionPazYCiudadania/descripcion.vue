@@ -1,5 +1,5 @@
 <script>
-import imgProyecto from "@/assets/img/proyectos/misionPazYCiudadania/misionPazYCiudadania.jpg";
+import imgProyecto from "@/assets/img/proyectos/misionPazYCiudadania/misionPazYCiudadania.webp";
 
 export default {
   name: "pazYCiudadniaDescripcion",

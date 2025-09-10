@@ -1,5 +1,5 @@
 <script>
-import imgProyectos from "@/assets/img/proyectos/proyectos.jpg";
+import imgProyectos from "@/assets/img/proyectos/proyectos.webp";
 import Cards from "@/components/proyectos/cards.vue";
 
 export default {

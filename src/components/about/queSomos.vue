@@ -1,5 +1,5 @@
 <script>
-import imgQueSomos from "@/assets/img/about/queSomos.jpg";
+import imgQueSomos from "@/assets/img/about/queSomos.webp";
 
 export default {
   name: "QueSomos",
