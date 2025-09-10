@@ -9,13 +9,14 @@ export default {
       proyectoLinks: [
         {name: "Esal", routeName: "esal"},
         {name: "tratamiento de datos personales", routeName: "Privacidad"},
-        {name: "terminos Y Condiciones", routeName: "terminosYCondiciones"},
-        {name: "politica De Cookies", routeName: "politicaDeCookies"},
+        {name: "Manejo de Datos Personales", routeName: "terminosYCondiciones"},
+        // {name: "politica De Cookies", routeName: "politicaDeCookies"},
       ],
     };
   },
 };
 </script>
+
 
 <template>
   <div>
