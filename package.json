@@ -11,19 +11,19 @@
     "deploy:production": "npm run build && node subir.js"
   },
   "dependencies": {
-    "@nuxt/ui": "^3.1.2",
-    "vue": "^3.5.14",
-    "vue-router": "^4.5.1",
-    "vue3-lazyload": "^0.3.8"
+    "@nuxt/ui": "3.1.2",
+    "vue": "3.5.14",
+    "vue-router": "4.5.1",
+    "vue3-lazyload": "0.3.8"
   },
   "devDependencies": {
-    "@iconify-json/logos": "^1.2.5",
-    "@iconify-json/material-symbols-light": "^1.2.21",
-    "@iconify/vue": "^5.0.0",
-    "@vitejs/plugin-vue": "^5.2.4",
-    "gh-pages": "^6.3.0",
+    "@iconify-json/logos": "1.2.5",
+    "@iconify-json/material-symbols-light": "1.2.21",
+    "@iconify/vue": "5.0.0",
+    "@vitejs/plugin-vue": "5.2.4",
+    "gh-pages": "6.3.0",
     "prettier": "3.5.3",
-    "vite": "^6.3.5",
-    "vite-plugin-vue-devtools": "^7.7.6"
+    "vite": "6.3.5",
+    "vite-plugin-vue-devtools": "7.7.6"
   }
 }
