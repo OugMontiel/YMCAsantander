@@ -1,43 +1,43 @@
 import {createRouter, createWebHistory} from "vue-router";
 // vistas de en construccion
-import EnConstruccion from "../components/util/EnConstruccion.vue"; // nuevo componente genérico
+const EnConstruccion = () => import("../components/util/EnConstruccion.vue"); // nuevo componente genérico
 
 // vistas principales
-import Home from "../views/home.vue";
-import About from "../views/about.vue";
+const Home = () => import("../views/home.vue");
+const About = () => import("../views/about.vue");
 
 // componentes de barra de navegacion de las rutas madres
-import AporteHeader from "../components/header/aporteHeader.vue";
-import ExperienciaHeader from "../components/header/experienciasHeader.vue";
-import ProyectosHeader from "../components/header/proyectosHeader.vue";
-import SocialHeader from "../components/header/socialHeader.vue";
-import LegalHeader from "../components/header/legalHeader.vue";
+const AporteHeader = () => import("../components/header/aporteHeader.vue");
+const ExperienciaHeader = () => import("../components/header/experienciasHeader.vue");
+const ProyectosHeader = () => import("../components/header/proyectosHeader.vue");
+const SocialHeader = () => import("../components/header/socialHeader.vue");
+const LegalHeader = () => import("../components/header/legalHeader.vue");
 
 // vistas legales
-import Esal from "../views/legal/Esal.vue"; // Inicio de la vista legal
-import Privacidad from "../views/legal/Privacidad.vue";
-import TerminosYCondiciones from "../views/legal/TerminosYCondiciones.vue";
-import PoliticaDeCookies from "../views/legal/PoliticaDeCookies.vue";
+const Esal = () => import("../views/legal/Esal.vue"); // Inicio de la vista legal
+const Privacidad = () => import("../views/legal/Privacidad.vue");
+const TerminosYCondiciones = () => import("../views/legal/TerminosYCondiciones.vue");
+const PoliticaDeCookies = () => import("../views/legal/PoliticaDeCookies.vue");
 
 // Vistas Proyectos
-import Proyectos from "../views/proyectos/proyectos.vue";
-import PazaLaPaz from "../views/proyectos/pazaLaPaz.vue";
-import MisionPazYCiudadania from "../views/proyectos/misionPazYCiudadania.vue";
+const Proyectos = () => import("../views/proyectos/proyectos.vue");
+const PazaLaPaz = () => import("../views/proyectos/pazaLaPaz.vue");
+const MisionPazYCiudadania = () => import("../views/proyectos/misionPazYCiudadania.vue");
 
 // vistas sociales
-import Social from "../views/social/social.vue";
-import Publicaciones from "../views/social/publicaciones.vue";
-import Voluntariado from "../views/social/voluntariado.vue";
+const Social = () => import("../views/social/social.vue");
+const Publicaciones = () => import("../views/social/publicaciones.vue");
+const Voluntariado = () => import("../views/social/voluntariado.vue");
 
 // vistas de aportes
-import Socio from "../views/aporta/socio.vue"; // Inicio de la vista de aportes
-import Donar from "../views/aporta/donar.vue";
-import HazteVoluntario from "../views/aporta/hazteVoluntario.vue";
+const Socio = () => import("../views/aporta/socio.vue"); // Inicio de la vista de aportes
+const Donar = () => import("../views/aporta/donar.vue");
+const HazteVoluntario = () => import("../views/aporta/hazteVoluntario.vue");
 
 // vistas de experiencia
-import Experiencia from "../views/experiencias/experiencia.vue";
-import AreaInternacional from "../views/experiencias/areaInternacional.vue";
-import experienciasLocales from "../views/experiencias/experienciasLocales.vue";
+const Experiencia = () => import("../views/experiencias/experiencia.vue");
+const AreaInternacional = () => import("../views/experiencias/areaInternacional.vue");
+const experienciasLocales = () => import("../views/experiencias/experienciasLocales.vue");
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
