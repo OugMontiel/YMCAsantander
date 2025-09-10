@@ -183,10 +183,9 @@ const router = createRouter({
       ],
     },
     {
-      path: "/esal", 
-      redirect: "/legal/Esal"
+      path: "/esal",
+      redirect: "/legal/Esal",
     },
-
 
     // 🚧 CUALQUIER OTRA RUTA que existía antes, ahora muestra "En Construcción"
     {

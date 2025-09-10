@@ -16,6 +16,9 @@
 
 <script setup>
 const abrirBanco = () => {
-  window.open("https://www.avalpaycenter.com/wps/portal/portal-de-pagos/web/pagos-aval/resultado-busqueda/realizar-pago?idConv=00027801&origen=buscar", "_blank")
-}
+  window.open(
+    "https://www.avalpaycenter.com/wps/portal/portal-de-pagos/web/pagos-aval/resultado-busqueda/realizar-pago?idConv=00027801&origen=buscar",
+    "_blank"
+  );
+};
 </script>

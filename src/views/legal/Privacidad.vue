@@ -58,9 +58,9 @@
 }
 /* md - Tablets */
 @media (max-width: 768px) {
-.privacidad {
-  padding: 2rem 4rem;
-}
+  .privacidad {
+    padding: 2rem 4rem;
+  }
 }
 
 /* sm - Teléfonos estándar */

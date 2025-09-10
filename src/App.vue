@@ -13,7 +13,8 @@ import TodosLosBotones from "@/components/BotonesFlotantes/TodosLosBotones.vue";
     </main>
     <Footer />
   </div>
-  <TodosLosBotones /> <!-- Botón flotante -->
+  <TodosLosBotones />
+  <!-- Botón flotante -->
 </template>
 
 <style scoped>
