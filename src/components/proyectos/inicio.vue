@@ -16,7 +16,7 @@ export default {
 </script>
 <template>
   <section class="inicioProyecto">
-    <img :src="imgProyectos" alt="" srcset="" />
+    <img v-lazy="{src: imgProyectos}" alt="" srcset="" />
     <div class="incioContenido">
       <h1>Proyectos YMCA</h1>
       <p>Aquí podrás encontrar los proyectos que hemos realizado en YMCA Santander</p>

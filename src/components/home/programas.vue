@@ -30,7 +30,7 @@ export default {
     </div>
     <div class="programasContenido">
       <article class="programa" v-for="proyecto in proyectos" :key="proyecto.id || proyecto.titulo">
-        <img :src="proyecto.img" :alt="`Imagen del proyecto: ${proyecto.titulo}`" class="proyectoImagen" />
+        <img v-lazy="{src: proyecto.img}" :alt="`Imagen del proyecto: ${proyecto.titulo}`" class="proyectoImagen" />
         <div class="proyectosCardItemContenido">
           <h2>{{ proyecto.titulo }}</h2>
           <p>{{ proyecto.descripcion }}</p>

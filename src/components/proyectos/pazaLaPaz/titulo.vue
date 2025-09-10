@@ -13,7 +13,7 @@ export default {
 
 <template>
   <div class="pazHeader">
-    <img :src="logoPLP" alt="Logo Paza la Paz" class="logopazHeader" />
+    <img v-lazy="{src: logoPLP}" alt="Logo Paza la Paz" class="logopazHeader" />
     <h1>Paza la Paz</h1>
   </div>
 </template>

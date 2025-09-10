@@ -26,7 +26,7 @@ export default {
       <beneficios />
     </div>
     <div class="logoContainer">
-      <img :src="imgProyecto" alt="Logo de Paza la Paz" class="logoPazDescripcion" />
+      <img v-lazy="{src: imgProyecto}" alt="Logo de Paza la Paz" class="logoPazDescripcion" />
     </div>
   </section>
 </template>

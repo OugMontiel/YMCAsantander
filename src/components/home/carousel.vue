@@ -11,7 +11,7 @@ const items = [img1, img2, img3, img4, img5];
 <template>
   <section class="bienvenida" aria-label="Bienvenida YMCA Santander">
     <UCarousel v-slot="{item}" loop auto-scroll :items="items" :ui="{item: 'basis-full shrink-0'}" class="homeCarousel">
-      <img :src="item" alt="Imagen del carrusel YMCA" class="w-full aspect-[16/9] object-cover" />
+      <img v-lazy="{src: item}" alt="Imagen del carrusel YMCA" class="w-full aspect-[16/9] object-cover" />
     </UCarousel>
 
     <div class="homeBienvenidaContent">

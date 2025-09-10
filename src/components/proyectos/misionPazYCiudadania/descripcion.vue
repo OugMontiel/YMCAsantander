@@ -31,7 +31,7 @@ export default {
       </p>
     </div>
     <div class="logoContainer">
-      <img :src="imgProyecto" alt="Logo de Misión Paz y Ciudadanía" class="logoPazYCiudadniaDescripcion" />
+      <img v-lazy="{src: imgProyecto}" alt="Logo de Misión Paz y Ciudadanía" class="logoPazYCiudadniaDescripcion" />
     </div>
   </section>
 </template>

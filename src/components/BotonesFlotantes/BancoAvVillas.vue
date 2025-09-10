@@ -7,7 +7,7 @@
     @click="abrirBanco"
   >
     <img
-      src="https://piloto.avvillas.com.co/o/bavv-portalpublico-theme/images/favicon.ico"
+      v-lazy="{src: 'https://piloto.avvillas.com.co/o/bavv-portalpublico-theme/images/favicon.ico'}"
       alt="AV Villas"
       class="w-14 h-14 transition-transform transform hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(200,0,0,0.7)]"
     />

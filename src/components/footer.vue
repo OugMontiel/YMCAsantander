@@ -48,12 +48,12 @@ export default {
 </script>
 
 <template>
-  <footer> 
+  <footer>
     <FondoDinamico />
     <div class="footerInfo">
       <div class="footerLogo">
         <router-link :to="{name: 'home'}" class="logoLink">
-          <img :src="Logo" alt="YMCA - Logo principal" class="logoDesktop" loading="eager" />
+          <img v-lazy="{src: Logo}" alt="YMCA - Logo principal" class="logoDesktop" />
         </router-link>
         <p>Inspirando Oportunidades.</p>
       </div>
@@ -68,10 +68,10 @@ export default {
           </li>
         </ul>
       </nav>
-      </div>
+    </div>
 
-      <Desarrollador />
-    </footer>
+    <Desarrollador />
+  </footer>
 </template>
 
 <style>
