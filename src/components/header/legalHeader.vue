@@ -8,9 +8,9 @@ export default {
     return {
       proyectoLinks: [
         {name: "Esal", routeName: "esal"},
-        {name: "tratamiento de datos personales", routeName: "Privacidad"},
-        {name: "Manejo de Datos Personales", routeName: "terminosYCondiciones"},
-        // {name: "politica De Cookies", routeName: "politicaDeCookies"},
+        {name: "Aviso de Privacidad", routeName: "Privacidad"},
+        {name: "Manual Habeas Data", routeName: "terminosYCondiciones"},
+        // {name: "Política de cookies", routeName: "politicaDeCookies"},
       ],
     };
   },
