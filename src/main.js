@@ -16,8 +16,8 @@ app.config.globalProperties.$aniosYMCA = calcularAniosYMCA;
 app.use(router);
 app.use(ui);
 app.use(VueLazyLoad, {
-  loading: "", // Placeholder mientras carga (opcional)
-  error: "", // Imagen en caso de error (opcional)
+  loading: "@/assets/fondos/fondoAzulOpc1.webp", // Placeholder mientras carga (opcional)
+  error: "@/assets/fondos/FondoIcono.webp", // Imagen en caso de error (opcional)
   observerOptions: {
     rootMargin: "0px",
     threshold: 0.1,
