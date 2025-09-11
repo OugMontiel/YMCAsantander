@@ -2,12 +2,14 @@
 import Logo from "@/assets/logos/LogoBlanco.webp";
 import FondoDinamico from "@/components/fondos/fondoDinamico.vue";
 import Desarrollador from "@/components/util/desarrollador.vue";
+import SocialMedia from "@/components/util/redesSociales.vue";
 
 export default {
   name: "Appfooter",
   components: {
     FondoDinamico,
     Desarrollador,
+    SocialMedia,
   },
   data() {
     return {
@@ -56,6 +58,14 @@ export default {
           <img v-lazy="{src: Logo}" alt="YMCA - Logo principal" class="logoDesktop" />
         </router-link>
         <p>Inspirando Oportunidades.</p>
+        <SocialMedia
+          variant="footer"
+          size="medium"
+          color="white"
+          hover-color="#0066cc"
+          spacing="normal"
+          aria-label="Síguenos en nuestras redes sociales"
+        />
       </div>
 
       <!-- Secciones de navegación dinámicas -->
