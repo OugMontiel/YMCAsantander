@@ -2,12 +2,14 @@
 import Logo from "@/assets/logos/LogoBlanco.webp";
 import FondoDinamico from "@/components/fondos/fondoDinamico.vue";
 import Desarrollador from "@/components/util/desarrollador.vue";
+import SocialMedia from "@/components/util/redesSociales.vue";
 
 export default {
   name: "Appfooter",
   components: {
     FondoDinamico,
     Desarrollador,
+    SocialMedia,
   },
   data() {
     return {
@@ -19,28 +21,28 @@ export default {
             {name: "Inicio", routeName: "home"},
             {name: "¿Quiénes Somos?", routeName: "about"},
             {name: "Programas", routeName: "proyectos"},
-            {name: "Experiencia", routeName: "experiencia"},
-            {name: "Aporta", routeName: "aporta"},
-            {name: "Social", routeName: "social"},
+            // {name: "Experiencia", routeName: "experiencia"},
+            // {name: "Aporta", routeName: "aporta"},
+            // {name: "Social", routeName: "social"},
           ],
         },
         {
           titulo: "Legal",
           links: [
-            {name: "Aviso de privacidad", routeName: "Privacidad"},
-            {name: "Términos y condiciones", routeName: "terminosYCondiciones"},
-            {name: "Política de cookies", routeName: "politicaDeCookies"},
+            {name: "Aviso de Privacidad", routeName: "Privacidad"},
+            {name: "Manual Habeas Data", routeName: "terminosYCondiciones"},
+            // {name: "Política de cookies", routeName: "politicaDeCookies"},
             {name: "ESAL", routeName: "esal"},
           ],
         },
-        {
-          titulo: "Conócenos",
-          links: [
-            {name: "Hazte socio", routeName: "Socio"},
-            {name: "Donar ahora", routeName: "donar"},
-            {name: "Hazte voluntario", routeName: "hazteVoluntario"},
-          ],
-        },
+        // {
+        //   titulo: "Conócenos",
+        //   links: [
+        //     {name: "Hazte socio", routeName: "Socio"},
+        //     {name: "Donar ahora", routeName: "donar"},
+        //     {name: "Hazte voluntario", routeName: "hazteVoluntario"},
+        //   ],
+        // },
       ],
     };
   },
@@ -56,6 +58,14 @@ export default {
           <img v-lazy="{src: Logo}" alt="YMCA - Logo principal" class="logoDesktop" />
         </router-link>
         <p>Inspirando Oportunidades.</p>
+        <SocialMedia
+          variant="footer"
+          size="medium"
+          color="white"
+          hover-color="#0066cc"
+          spacing="normal"
+          aria-label="Síguenos en nuestras redes sociales"
+        />
       </div>
 
       <!-- Secciones de navegación dinámicas -->

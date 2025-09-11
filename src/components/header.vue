@@ -19,9 +19,9 @@ export default {
         {name: "Inicio", routeName: "home"},
         {name: "¿Quiénes Somos?", routeName: "about"},
         {name: "Liderazgo Juvenil", routeName: "proyectos"},
-        {name: "Experiencia", routeName: "experiencia"},
-        {name: "Aporta", routeName: "aporta"},
-        {name: "Social", routeName: "social"},
+        // {name: "Experiencia", routeName: "experiencia"},
+        // {name: "Aporta", routeName: "aporta"},
+        // {name: "Social", routeName: "social"},
       ],
     };
   },

@@ -173,7 +173,7 @@ const router = createRouter({
         {
           path: "terminosYCondiciones",
           name: "terminosYCondiciones",
-          component: EnConstruccion,
+          component: TerminosYCondiciones,
         },
         {
           path: "politicaDeCookies",
