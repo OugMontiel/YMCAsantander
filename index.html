@@ -1,26 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/LogoAzul.webp">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/LogoAzul.webp" />
     <title>YMCA Santander</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": "Video de presentación",
+        "description": "Conoce nuestra organización en este video introductorio.",
+        "thumbnailUrl": "https://img.youtube.com/vi/r3HPs-3oNYY/maxresdefault.jpg",
+        "uploadDate": "2025-09-15T08:00:00+00:00",
+        "embedUrl": "https://www.youtube.com/embed/r3HPs-3oNYY"
+      }
+    </script>
   </head>
   <body>
     <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-          navigator.serviceWorker.register('/sw.js').then(function(registration) {
-            console.log('Service Worker registrado con éxito:', registration.scope);
-          }).catch(function(error) {
-            console.log('Error al registrar el Service Worker:', error);
-          });
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker
+            .register("/sw.js")
+            .then(function (registration) {
+              console.log("Service Worker registrado con éxito:", registration.scope);
+            })
+            .catch(function (error) {
+              console.log("Error al registrar el Service Worker:", error);
+            });
         });
       } else {
-        console.log('Service Workers no son soportados en este navegador.');
+        console.log("Service Workers no son soportados en este navegador.");
       }
     </script>
     <div id="app"></div>

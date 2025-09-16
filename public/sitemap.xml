@@ -1,115 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-            
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Sitemap de páginas -->
+  <sitemap>
+    <loc>https://www.ymcasantander.org/pages-sitemap.xml</loc>
+    <lastmod>2025-09-15</lastmod>
+  </sitemap>
 
-  <!-- Páginas principales -->
-  <url>
-    <loc>https://www.ymcasantander.org/</loc>
-    <lastmod>2025-09-09</lastmod>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.ymcasantander.org/about</loc>
-    <lastmod>2025-09-09</lastmod>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Experiencia -->
-  <!-- <url>
-    <loc>https://www.ymcasantander.org/experiencia</loc>
-    <lastmod>2025-09-09</lastmod>
-    <priority>0.8</priority>
-  </url> -->
-  <!-- <url>
-    <loc>https://www.ymcasantander.org/experiencia/areaInternacional</loc>
-    <lastmod>2025-09-09</lastmod>
-    <priority>0.6</priority>
-  </url> -->
-  <!-- <url>
-    <loc>https://www.ymcasantander.org/experiencia/experienciasLocales</loc>
-    <lastmod>2025-09-09</lastmod>
-    <priority>0.6</priority>
-  </url> -->
-
-  <!-- Proyectos -->
-  <url>
-    <loc>https://www.ymcasantander.org/proyectos</loc>
-    <lastmod>2025-09-09</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <!-- <url>
-    <loc>https://www.ymcasantander.org/proyectos/pazaLaPaz</loc>
-    <lastmod>2025-09-09</lastmod>
-    <priority>0.6</priority>
-  </url> -->
-  <!-- <url>
-    <loc>https://www.ymcasantander.org/proyectos/misionPazYCiudadania</loc>
-    <lastmod>2025-09-09</lastmod>
-    <priority>0.6</priority>
-  </url> -->
-
-  <!-- Aporta -->
-  <!-- <url>
-    <loc>https://www.ymcasantander.org/aporta</loc>
-    <lastmod>2025-09-09</lastmod>
-    <priority>0.8</priority>
-  </url> -->
-  <!-- <url>
-    <loc>https://www.ymcasantander.org/aporta/socio</loc>
-    <lastmod>2025-09-09</lastmod>
-    <priority>0.7</priority>
-  </url> -->
-  <!-- <url>
-    <loc>https://www.ymcasantander.org/aporta/donar</loc>
-    <lastmod>2025-09-09</lastmod>
-    <priority>0.9</priority>
-  </url> -->
-  <!-- <url>
-    <loc>https://www.ymcasantander.org/aporta/hazteVoluntario</loc>
-    <lastmod>2025-09-09</lastmod>
-    <priority>0.8</priority>
-  </url> -->
-
-  <!-- Social -->
-  <!-- <url>
-    <loc>https://www.ymcasantander.org/social</loc>
-    <lastmod>2025-09-09</lastmod>
-    <priority>0.8</priority>
-  </url> -->
-  <!-- <url>
-    <loc>https://www.ymcasantander.org/social/voluntariado</loc>
-    <lastmod>2025-09-09</lastmod>
-    <priority>0.7</priority>
-  </url> -->
-  <!-- <url>
-    <loc>https://www.ymcasantander.org/social/publicaciones</loc>
-    <lastmod>2025-09-09</lastmod>
-    <priority>0.6</priority>
-  </url> -->
-
-  <!-- Legal -->
-  <url>
-    <loc>https://www.ymcasantander.org/legal/Esal</loc>
-    <lastmod>2025-09-09</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.ymcasantander.org/legal/Privacidad</loc>
-    <lastmod>2025-09-09</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.ymcasantander.org/legal/terminosYCondiciones</loc>
-    <lastmod>2025-09-09</lastmod>
-    <priority>0.5</priority>
-  </url>
-  <!-- <url>
-    <loc>https://www.ymcasantander.org/legal/politicaDeCookies</loc>
-    <lastmod>2025-09-09</lastmod>
-    <priority>0.5</priority>
-  </url> -->
-
-</urlset>
+  <!-- Sitemap de videos -->
+  <sitemap>
+    <loc>https://www.ymcasantander.org/video-sitemap.xml</loc>
+    <lastmod>2025-09-15</lastmod>
+  </sitemap>
+</sitemapindex>
