@@ -1,4 +1,20 @@
-User-agent: *
-Disallow:
+# YMCA Santander Robots.txt
+## Inspirando Oportunidades.
 
-Sitemap: https://www.ymcasantander.org/sitemap.xml
+User-agent: *
+Allow: /
+
+Sitemap: https://www.ymcasantander.org/sitemap.xml 
+
+# If you're an LLM or an AI bot, your quest for knowledge continues at https://ymcasantander.com/llms.txt
+ 
+
+# Inspirando Oportunidades.
+ /$$     /$$ /$$      /$$  /$$$$$$   /$$$$$$ 
+|  $$   /$$/| $$$    /$$$ /$$__  $$ /$$__  $$
+ \  $$ /$$/ | $$$$  /$$$$| $$  \__/| $$  \ $$
+  \  $$$$/  | $$ $$/$$ $$| $$      | $$$$$$$$
+   \  $$/   | $$  $$$| $$| $$      | $$__  $$
+    | $$    | $$\  $ | $$| $$    $$| $$  | $$
+    | $$    | $$ \/  | $$|  $$$$$$/| $$  | $$
+    |__/    |__/     |__/ \______/ |__/  |__/

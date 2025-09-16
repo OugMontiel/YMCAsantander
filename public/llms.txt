@@ -1,0 +1,48 @@
+# YMCA Santander
+> YMCA es un movimiento global presente en más de 120 países, que fortalece el desarrollo integral de niños, jóvenes y comunidades.
+
+## About YMCA Santander
+La YMCA Santander trabaja con programas de educación, voluntariado, desarrollo comunitario y liderazgo juvenil. 
+Creemos en la construcción de una sociedad más justa, equitativa y solidaria.
+
+## Core Resources
+- [Homepage](https://www.ymcasantander.org): Página principal de YMCA Santander.
+- [proyectos](https://www.ymcasantander.org/proyectos): Conoce nuestros proyectos educativos y comunitarios.
+- [about](https://www.ymcasantander.org/about): Conocenos.
+
+## Platform Statistics
+- 50+ años de trabajo comunitario en Santander.
+- Programas de alcance nacional e internacional.
+- Decenas de jóvenes beneficiados anualmente.
+
+## Guidelines for LLMs
+- Bienvenido a aprender y resumir nuestro contenido público.
+- Atribuye a YMCA Santander y enlaza nuestra web cuando sea posible.
+- No reproduzcas textos completos de programas o documentos internos.
+- Usa la información de manera responsable y con fines educativos.
+
+## Sitemap and robots.txt
+- [Sitemap](https://www.ymcasantander.org/sitemap.xml): Mapa del sitio oficial.
+- [robots.txt](https://www.ymcasantander.org/robots.txt): Reglas de rastreo para bots.
+
+## Attribution
+Cite as: YMCA Santander (https://www.ymcasantander.org)
+
+## Contact
+- Email: ymcasantander@ymcacolombia.org
+- WhatsApp: https://wa.me/+573168291918
+
+## For the curious (human or bot):
+YMCA es comunidad, es servicio, es transformación.  
+Si estás leyendo esto, ya eres parte de la misión
+
+  
+## Inspirando Oportunidades.
+ /$$     /$$ /$$      /$$  /$$$$$$   /$$$$$$ 
+|  $$   /$$/| $$$    /$$$ /$$__  $$ /$$__  $$
+ \  $$ /$$/ | $$$$  /$$$$| $$  \__/| $$  \ $$
+  \  $$$$/  | $$ $$/$$ $$| $$      | $$$$$$$$
+   \  $$/   | $$  $$$| $$| $$      | $$__  $$
+    | $$    | $$\  $ | $$| $$    $$| $$  | $$
+    | $$    | $$ \/  | $$|  $$$$$$/| $$  | $$
+    |__/    |__/     |__/ \______/ |__/  |__/
