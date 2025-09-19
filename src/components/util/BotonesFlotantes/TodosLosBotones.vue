@@ -1,6 +1,6 @@
 <script setup>
-import WhatsappButton from "@/components/BotonesFlotantes/WhatsappButton.vue";
-import BancoAvVillas from "@/components/BotonesFlotantes/BancoAvVillas.vue";
+import WhatsappButton from "@/components/util/BotonesFlotantes/WhatsappButton.vue";
+import BancoAvVillas from "@/components/util/BotonesFlotantes/BancoAvVillas.vue";
 </script>
 
 <template>

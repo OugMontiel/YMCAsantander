@@ -1,7 +1,7 @@
 <script>
-import Carousel from "@/components/home/carousel.vue";
-import Programas from "@/components/home/programas.vue";
-import Video from "@/components/home/video.vue";
+import Carousel from "@/components/sections/home/carousel.vue";
+import Programas from "@/components/sections/home/programas.vue";
+import Video from "@/components/sections/home/video.vue";
 
 export default {
   name: "HomeBienvenida",

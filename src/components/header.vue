@@ -1,5 +1,5 @@
 <script>
-import FondoDinamico from "@/components/fondos/fondoDinamico.vue";
+import FondoDinamico from "@/components/util/fondos/fondoDinamico.vue";
 import Logo from "@/components/header/logo.vue";
 import Navegacion from "@/components/header/Nav.vue";
 import MenuLateral from "@/components/header/MenuLateral.vue";

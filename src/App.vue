@@ -2,7 +2,7 @@
 import {RouterView} from "vue-router";
 import Header from "@/components/header.vue";
 import Footer from "@/components/footer.vue";
-import TodosLosBotones from "@/components/BotonesFlotantes/TodosLosBotones.vue";
+import TodosLosBotones from "@/components/util/BotonesFlotantes/TodosLosBotones.vue";
 </script>
 
 <template>

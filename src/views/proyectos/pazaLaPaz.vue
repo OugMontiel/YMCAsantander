@@ -1,9 +1,9 @@
 <script>
-import titulo from "@/components/proyectos/pazaLaPaz/titulo.vue";
-import descripsion from "@/components/proyectos/pazaLaPaz/descripsion.vue";
-import metodologia from "@/components/proyectos/pazaLaPaz/metodologia.vue";
-import aliados from "@/components/proyectos/pazaLaPaz/aliados.vue";
-import testimonios from "@/components/proyectos/pazaLaPaz/testimonios.vue";
+import titulo from "@/components/sections/proyectos/pazaLaPaz/titulo.vue";
+import descripsion from "@/components/sections/proyectos/pazaLaPaz/descripsion.vue";
+import metodologia from "@/components/sections/proyectos/pazaLaPaz/metodologia.vue";
+import aliados from "@/components/sections/proyectos/pazaLaPaz/aliados.vue";
+import testimonios from "@/components/sections/proyectos/pazaLaPaz/testimonios.vue";
 
 export default {
   name: "pazaLaPaz",

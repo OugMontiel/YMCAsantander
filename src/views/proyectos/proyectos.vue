@@ -1,7 +1,7 @@
 <script>
-import Inicio from "@/components/proyectos/inicio.vue";
-import Cards from "@/components/proyectos/cards.vue";
-import Estadisticas from "@/components/proyectos/estadisticas.vue";
+import Inicio from "@/components/sections/proyectos/inicio.vue";
+import Cards from "@/components/sections/proyectos/cards.vue";
+import Estadisticas from "@/components/sections/proyectos/estadisticas.vue";
 
 export default {
   name: "Proyectos",

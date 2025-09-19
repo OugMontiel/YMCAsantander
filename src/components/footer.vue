@@ -1,6 +1,6 @@
 <script>
 import Logo from "@/assets/logos/LogoBlanco.webp";
-import FondoDinamico from "@/components/fondos/fondoDinamico.vue";
+import FondoDinamico from "@/components/util/fondos/fondoDinamico.vue";
 import Desarrollador from "@/components/util/desarrollador.vue";
 import SocialMedia from "@/components/util/redesSociales.vue";
 

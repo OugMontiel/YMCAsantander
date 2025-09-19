@@ -1,6 +1,6 @@
 <script>
 import imgProyecto from "@/assets/img/proyectos/pazaLaPaz/pazaLaPaz.webp";
-import beneficios from "@/components/proyectos/pazaLaPaz/beneficios.vue";
+import beneficios from "@/components/sections/proyectos/pazaLaPaz/beneficios.vue";
 
 export default {
   name: "PazaLaPazDescripcion",

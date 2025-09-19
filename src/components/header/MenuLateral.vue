@@ -1,6 +1,6 @@
 <script>
 import Logo from "@/components/header/logo.vue";
-import FondoDinamico from "@/components/fondos/fondoDinamico.vue";
+import FondoDinamico from "@/components/util/fondos/fondoDinamico.vue";
 
 export default {
   name: "MenuLateral",

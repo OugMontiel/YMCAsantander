@@ -1,7 +1,7 @@
 <script>
 import testimoniosRaw from "@/data/testimonios/testimoniosPLP.js";
-import TestimonioCard from "@/components/proyectos/pazaLaPaz/TestimonioCard.vue";
-import VideoModal from "@/components/proyectos/pazaLaPaz/VideoModal.vue";
+import TestimonioCard from "@/components/sections/proyectos/pazaLaPaz/TestimonioCard.vue";
+import VideoModal from "@/components/sections/proyectos/pazaLaPaz/VideoModal.vue";
 
 export default {
   name: "TestimoniosPLP",

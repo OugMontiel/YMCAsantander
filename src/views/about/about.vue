@@ -1,7 +1,7 @@
 <script>
-import QueSomos from "@/components/about/queSomos.vue";
-import MisionYVision from "@/components/about/misionYVision.vue";
-import Historia from "@/components/about/historia.vue";
+import QueSomos from "@/components/sections/about/queSomos.vue";
+import MisionYVision from "@/components/sections/about/misionYVision.vue";
+import Historia from "@/components/sections/about/historia.vue";
 
 export default {
   name: "About",
