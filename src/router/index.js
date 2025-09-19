@@ -3,8 +3,8 @@ import {createRouter, createWebHistory} from "vue-router";
 const EnConstruccion = () => import("../components/util/EnConstruccion.vue"); // nuevo componente genérico
 
 // vistas principales
-const Home = () => import("../views/home.vue");
-const About = () => import("../views/about.vue");
+const Home = () => import("../views/home/home.vue");
+const About = () => import("../views/about/about.vue");
 
 // componentes de barra de navegacion de las rutas madres
 const AporteHeader = () => import("../components/header/aporteHeader.vue");
