@@ -1,4 +1,4 @@
-GNU nano 7.2                                                                   Dockerfile                                                                             FROM node:18-alpine AS build
+FROM node:18-alpine AS build                                                                Dockerfile                                                                             FROM node:18-alpine AS build
 
 WORKDIR /app
 COPY package*.json ./
