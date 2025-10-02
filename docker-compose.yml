@@ -5,7 +5,7 @@ services:
       dockerfile: Dockerfile
     container_name: ymcasantanderweb
     restart: unless-stopped
-    expose:
+    ports:
       - "8080:80"
     networks:
       - proxy
