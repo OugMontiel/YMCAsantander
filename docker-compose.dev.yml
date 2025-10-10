@@ -1,12 +1,13 @@
 services:
-  ymcasantander:
+  devymcasantander:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: ymcasantander
+    container_name: devymcasantander
+    image: ymcasantander:dev
     restart: unless-stopped
     ports:
-      - "8080:80"
+      - "8081:80"
     networks:
       - proxy
     healthcheck:
