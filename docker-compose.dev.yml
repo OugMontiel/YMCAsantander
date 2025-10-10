@@ -1,6 +1,6 @@
 services:
   dev_ymca_santander:
-    image: ghcr.io/${GITHUB_REPOSITORY}:dev-${IMAGE_TAG:-latest}
+    image: ymcasantander:latest
     container_name: dev_ymca_santander
     restart: unless-stopped
     ports:
@@ -18,8 +18,6 @@ services:
       options:
         max-size: "10m"
         max-file: "3"
-    labels:
-      - "com.centurylinklabs.watchtower.enable=true"
 
 networks:
   proxy:
