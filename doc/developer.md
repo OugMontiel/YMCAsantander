@@ -6,11 +6,11 @@ Seguimos el estándar Git Flow como se describe en:
 [**Git Flow Workflow - Atlassian**](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
 
 ### Estructura de Ramas Principales
-- `Produccion` ➔ **Producción** (solo releases estables)
-- `main` ➔ **Desarrollo** (integración de features)
+- `main` ➔ **Producción** (solo releases estables)
+- `develop` ➔ **Desarrollo** (integración de features)
 
 ### Reglas Clave
-1. **Nunca hacer commit directo** en `main` o `Produccion`
+1. **Nunca hacer commit directo** en `main` o `develop`
 2. **Squash merge** recomendado para PRs (opcional)
 4. Revisión de código antes de hacer el pr
 
