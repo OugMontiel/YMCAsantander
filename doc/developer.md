@@ -6,11 +6,11 @@ Seguimos el estándar Git Flow como se describe en:
 [**Git Flow Workflow - Atlassian**](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
 
 ### Estructura de Ramas Principales
-- `Produccion` ➔ **Producción** (solo releases estables)
-- `main` ➔ **Desarrollo** (integración de features)
+- `main` ➔ **Producción** (solo releases estables)
+- `develop` ➔ **Desarrollo** (integración de features)
 
 ### Reglas Clave
-1. **Nunca hacer commit directo** en `main` o `Produccion`
+1. **Nunca hacer commit directo** en `main` o `develop`
 2. **Squash merge** recomendado para PRs (opcional)
 4. Revisión de código antes de hacer el pr
 
@@ -66,7 +66,4 @@ enfoque principal es **desktop-first (para pantallas grandes)** y luego escalas 
 
 **Flujo:**
 
-1. Desarrollar → `dev`
-2. formatear Codigo → `lint:format`
-3. Probar en GH Pages → `deploy:preview`
-4. Subir a producción → `deploy:production`
+Todo quedo automatizado con workflows

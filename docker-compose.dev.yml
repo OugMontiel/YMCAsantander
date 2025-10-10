@@ -1,10 +1,10 @@
 services:
-  ymca_santander:
+  dev_ymca_santander:
     image: ymcasantander:latest
-    container_name: ymca_santander
+    container_name: dev_ymca_santander
     restart: unless-stopped
     ports:
-      - "8080:80"
+      - "8081:80"
     networks:
       - proxy
     healthcheck:
