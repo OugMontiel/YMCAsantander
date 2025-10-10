@@ -75,12 +75,13 @@ jobs:
         env:
           COMPOSE_FILE: ${{ steps.env.outputs.compose_file }}
           IMAGE_FULL: ${{ needs.build-and-push.outputs.image_full }}
+          ENVIRONMENT: ${{ steps.env.outputs.environment }}
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
-          envs: COMPOSE_FILE,IMAGE_FULL
+          envs: COMPOSE_FILE,IMAGE_FULL,ENVIRONMENT
           script: |
             set -e
             
@@ -92,8 +93,15 @@ jobs:
             echo "Pulling imagen: ${IMAGE_FULL}"
             docker pull ${IMAGE_FULL}
             
-            echo "Creando tag local: ymcasantander:latest"
-            docker tag ${IMAGE_FULL} ymcasantander:latest
+            # Tag diferente según entorno
+            if [ "${ENVIRONMENT}" = "production" ]; then
+              echo "Creando tag local: ymcasantander (sin tag = latest implícito)"
+              docker tag ${IMAGE_FULL} ymcasantander:latest
+              docker tag ${IMAGE_FULL} ymcasantander
+            else
+              echo "Creando tag local: ymcasantander:dev"
+              docker tag ${IMAGE_FULL} ymcasantander:dev
+            fi
             
             echo "Backup estado actual..."
             docker compose -f ${COMPOSE_FILE} ps > /tmp/pre-deploy-$(date +%Y%m%d-%H%M%S).log || true
@@ -106,7 +114,7 @@ jobs:
             
             echo "Verificando salud..."
             if docker compose -f ${COMPOSE_FILE} ps | grep -E "Up|running"; then
-              echo "Deployment exitoso a ${{ steps.env.outputs.environment }}"
+              echo "Deployment exitoso a ${ENVIRONMENT}"
               echo "Imagen desplegada: ${IMAGE_FULL}"
               
               echo "Limpiando imágenes antiguas..."
@@ -119,7 +127,7 @@ jobs:
               docker compose -f ${COMPOSE_FILE} logs --tail=100
               exit 1
             fi
-
+            
       - name: Deployment summary
         if: success()
         run: |

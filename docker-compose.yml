@@ -1,6 +1,6 @@
 services:
   ymca_santander:
-    image: ymcasantander:latest
+    image: ymcasantander
     container_name: ymca_santander
     restart: unless-stopped
     ports:
