@@ -8,7 +8,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository_owner }}/${{ github.event.repository.name }}
+  IMAGE_NAME: ${{ github.repository_owner }}/ymcasantander 
 
 jobs:
   build-and-push:
@@ -84,13 +84,13 @@ jobs:
         env:
           COMPOSE_FILE: ${{ steps.env.outputs.compose_file }}
           IMAGE_TAG: ${{ steps.env.outputs.image_tag }}
-          GITHUB_REPOSITORY: ${{ github.repository }}
+          REGISTRY_IMAGE: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
-          envs: COMPOSE_FILE,IMAGE_TAG,GITHUB_REPOSITORY
+          envs: COMPOSE_FILE,IMAGE_TAG,REGISTRY_IMAGE
           script: |
             set -e
             
@@ -99,15 +99,14 @@ jobs:
             # Login al registry
             echo "${{ secrets.REGISTRY_TOKEN }}" | docker login ghcr.io -u "${{ secrets.REGISTRY_USER }}" --password-stdin
             
-            # Exportar variables para docker-compose
-            export IMAGE_TAG="${IMAGE_TAG}"
-            export GITHUB_REPOSITORY="${GITHUB_REPOSITORY}"
+            # Pull de la imagen específica del registry
+            docker pull ${REGISTRY_IMAGE}:${IMAGE_TAG}
+            
+            # ⭐ CREAR EL TAG LOCAL que usa docker-compose
+            docker tag ${REGISTRY_IMAGE}:${IMAGE_TAG} ymcasantander:latest
             
             # Backup estado actual
             docker compose -f ${COMPOSE_FILE} ps > /tmp/pre-deploy-$(date +%Y%m%d-%H%M%S).log || true
-            
-            # Pull nueva imagen
-            docker compose -f ${COMPOSE_FILE} pull
             
             # Deploy con timeout
             timeout 300 docker compose -f ${COMPOSE_FILE} up -d --remove-orphans
@@ -119,9 +118,10 @@ jobs:
             # Verificar salud
             if docker compose -f ${COMPOSE_FILE} ps | grep -E "Up|running"; then
               echo "✅ Deployment exitoso a ${{ steps.env.outputs.environment }}"
+              echo "📦 Imagen: ${REGISTRY_IMAGE}:${IMAGE_TAG}"
               
-              # Limpiar imágenes antiguas
-              docker image prune -f
+              # Limpiar imágenes antiguas (pero mantener las últimas 3)
+              docker images ${REGISTRY_IMAGE} --format "{{.Repository}}:{{.Tag}}" | tail -n +4 | xargs -r docker rmi || true
               
               # Mostrar estado
               docker compose -f ${COMPOSE_FILE} ps
