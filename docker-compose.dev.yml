@@ -1,10 +1,10 @@
 services:
-  ymca_santander:
-    image: ghcr.io/${GITHUB_REPOSITORY}:${IMAGE_TAG:-latest}
-    container_name: ymca_santander
+  dev_ymca_santander:
+    image: ghcr.io/${GITHUB_REPOSITORY}:dev-${IMAGE_TAG:-latest}
+    container_name: dev_ymca_santander
     restart: unless-stopped
     ports:
-      - "8080:80"
+      - "8081:80"
     networks:
       - proxy
     healthcheck:
