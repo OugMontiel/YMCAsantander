@@ -8,7 +8,6 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository_owner }}/ymcasantander 
 
 jobs:
   build-and-push:
@@ -18,11 +17,23 @@ jobs:
       packages: write
     
     outputs:
-      image_tag: ${{ steps.meta.outputs.tags }}
+      image_full: ${{ steps.vars.outputs.image_full }}
       
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Set lowercase variables
+        id: vars
+        run: |
+          # Convertir todo a minúsculas
+          OWNER_LOWER=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
+          IMAGE_FULL="${{ env.REGISTRY }}/${OWNER_LOWER}/ymcasantander:${{ github.ref_name }}-${{ github.sha }}"
+          
+          echo "owner_lower=${OWNER_LOWER}" >> $GITHUB_OUTPUT
+          echo "image_full=${IMAGE_FULL}" >> $GITHUB_OUTPUT
+          
+          echo "🏗️ Building: ${IMAGE_FULL}"
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -34,30 +45,12 @@ jobs:
           username: ${{ secrets.REGISTRY_USER }}
           password: ${{ secrets.REGISTRY_TOKEN }}
 
-      - name: Extract metadata
-        id: meta
-        uses: docker/metadata-action@v5
-        with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-          tags: |
-            type=ref,event=branch
-            type=sha,prefix={{branch}}-
-            type=raw,value=latest,enable={{is_default_branch}}
-          flavor: |
-            latest=false
-          
-      - name: Lowercase image name
-        id: lowercase
-        run: |
-          echo "image_name=$(echo '${{ env.IMAGE_NAME }}' | tr '[:upper:]' '[:lower:]')" >> $GITHUB_OUTPUT
-          
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
           context: .
           push: true
-          tags: ${{ env.REGISTRY }}/${{ steps.lowercase.outputs.image_name }}:${{ github.ref_name }}-${{ github.sha }}
-          labels: ${{ steps.meta.outputs.labels }}
+          tags: ${{ steps.vars.outputs.image_full }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -72,61 +65,57 @@ jobs:
           if [ "${{ github.ref_name }}" = "main" ]; then
             echo "compose_file=docker-compose.yml" >> $GITHUB_OUTPUT
             echo "environment=production" >> $GITHUB_OUTPUT
-            echo "image_tag=main-${{ github.sha }}" >> $GITHUB_OUTPUT
           else
             echo "compose_file=docker-compose.dev.yml" >> $GITHUB_OUTPUT
             echo "environment=development" >> $GITHUB_OUTPUT
-            echo "image_tag=develop-${{ github.sha }}" >> $GITHUB_OUTPUT
           fi
 
       - name: Deploy to VPS
         uses: appleboy/ssh-action@v1.0.3
         env:
           COMPOSE_FILE: ${{ steps.env.outputs.compose_file }}
-          IMAGE_TAG: ${{ steps.env.outputs.image_tag }}
-          REGISTRY_IMAGE: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          IMAGE_FULL: ${{ needs.build-and-push.outputs.image_full }}
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
-          envs: COMPOSE_FILE,IMAGE_TAG,REGISTRY_IMAGE
+          envs: COMPOSE_FILE,IMAGE_FULL
           script: |
             set -e
             
             cd /home/ubuntu/apps/ymcaSantander
             
-            # Login al registry
+            echo "Login al registry..."
             echo "${{ secrets.REGISTRY_TOKEN }}" | docker login ghcr.io -u "${{ secrets.REGISTRY_USER }}" --password-stdin
             
-            # Pull de la imagen específica del registry
-            docker pull ${REGISTRY_IMAGE}:${IMAGE_TAG}
+            echo "Pulling imagen: ${IMAGE_FULL}"
+            docker pull ${IMAGE_FULL}
             
-            # ⭐ CREAR EL TAG LOCAL que usa docker-compose
-            docker tag ${REGISTRY_IMAGE}:${IMAGE_TAG} ymcasantander:latest
+            echo "Creando tag local: ymcasantander:latest"
+            docker tag ${IMAGE_FULL} ymcasantander:latest
             
-            # Backup estado actual
+            echo "Backup estado actual..."
             docker compose -f ${COMPOSE_FILE} ps > /tmp/pre-deploy-$(date +%Y%m%d-%H%M%S).log || true
             
-            # Deploy con timeout
+            echo "Desplegando con docker-compose..."
             timeout 300 docker compose -f ${COMPOSE_FILE} up -d --remove-orphans
             
-            # Esperar arranque
-            echo "⏳ Esperando arranque de contenedores..."
+            echo "Esperando arranque de contenedores..."
             sleep 15
             
-            # Verificar salud
+            echo "Verificando salud..."
             if docker compose -f ${COMPOSE_FILE} ps | grep -E "Up|running"; then
-              echo "✅ Deployment exitoso a ${{ steps.env.outputs.environment }}"
-              echo "📦 Imagen: ${REGISTRY_IMAGE}:${IMAGE_TAG}"
+              echo "Deployment exitoso a ${{ steps.env.outputs.environment }}"
+              echo "Imagen desplegada: ${IMAGE_FULL}"
               
-              # Limpiar imágenes antiguas (pero mantener las últimas 3)
-              docker images ${REGISTRY_IMAGE} --format "{{.Repository}}:{{.Tag}}" | tail -n +4 | xargs -r docker rmi || true
+              echo "Limpiando imágenes antiguas..."
+              docker image prune -f
               
-              # Mostrar estado
+              echo "Estado final:"
               docker compose -f ${COMPOSE_FILE} ps
             else
-              echo "❌ Deployment falló - contenedores no están saludables"
+              echo "Deployment falló - contenedores no están saludables"
               docker compose -f ${COMPOSE_FILE} logs --tail=100
               exit 1
             fi
@@ -134,20 +123,9 @@ jobs:
       - name: Deployment summary
         if: success()
         run: |
-          echo "### ✅ Deployment Successful" >> $GITHUB_STEP_SUMMARY
+          echo "### Deployment Successful" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "- **Environment:** ${{ steps.env.outputs.environment }}" >> $GITHUB_STEP_SUMMARY
-          echo "- **Image Tag:** ${{ steps.env.outputs.image_tag }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Image:** ${{ needs.build-and-push.outputs.image_full }}" >> $GITHUB_STEP_SUMMARY
           echo "- **Commit:** ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
           echo "- **Branch:** ${{ github.ref_name }}" >> $GITHUB_STEP_SUMMARY
-
-      - name: Notify deployment
-        if: always()
-        uses: 8398a7/action-slack@v3
-        with:
-          status: ${{ job.status }}
-          text: |
-            Deployment to ${{ steps.env.outputs.environment }}
-            Status: ${{ job.status }}
-            Commit: ${{ github.sha }}
-          webhook_url: ${{ secrets.SLACK_WEBHOOK }}
