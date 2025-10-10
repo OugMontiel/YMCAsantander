@@ -66,7 +66,4 @@ enfoque principal es **desktop-first (para pantallas grandes)** y luego escalas 
 
 **Flujo:**
 
-1. Desarrollar → `dev`
-2. formatear Codigo → `lint:format`
-3. Probar en GH Pages → `deploy:preview`
-4. Subir a producción → `deploy:production`
+Todo quedo automatizado con workflows
