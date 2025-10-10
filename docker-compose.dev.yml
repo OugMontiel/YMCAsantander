@@ -1,10 +1,7 @@
 services:
-  devymcasantander:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: devymcasantander
-    image: ymcasantander:dev
+  dev_ymca_santander:
+    image: ghcr.io/${GITHUB_REPOSITORY}:dev-${IMAGE_TAG:-latest}
+    container_name: dev_ymca_santander
     restart: unless-stopped
     ports:
       - "8081:80"
@@ -21,6 +18,8 @@ services:
       options:
         max-size: "10m"
         max-file: "3"
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
 
 networks:
   proxy:
