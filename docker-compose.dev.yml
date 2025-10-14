@@ -1,7 +1,7 @@
 services:
-  dev_ymca_santander:
-    image: ymcasantander:dev
-    container_name: dev_ymca_santander
+  ymca_santander_dev:
+    image: ymcasantander-development:latest
+    container_name: ymca_santander_dev
     restart: unless-stopped
     ports:
       - "8081:80"
