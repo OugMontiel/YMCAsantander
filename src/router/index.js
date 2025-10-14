@@ -89,7 +89,7 @@ const router = createRouter({
         {
           path: "pazaLaPaz",
           name: "pazaLaPaz",
-          component: PazaLaPaz,
+          component: EnConstruccion,
         },
         {
           path: "misionPazYCiudadania",
