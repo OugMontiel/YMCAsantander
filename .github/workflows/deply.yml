@@ -18,6 +18,7 @@ jobs:
     
     outputs:
       image_full: ${{ steps.vars.outputs.image_full }}
+      environment: ${{ steps.vars.outputs.environment }}
       
     steps:
       - name: Checkout code
@@ -28,12 +29,24 @@ jobs:
         run: |
           # Convertir todo a minúsculas
           OWNER_LOWER=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
-          IMAGE_FULL="${{ env.REGISTRY }}/${OWNER_LOWER}/ymcasantander:${{ github.ref_name }}-${{ github.sha }}"
+          
+          # Determinar entorno y sufijo
+          if [ "${{ github.ref_name }}" = "main" ]; then
+            ENV_SUFFIX="production"
+            ENVIRONMENT="production"
+          else
+            ENV_SUFFIX="development"
+            ENVIRONMENT="development"
+          fi
+          
+          IMAGE_FULL="${{ env.REGISTRY }}/${OWNER_LOWER}/ymcasantander-${ENV_SUFFIX}:${{ github.sha }}"
           
           echo "owner_lower=${OWNER_LOWER}" >> $GITHUB_OUTPUT
           echo "image_full=${IMAGE_FULL}" >> $GITHUB_OUTPUT
+          echo "environment=${ENVIRONMENT}" >> $GITHUB_OUTPUT
+          echo "env_suffix=${ENV_SUFFIX}" >> $GITHUB_OUTPUT
           
-          echo "🏗️ Building: ${IMAGE_FULL}"
+          echo "Building for ${ENVIRONMENT}: ${IMAGE_FULL}"
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -63,11 +76,13 @@ jobs:
         id: env
         run: |
           if [ "${{ github.ref_name }}" = "main" ]; then
-            echo "compose_file=docker-compose.yml" >> $GITHUB_OUTPUT
+            echo "compose_file=docker-compose.production.yml" >> $GITHUB_OUTPUT
             echo "environment=production" >> $GITHUB_OUTPUT
+            echo "local_image_tag=ymcasantander-production:latest" >> $GITHUB_OUTPUT
           else
-            echo "compose_file=docker-compose.dev.yml" >> $GITHUB_OUTPUT
+            echo "compose_file=docker-compose.development.yml" >> $GITHUB_OUTPUT
             echo "environment=development" >> $GITHUB_OUTPUT
+            echo "local_image_tag=ymcasantander-development:latest" >> $GITHUB_OUTPUT
           fi
 
       - name: Deploy to VPS
@@ -75,56 +90,65 @@ jobs:
         env:
           COMPOSE_FILE: ${{ steps.env.outputs.compose_file }}
           IMAGE_FULL: ${{ needs.build-and-push.outputs.image_full }}
+          LOCAL_IMAGE_TAG: ${{ steps.env.outputs.local_image_tag }}
           ENVIRONMENT: ${{ steps.env.outputs.environment }}
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.SSH_PORT }}
-          envs: COMPOSE_FILE,IMAGE_FULL,ENVIRONMENT
+          envs: COMPOSE_FILE,IMAGE_FULL,LOCAL_IMAGE_TAG,ENVIRONMENT
           script: |
             set -e
             
             cd /home/ubuntu/apps/ymcaSantander
             
-            echo "Login al registry..."
+            echo "=================================================="
+            echo "🚀 Desplegando entorno: ${ENVIRONMENT}"
+            echo "=================================================="
+            
+            echo "🔐 Login al registry..."
             echo "${{ secrets.REGISTRY_TOKEN }}" | docker login ghcr.io -u "${{ secrets.REGISTRY_USER }}" --password-stdin
             
-            echo "Pulling imagen: ${IMAGE_FULL}"
+            echo "📥 Pulling imagen: ${IMAGE_FULL}"
             docker pull ${IMAGE_FULL}
             
-            # Tag SOLO para el entorno correspondiente
-            if [ "${ENVIRONMENT}" = "production" ]; then
-              echo "Creando tags para PRODUCCIÓN"
-              docker tag ${IMAGE_FULL} ymcasantander:latest
-              docker tag ${IMAGE_FULL} ymcasantander
-            else
-              echo "Creando tag para DESARROLLO"
-              docker tag ${IMAGE_FULL} ymcasantander:dev
-            fi
+            echo "🏷️  Creando tag local: ${LOCAL_IMAGE_TAG}"
+            docker tag ${IMAGE_FULL} ${LOCAL_IMAGE_TAG}
             
-            echo "Backup estado actual..."
-            docker compose -f ${COMPOSE_FILE} ps > /tmp/pre-deploy-$(date +%Y%m%d-%H%M%S).log || true
+            echo "💾 Backup estado actual..."
+            docker compose -f ${COMPOSE_FILE} ps > /tmp/pre-deploy-${ENVIRONMENT}-$(date +%Y%m%d-%H%M%S).log || true
             
-            echo "Desplegando con docker-compose..."
+            echo "🚢 Desplegando con docker-compose..."
             timeout 300 docker compose -f ${COMPOSE_FILE} up -d --remove-orphans
             
-            echo "Esperando arranque de contenedores..."
+            echo "⏳ Esperando arranque de contenedores..."
             sleep 20
             
-            echo "Verificando salud..."
+            echo "🏥 Verificando salud..."
             if docker compose -f ${COMPOSE_FILE} ps | grep -E "Up|running"; then
-              echo "Deployment exitoso a ${ENVIRONMENT}"
-              echo "Imagen desplegada: ${IMAGE_FULL}"
+              echo "✅ Deployment exitoso a ${ENVIRONMENT}"
+              echo "📦 Imagen desplegada: ${IMAGE_FULL}"
+              echo "🏷️  Tag local: ${LOCAL_IMAGE_TAG}"
               
-              echo "Limpiando imágenes antiguas..."
-              docker image prune -f
+              echo "🧹 Limpiando imágenes antiguas de ${ENVIRONMENT}..."
+              # Solo limpia imágenes del entorno correspondiente
+              if [ "${ENVIRONMENT}" = "production" ]; then
+                docker images | grep "ymcasantander-production" | grep -v "latest" | awk '{print $3}' | xargs -r docker rmi -f || true
+              else
+                docker images | grep "ymcasantander-development" | grep -v "latest" | awk '{print $3}' | xargs -r docker rmi -f || true
+              fi
               
-              echo "Estado final:"
+              echo "📊 Estado final:"
               docker compose -f ${COMPOSE_FILE} ps
+              echo ""
+              echo "🐳 Contenedores YMCA activos:"
               docker ps --filter "name=ymca"
+              echo ""
+              echo "🖼️  Imágenes YMCA:"
+              docker images | grep ymcasantander
             else
-              echo "Deployment falló - contenedores no están saludables"
+              echo "❌ Deployment falló - contenedores no están saludables"
               docker compose -f ${COMPOSE_FILE} logs --tail=100
               exit 1
             fi
@@ -132,9 +156,10 @@ jobs:
       - name: Deployment summary
         if: success()
         run: |
-          echo "### Deployment Successful" >> $GITHUB_STEP_SUMMARY
+          echo "### ✅ Deployment Successful" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "- **Environment:** ${{ steps.env.outputs.environment }}" >> $GITHUB_STEP_SUMMARY
           echo "- **Image:** ${{ needs.build-and-push.outputs.image_full }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Local Tag:** ${{ steps.env.outputs.local_image_tag }}" >> $GITHUB_STEP_SUMMARY
           echo "- **Commit:** ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
           echo "- **Branch:** ${{ github.ref_name }}" >> $GITHUB_STEP_SUMMARY
