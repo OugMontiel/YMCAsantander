@@ -6,8 +6,8 @@ Seguimos el estándar Git Flow como se describe en:
 [**Git Flow Workflow - Atlassian**](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
 
 ### Estructura de Ramas Principales
-- `main` ➔ **Producción** (solo releases estables)
-- `develop` ➔ **Desarrollo** (integración de features)
+- `main` ➔ **Producción** 
+- `develop` ➔ **Desarrollo**
 
 ### Reglas Clave
 1. **Nunca hacer commit directo** en `main` o `develop`
@@ -58,12 +58,24 @@ enfoque principal es **desktop-first (para pantallas grandes)** y luego escalas 
 
 ## Scripts principales
 
-* **`npm run dev`** → Servidor de desarrollo (Vite).
-* **`npm run build`** → Build producción (genera `dist/` + copia `index.html` a `404.html` para GitHub Pages).
-* **`npm run deploy:preview`** → Publica el build en **GitHub Pages** (vista previa).
-* **`npm run deploy:production`** → Publica en el **servidor oficial** vía FTP (ejecuta `versionar.js` + `subir.js`).
+* **`npm run dev`** → Servidor de desarrollo (Vite) local.
 * **`npm run lint:format`** → Formatea el código (Prettier).
 
-**Flujo:**
+**Flujo de despliegue**
 
-Todo quedo automatizado con workflows
+El proceso de **despliegue a producción** está completamente automatizado mediante **GitHub Workflows**.
+
+Para el entorno de **desarrollo**, el despliegue se realiza manualmente ejecutando el siguiente comando:
+
+```bash
+sudo docker compose -f docker-compose.dev.yml up -d --build
+```
+
+Este comando levanta el entorno local para realizar pruebas y revisiones.
+Una vez finalizadas las verificaciones, el entorno se detiene para evitar consumo innecesario de recursos en el servidor.
+
+```bash
+sudo docker compose -f docker-compose.dev.yml down
+```
+
+* `down` → detiene y elimina los contenedores, redes y recursos creados por ese compose.
