@@ -76,11 +76,11 @@ jobs:
         id: env
         run: |
           if [ "${{ github.ref_name }}" = "main" ]; then
-            echo "compose_file=docker-compose.production.yml" >> $GITHUB_OUTPUT
+            echo "compose_file=docker-compose.yml" >> $GITHUB_OUTPUT
             echo "environment=production" >> $GITHUB_OUTPUT
             echo "local_image_tag=ymcasantander-production:latest" >> $GITHUB_OUTPUT
           else
-            echo "compose_file=docker-compose.development.yml" >> $GITHUB_OUTPUT
+            echo "compose_file=docker-compose.dev.yml" >> $GITHUB_OUTPUT
             echo "environment=development" >> $GITHUB_OUTPUT
             echo "local_image_tag=ymcasantander-development:latest" >> $GITHUB_OUTPUT
           fi
