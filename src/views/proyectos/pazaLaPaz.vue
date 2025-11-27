@@ -22,7 +22,7 @@ export default {
       <titulo />
     </section>
 
-    <section class="Descripcion">
+    <section class="descripcion">
       <descripsion />
     </section>
 
@@ -40,4 +40,33 @@ export default {
   </main>
 </template>
 
-<style scoped></style>
+<style scoped>
+.pazaLaPaz {
+  min-height: 100vh;
+  background-color: var(--color-fondo);
+}
+
+/* xxl - Pantallas grandes */
+@media (min-width: 1201px) {
+}
+
+/* xl - Laptops / desktops medianos */
+@media (max-width: 1200px) {
+}
+
+/* lg - Laptops pequeñas */
+@media (max-width: 992px) {
+}
+
+/* md - Tablets */
+@media (max-width: 768px) {
+}
+
+/* sm - Teléfonos estándar */
+@media (max-width: 576px) {
+}
+
+/* xs - Teléfonos pequeños */
+@media (max-width: 480px) {
+}
+</style>
