@@ -89,12 +89,12 @@ const router = createRouter({
         {
           path: "pazaLaPaz",
           name: "pazaLaPaz",
-          component: EnConstruccion,
+          component: PazaLaPaz,
         },
         {
           path: "misionPazYCiudadania",
           name: "misionPazYCiudadania",
-          component: EnConstruccion,
+          component: MisionPazYCiudadania,
         },
       ],
     },
