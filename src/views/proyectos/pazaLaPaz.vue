@@ -3,7 +3,7 @@ import titulo from "@/components/proyectos/pazaLaPaz/titulo.vue";
 import descripsion from "@/components/proyectos/pazaLaPaz/descripsion.vue";
 import metodologia from "@/components/proyectos/pazaLaPaz/metodologia.vue";
 import aliados from "@/components/proyectos/pazaLaPaz/aliados.vue";
-import testimonios from "@/components/proyectos/pazaLaPaz/testimonios.vue";
+// import testimonios from "@/components/proyectos/pazaLaPaz/testimonios.vue";
 
 export default {
   name: "pazaLaPaz",
@@ -12,7 +12,7 @@ export default {
     titulo,
     metodologia,
     aliados,
-    testimonios,
+    // testimonios,
   },
 };
 </script>
@@ -34,9 +34,9 @@ export default {
       <aliados />
     </section>
 
-    <section class="testimonios">
+    <!-- <section class="testimonios">
       <testimonios />
-    </section>
+    </section> -->
   </main>
 </template>
 
