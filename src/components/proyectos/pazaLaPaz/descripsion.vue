@@ -15,14 +15,14 @@ export default {
 };
 </script>
 <template>
-  <div class="flex flex-col lg:flex-row items-center gap-8 p-8">
-    <!-- Imagen a la izquierda -->
-    <div class="w-full lg:w-1/2 flex justify-center lg:justify-end">
-      <img v-lazy="{src: imgProyecto}" alt="Logo de Paza la Paz" class="max-w-full h-auto rounded-2xl shadow-lg object-cover max-h-[80vh]" />
+  <div class="flex flex-col lg:flex-row items-start gap-8 p-8">
+    <!-- Imagen a la izquierda - 1/3 del ancho y sticky -->
+    <div class="w-full lg:w-1/3 flex justify-center lg:justify-start lg:sticky lg:top-24 lg:self-start">
+      <img v-lazy="{src: imgProyecto}" alt="Logo de Paza la Paz" class="max-w-full h-auto rounded-2xl shadow-lg object-cover max-h-[70vh]" />
     </div>
 
-    <!-- Contenido (Texto + Beneficios) a la derecha -->
-    <div class="w-full lg:w-1/2 flex flex-col gap-8">
+    <!-- Contenido (Texto + Beneficios) a la derecha - 2/3 del ancho -->
+    <div class="w-full lg:w-2/3 flex flex-col gap-8">
       <div class="bg-[var(--color-fondo-texto)] p-8 rounded-2xl">
         <p class="leading-relaxed text-lg text-left">
           Es un proyecto dirigido a jóvenes entre <strong>14 y 28 años</strong> en situación de vulnerabilidad social. Su objetivo es
