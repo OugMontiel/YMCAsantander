@@ -4,94 +4,23 @@ import beneficios from "@/data/proyectos/beneficiosPrograma.js";
 </script>
 
 <template>
-  <section class="pazBeneficios">
-    <div class="beneficiosHeader">
-      <h2>¿Por qué ser parte del programa?</h2>
+  <section class="mt-8">
+    <div class="flex justify-center items-center mb-8 p-4 text-center">
+      <h2 class="m-0 text-[var(--color-texto-secundario)] text-2xl font-bold">¿Por qué ser parte del programa?</h2>
     </div>
-    <div class="beneficiosGrid">
-      <div class="beneficioCard" v-for="(beneficio, index) in beneficios" :key="index">
-        <Icon :icon="beneficio.icono" :alt="beneficio.alt" class="iconoImg" />
-        <p>{{ beneficio.texto }}</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+      <div
+        class="bg-[var(--color-fondo-secundario)] p-3 border-t-[5px] border-[var(--color-hover-primario)] rounded-2xl flex flex-col items-center gap-4 shadow-[0_2px_8px_var(--color-fondo-shadow)] transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_4px_12px_var(--color-fondo-shadow)] h-full"
+        v-for="(beneficio, index) in beneficios"
+        :key="index"
+      >
+        <div class="p-3 bg-[var(--color-fondo)] rounded-full shadow-sm">
+          <Icon :icon="beneficio.icono" :alt="beneficio.alt" class="w-10 h-10 text-[var(--color-hover-primario)]" />
+        </div>
+        <p class="text-center m-0 leading-relaxed">{{ beneficio.texto }}</p>
       </div>
     </div>
   </section>
 </template>
 
-<style scoped>
-.beneficiosHeader {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 1rem;
-
-  margin-bottom: 2rem;
-  padding: 2rem;
-
-  text-align: center;
-}
-
-.logoBeneficiosHeader {
-  width: 60px;
-  height: auto;
-}
-
-.beneficiosGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 1rem;
-}
-
-.beneficioCard {
-  background-color: var(--color-fondo-secundario);
-  padding: 1rem;
-  border-left: 5px solid var(--color-hover-primario);
-  border-radius: 1em;
-
-  display: flex;
-  align-items: flex-start;
-  gap: 0.5rem;
-
-  box-shadow: 0 2px 6px var(--color-fondo-shadow);
-  transition: transform 0.2s ease;
-}
-
-.beneficioCard:hover {
-  transform: translateY(-5px);
-}
-
-.iconoImg {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-  flex-shrink: 0;
-}
-
-.beneficioCard p {
-  text-align: left;
-}
-
-/* xxl - Pantallas grandes */
-@media (min-width: 1201px) {
-}
-
-/* xl - Laptops / desktops medianos */
-@media (max-width: 1200px) {
-}
-
-/* lg - Laptops pequeñas */
-@media (max-width: 992px) {
-}
-
-/* md - Tablets */
-@media (max-width: 768px) {
-}
-
-/* sm - Teléfonos estándar */
-@media (max-width: 576px) {
-}
-
-/* xs - Teléfonos pequeños */
-@media (max-width: 480px) {
-}
-</style>
+<style scoped></style>

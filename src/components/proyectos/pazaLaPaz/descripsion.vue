@@ -15,121 +15,25 @@ export default {
 };
 </script>
 <template>
-  <section class="pazDescripcion">
-    <div class="contenidoPazDescripcion">
-      <p>
-        Es un proyecto dirigido a jóvenes entre <strong>14 y 28 años</strong> en situación de vulnerabilidad social. Su objetivo es
-        contribuir a la construcción de paz y a la transformación del conflicto social en Colombia, generando oportunidades de
-        empoderamiento e inclusión para los jóvenes en <strong>Bucaramanga</strong> y su área metropolitana.
-      </p>
+  <div class="flex flex-col lg:flex-row items-start gap-8 p-8">
+    <!-- Imagen a la izquierda - 1/3 del ancho y sticky -->
+    <div class="w-full lg:w-1/3 flex justify-center lg:justify-start lg:sticky lg:top-24 lg:self-start">
+      <img v-lazy="{src: imgProyecto}" alt="Logo de Paza la Paz" class="max-w-full h-auto rounded-2xl shadow-lg object-cover max-h-[70vh]" />
+    </div>
 
+    <!-- Contenido (Texto + Beneficios) a la derecha - 2/3 del ancho -->
+    <div class="w-full lg:w-2/3 flex flex-col gap-8">
+      <div class="bg-[var(--color-fondo-texto)] p-8 rounded-2xl">
+        <p class="leading-relaxed text-lg text-left">
+          Es un proyecto dirigido a jóvenes entre <strong>14 y 28 años</strong> en situación de vulnerabilidad social. Su objetivo es
+          contribuir a la construcción de paz y a la transformación del conflicto social en Colombia, generando oportunidades de
+          empoderamiento e inclusión para los jóvenes en <strong>Bucaramanga</strong> y su área metropolitana.
+        </p>
+      </div>
+      
       <beneficios />
     </div>
-    <div class="logoContainer">
-      <img v-lazy="{src: imgProyecto}" alt="Logo de Paza la Paz" class="logoPazDescripcion" />
-    </div>
-  </section>
+  </div>
 </template>
 
-<style scoped>
-.pazDescripcion {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-
-  position: relative;
-}
-
-.contenidoPazDescripcion {
-  flex: 1;
-  min-width: 280px;
-  padding: 2em;
-}
-
-.contenidoPazDescripcion h1 {
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-}
-
-.logoContainer {
-  flex-shrink: 0;
-}
-
-.logoPazDescripcion {
-  max-width: 36rem;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-}
-
-/* xxl - Pantallas grandes */
-@media (min-width: 1201px) {
-}
-
-/* xl - Laptops / desktops medianos */
-@media (max-width: 1200px) {
-  .logoPazDescripcion {
-    max-width: 30rem;
-  }
-}
-
-/* lg - Laptops pequeñas */
-@media (max-width: 992px) {
-  .contenidoPazDescripcion {
-    position: absolute;
-    top: 3em;
-    z-index: 10;
-
-    background-color: var(--color-fondo-texto);
-    border-radius: 1rem;
-    padding: 2rem;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-
-  .logoContainer {
-    flex-shrink: 1;
-  }
-  .logoPazDescripcion {
-    max-width: none;
-  }
-
-  .contenidoPazDescripcion {
-    max-width: 40rem;
-  }
-  .pazDescripcion {
-    justify-content: center;
-  }
-}
-/* md - Tablets */
-@media (max-width: 768px) {
-  .contenidoPazDescripcion {
-    max-width: 34rem;
-  }
-}
-
-/* sm - Teléfonos estándar */
-@media (max-width: 576px) {
-  .contenidoPazDescripcion {
-    position: static; /* comportamiento por defecto */
-    z-index: auto;
-
-    background-color: transparent; /* sin fondo */
-    border-radius: 0;
-    padding: 1em; /* padding suave y adaptable */
-
-    display: block; /* comportamiento por defecto */
-    text-align: left; /* alineación de texto natural */
-  }
-}
-
-/* xs - Teléfonos pequeños */
-@media (max-width: 480px) {
-}
-</style>
+<style scoped></style>

@@ -64,11 +64,12 @@ export default {
   padding: 2rem;
   text-align: center;
   overflow: hidden;
+  background-color: var(--color-fondo);
 }
-.pazGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+
+.pazTestimonios h2 {
+  margin-bottom: 2rem;
+  color: var(--color-texto-secundario);
 }
 
 /* xxl - Pantallas grandes */
@@ -81,13 +82,23 @@ export default {
 
 /* lg - Laptops pequeñas */
 @media (max-width: 992px) {
+  .pazTestimonios {
+    padding: 1.5rem;
+  }
 }
+
 /* md - Tablets */
 @media (max-width: 768px) {
+  .pazTestimonios {
+    padding: 1rem;
+  }
 }
 
 /* sm - Teléfonos estándar */
 @media (max-width: 576px) {
+  .pazTestimonios h2 {
+    font-size: 2rem;
+  }
 }
 
 /* xs - Teléfonos pequeños */

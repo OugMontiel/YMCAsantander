@@ -3,7 +3,7 @@ import titulo from "@/components/proyectos/pazaLaPaz/titulo.vue";
 import descripsion from "@/components/proyectos/pazaLaPaz/descripsion.vue";
 import metodologia from "@/components/proyectos/pazaLaPaz/metodologia.vue";
 import aliados from "@/components/proyectos/pazaLaPaz/aliados.vue";
-import testimonios from "@/components/proyectos/pazaLaPaz/testimonios.vue";
+// import testimonios from "@/components/proyectos/pazaLaPaz/testimonios.vue";
 
 export default {
   name: "pazaLaPaz",
@@ -12,7 +12,7 @@ export default {
     titulo,
     metodologia,
     aliados,
-    testimonios,
+    // testimonios,
   },
 };
 </script>
@@ -22,7 +22,7 @@ export default {
       <titulo />
     </section>
 
-    <section class="Descripcion">
+    <section class="descripcion">
       <descripsion />
     </section>
 
@@ -34,10 +34,39 @@ export default {
       <aliados />
     </section>
 
-    <section class="testimonios">
+    <!-- <section class="testimonios">
       <testimonios />
-    </section>
+    </section> -->
   </main>
 </template>
 
-<style scoped></style>
+<style scoped>
+.pazaLaPaz {
+  min-height: 100vh;
+  background-color: var(--color-fondo);
+}
+
+/* xxl - Pantallas grandes */
+@media (min-width: 1201px) {
+}
+
+/* xl - Laptops / desktops medianos */
+@media (max-width: 1200px) {
+}
+
+/* lg - Laptops pequeñas */
+@media (max-width: 992px) {
+}
+
+/* md - Tablets */
+@media (max-width: 768px) {
+}
+
+/* sm - Teléfonos estándar */
+@media (max-width: 576px) {
+}
+
+/* xs - Teléfonos pequeños */
+@media (max-width: 480px) {
+}
+</style>

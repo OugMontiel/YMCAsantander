@@ -1,26 +1,22 @@
+<script>
+import logoMPC from "@/assets/img/proyectos/pazaLaPaz/LogoPazaLaPazAzul.webp";
+
+export default {
+  name: "TituloPazYCiudadania",
+  data() {
+    return {
+      logoMPC,
+    };
+  },
+};
+</script>
+
 <template>
-  <div class="pazYCiudadniaHeader">
-    <img v-lazy="{src: '/LogoAzul.webp'}" alt="Logo Mision Paz Y Ciudadania" class="logopazYCiudadniaHeader" />
-    <h1>mision Paz Y Ciudadania</h1>
+  <div class="flex justify-center items-center gap-8 p-8 pb-6 bg-[var(--color-fondo)]">
+    <img v-lazy="{src: logoMPC}" alt="Logo Misión Paz Y Ciudadanía" class="w-16 h-16 object-contain transition-transform duration-300 hover:scale-110" />
+    <h1 class="m-0 text-4xl md:text-5xl text-[var(--color-texto-secundario)] font-bold text-center">Misión Paz Y Ciudadanía</h1>
   </div>
 </template>
 
-<style scoped>
-.pazYCiudadniaHeader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
+<style scoped></style>
 
-  padding: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 2px solid var(--color-borde-secundario);
-  margin-bottom: 2rem;
-}
-
-.logopazYCiudadniaHeader {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-}
-</style>

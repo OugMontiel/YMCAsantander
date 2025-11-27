@@ -12,28 +12,10 @@ export default {
 </script>
 
 <template>
-  <div class="pazHeader">
-    <img v-lazy="{src: logoPLP}" alt="Logo Paza la Paz" class="logopazHeader" />
-    <h1>Paza la Paz</h1>
+  <div class="flex justify-center items-center gap-8 p-8 pb-6 bg-[var(--color-fondo)]">
+    <img v-lazy="{src: logoPLP}" alt="Logo Paza la Paz" class="w-16 h-16 object-contain transition-transform duration-300 hover:scale-110" />
+    <h1 class="m-0 text-4xl md:text-5xl text-[var(--color-texto-secundario)] font-bold text-center">Paza la Paz</h1>
   </div>
 </template>
 
-<style>
-.pazHeader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-
-  padding: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 2px solid var(--color-borde-secundario);
-  margin-bottom: 2rem;
-}
-
-.logopazHeader {
-  width: 60px;
-  height: 60px;
-  object-fit: contain;
-}
-</style>
+<style scoped></style>
