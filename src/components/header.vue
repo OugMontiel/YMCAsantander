@@ -34,9 +34,9 @@ export default {
           {name: "experienciasLocales", routeName: "experienciasLocales"},
         ],
         aporta: [
-          {name: "socio", routeName: "Socio"},
-          {name: "donar", routeName: "donar"},
-          {name: "hazteVoluntario", routeName: "hazteVoluntario"},
+          {name: "Hazte Socio", routeName: "Socio"},
+          {name: "Donar", routeName: "donar"},
+          {name: "Hazte Voluntario", routeName: "hazteVoluntario"},
         ],
         social: [
           {name: "voluntariado", routeName: "voluntariado"},
