@@ -101,28 +101,28 @@ const router = createRouter({
     {
       path: "/aporta",
       name: "aporta",
-      component: EnConstruccion,
-      redirect: {name: "aportaInicio"},
+      component: AporteHeader,
+      redirect: {name: "Socio"},
       children: [
         {
           path: "",
           name: "aportaInicio",
-          component: EnConstruccion,
+          redirect: {name: "Socio"},
         },
         {
           path: "Socio",
           name: "Socio",
-          component: EnConstruccion,
+          component: Socio,
         },
         {
           path: "donar",
           name: "donar",
-          component: EnConstruccion,
+          component: Donar,
         },
         {
           path: "hazteVoluntario",
           name: "hazteVoluntario",
-          component: EnConstruccion,
+          component: HazteVoluntario,
         },
       ],
     },
