@@ -149,7 +149,7 @@ export default {
   flex-direction: column;
   width: 100%;
   /* Fondo base semitransparente para permitir ver el fondo dinámico */
-  background: rgba(255, 255, 255, 0.7);
+  
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
@@ -164,13 +164,7 @@ export default {
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(
-    to right,
-    transparent 0%,
-    rgba(224, 224, 224, 0.3) 20%,
-    rgba(224, 224, 224, 0.3) 80%,
-    transparent 100%
-  );
+
   z-index: 1;
 }
 
@@ -182,12 +176,7 @@ export default {
   min-height: 3.5rem;
   padding: 0.75rem 1.5rem;
   /* Gradiente suave que se conecta con el subHeader */
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.7) 0%,
-    rgba(255, 255, 255, 0.7) 70%,
-    rgba(250, 250, 250, 0.65) 100%
-  );
+
   transition: padding 0.3s ease, background 0.3s ease;
   z-index: 2;
 }
@@ -195,14 +184,7 @@ export default {
 .headerMain.withSubHeader {
   padding-bottom: 0.5rem;
   /* Gradiente muy suave que se conecta perfectamente con el subHeader */
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.7) 0%,
-    rgba(255, 255, 255, 0.68) 60%,
-    rgba(252, 252, 252, 0.65) 85%,
-    rgba(250, 250, 250, 0.62) 95%,
-    rgba(248, 248, 248, 0.6) 100%
-  );
+
 }
 
 .navDesktop {
@@ -217,11 +199,11 @@ export default {
 /* SubHeader integrado - transición suave */
 .subHeader {
   width: 100%;
-  padding: 0.75rem 1.5rem;
+  padding: 0.4rem 1.5rem;
   /* Gradiente que continúa perfectamente desde el headerMain - transición muy suave */
   background: linear-gradient(
     to bottom,
-    rgba(248, 248, 248, 0.6) 0%,
+    rgba(248, 248, 248, 0.6) 20%,
     rgba(247, 247, 247, 0.62) 30%,
     rgba(246, 246, 246, 0.65) 70%,
     rgba(245, 245, 245, 0.68) 100%
@@ -351,7 +333,7 @@ export default {
 
   .subHeader {
     justify-content: flex-start;
-    padding: 0.65rem 1rem;
+    padding: 0.4rem 1rem;
     gap: 0.5rem;
   }
 }
@@ -383,7 +365,7 @@ export default {
 
   .subHeader {
     font-size: 0.875rem;
-    padding: 0.6rem 1rem;
+    padding: 0.4rem 1rem;
     gap: 0.4rem;
   }
 
@@ -400,7 +382,7 @@ export default {
   }
 
   .subHeader {
-    padding: 0.55rem 0.75rem;
+    padding: 0.4rem 0.75rem;
     gap: 0.3rem;
   }
 
@@ -418,7 +400,7 @@ export default {
   }
 
   .subHeader {
-    padding: 0.5rem 0.5rem;
+    padding: 0.4rem 0.5rem;
     gap: 0.25rem;
   }
 
