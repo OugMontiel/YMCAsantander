@@ -165,6 +165,22 @@ import {Icon} from "@iconify/vue";
           </a>
         </div>
       </div>
+
+      <!-- Socio Empresarial -->
+      <div class="mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-[var(--color-texto-secundario)] mb-8 text-center">
+          Socio Empresarial
+        </h2>
+        
+        <div class="max-w-5xl mx-auto space-y-6 px-4">
+          <p class="leading-relaxed text-lg text-center">
+            En <strong>YMCA Santander</strong>, la Responsabilidad Social Empresarial (RSE) ofrece a tu empresa la oportunidad de contribuir activamente al mejoramiento social, económico y medioambiental de las comunidades. Al colaborar con nosotros, tu organización puede obtener reconocimiento y un valioso acercamiento a las necesidades de la región.
+          </p>
+          <p class="leading-relaxed text-lg text-center">
+            Invitamos a tu equipo de trabajo a participar en diversas iniciativas que marcan la diferencia. Pueden involucrarse en jornadas de limpieza de quebradas, acompañamiento a sectores vulnerables a través de actividades lúdicas y recreativas, el apoyo a emprendimientos sociales y juveniles, o la vinculación con actividades de inmersión en inglés para reducir la brecha social que enfrentan los jóvenes por la falta de una segunda lengua. <strong>¡Tu compromiso nos ayuda a construir un futuro mejor para Bucaramanga y sus alrededores!</strong>
+          </p>
+        </div>
+      </div>
     </section>
   </main>
 </template>
