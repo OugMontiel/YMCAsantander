@@ -19,21 +19,18 @@ const showQR = ref(false);
     <section class="w-full p-8 pt-0">
       <!-- Beneficio Fiscal -->
       <div class="mb-8 max-w-3xl mx-auto text-center">
-        <div class="bg-[var(--color-fondo-texto)] p-6 rounded-xl shadow-md">
-          <Icon icon="mdi:certificate" class="w-12 h-12 text-[var(--color-hover-primario)] mx-auto mb-3" />
           <p class="text-lg font-semibold">
             Tus aportes te pueden deducir hasta en un puede obtener un descuento del
             <strong class="text-[var(--color-hover-primario)]">37%</strong> del valor donado sobre su impuesto de renta causado la
             declaración de renta en Colombia.
           </p>
-        </div>
       </div>
       
       <!-- Métodos de Donación -->
       <div class="mb-16">
 
         
-        <h2 class="text-3xl md:text-4xl font-bold text-[var(--color-texto-secundario)] mb-8 text-center">Elige cómo donar</h2>
+        <h6 class="text-3xl md:text-4xl font-bold text-[var(--color-texto-secundario)] mb-8 text-center">Elige cómo donar</h6>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           <!-- Transferencia Bancaria -->
