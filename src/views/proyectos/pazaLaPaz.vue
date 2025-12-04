@@ -2,6 +2,7 @@
 import titulo from "@/components/proyectos/pazaLaPaz/titulo.vue";
 import descripsion from "@/components/proyectos/pazaLaPaz/descripsion.vue";
 import metodologia from "@/components/proyectos/pazaLaPaz/metodologia.vue";
+import resultadosEsperados from "@/components/proyectos/pazaLaPaz/resultadosEsperados.vue";
 import aliados from "@/components/proyectos/pazaLaPaz/aliados.vue";
 // import testimonios from "@/components/proyectos/pazaLaPaz/testimonios.vue";
 
@@ -11,6 +12,7 @@ export default {
     descripsion,
     titulo,
     metodologia,
+    resultadosEsperados,
     aliados,
     // testimonios,
   },
@@ -28,6 +30,10 @@ export default {
 
     <section class="metodologia">
       <metodologia />
+    </section>
+
+    <section class="resultados">
+      <resultadosEsperados />
     </section>
 
     <section class="aliados">

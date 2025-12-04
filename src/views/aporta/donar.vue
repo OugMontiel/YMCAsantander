@@ -20,9 +20,8 @@ const showQR = ref(false);
       <!-- Beneficio Fiscal -->
       <div class="mb-8 max-w-3xl mx-auto text-center">
           <p class="text-lg font-semibold">
-            Tus aportes te pueden deducir hasta en un puede obtener un descuento del
-            <strong class="text-[var(--color-hover-primario)]">37%</strong> del valor donado sobre su impuesto de renta causado la
-            declaración de renta en Colombia.
+            Tus aportes te pueden otorgar un descuento del
+            <strong class="text-[var(--color-hover-primario)]">25%</strong> del valor donado sobre el impuesto de renta causado en Colombia.
           </p>
       </div>
       
