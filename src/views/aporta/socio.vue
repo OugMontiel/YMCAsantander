@@ -9,14 +9,14 @@ import {Icon} from "@iconify/vue";
       <div class="p-3 bg-[var(--color-fondo-secundario)] rounded-full shadow-md">
         <Icon icon="mdi:account-heart" class="w-12 h-12 text-[var(--color-hover-primario)]" />
       </div>
-      <h1 class="m-0 text-4xl md:text-5xl text-[var(--color-texto-secundario)] font-bold text-center">Hazte Socio</h1>
+      <h1 class="m-0 text-4xl md:text-5xl text-[var(--color-texto-secundario)] font-bold text-center">¿POR QUÉ HACERTE SOCIO?</h1>
     </section>
 
     <!-- Contenido Principal -->
     <section class="w-full p-8">
       <!-- Motivos -->
       <div class="mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-[var(--color-texto-secundario)] mb-8 text-center">¿POR QUÉ HACERTE SOCIO?</h2>
+
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
           <!-- Motivo 1 -->
@@ -72,7 +72,7 @@ import {Icon} from "@iconify/vue";
               </div>
             </div>
             <h3 class="text-xl font-bold text-[var(--color-texto-secundario)] mb-2">Beneficios Fiscales</h3>
-            <p class="leading-relaxed">Tus aportes son deducibles de impuestos hasta en un 100% en tu declaración de renta en Colombia.</p>
+            <p class="leading-relaxed">Tus aportes te pueden otorgar un descuento del 25% del valor donado sobre el impuesto de renta causado en Colombia..</p>
           </div>
 
           <!-- Motivo 5 -->
@@ -140,13 +140,13 @@ import {Icon} from "@iconify/vue";
           </p>
 
           <!-- Video Placeholder -->
-          <div class="w-full aspect-video bg-gray-200 rounded-xl flex items-center justify-center shadow-inner mt-8">
+          <!-- <div class="w-full aspect-video bg-gray-200 rounded-xl flex items-center justify-center shadow-inner mt-8">
             <div class="text-center text-gray-500">
               <Icon icon="mdi:video-outline" class="w-16 h-16 mx-auto mb-2 opacity-50" />
               <p class="text-xl font-semibold">Video de Campaña Financiera</p>
               <p class="text-sm">(Próximamente)</p>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
 

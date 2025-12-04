@@ -22,61 +22,91 @@ import RedesSociales from "@/components/util/redesSociales.vue";
         </h3>
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
-          <!-- Limpieza de Quebradas -->
+          <!-- Y-Maná -->
           <div class="bg-[var(--color-fondo-secundario)] p-6 rounded-2xl shadow-md border-l-4 border-[var(--color-hover-primario)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
             <div class="flex items-start gap-4">
               <div class="p-3 bg-[var(--color-fondo)] rounded-full shadow-sm shrink-0">
-                <Icon icon="mdi:water" class="w-8 h-8 text-[var(--color-hover-primario)]" />
+                <Icon icon="mdi:food" class="w-8 h-8 text-[var(--color-hover-primario)]" />
               </div>
               <div>
-                <h4 class="text-xl font-bold text-[var(--color-texto-secundario)] mb-2">Limpieza de Quebradas</h4>
+                <h4 class="text-xl font-bold text-[var(--color-texto-secundario)] mb-2">Y-Maná</h4>
                 <p class="leading-relaxed">
-                  Jornadas de limpieza ambiental para proteger nuestros recursos hídricos y el medio ambiente.
+                  Iniciativa del movimiento YMCA Santander donde voluntarios, colaboradores, simpatizantes y staff, comparten aguapanela con pan con personas en situación de calle en Bucaramanga. Este gesto sirve como puente para el diálogo, la oración y la extensión del Reino de Dios. Los voluntarios gestionan 200 panes y 10 panelas para llevar a cabo esta actividad solidaria.
                 </p>
               </div>
             </div>
           </div>
 
-          <!-- Actividades Lúdicas -->
+          <!-- Our Words -->
           <div class="bg-[var(--color-fondo-secundario)] p-6 rounded-2xl shadow-md border-l-4 border-[var(--color-hover-primario)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
             <div class="flex items-start gap-4">
               <div class="p-3 bg-[var(--color-fondo)] rounded-full shadow-sm shrink-0">
-                <Icon icon="mdi:human-greeting" class="w-8 h-8 text-[var(--color-hover-primario)]" />
+                <Icon icon="mdi:book-alphabet" class="w-8 h-8 text-[var(--color-hover-primario)]" />
               </div>
               <div>
-                <h4 class="text-xl font-bold text-[var(--color-texto-secundario)] mb-2">Acompañamiento Social</h4>
+                <h4 class="text-xl font-bold text-[var(--color-texto-secundario)] mb-2">Our Words</h4>
                 <p class="leading-relaxed">
-                  Actividades lúdicas y recreativas con sectores vulnerables para generar espacios de alegría y desarrollo.
+                  Este proyecto busca enseñar inglés a niños de una vereda en Girón desde edades tempranas, utilizando juegos y actividades lúdicas. El objetivo es que los niños se familiaricen con el idioma de forma natural y divertida, contribuyendo así a cerrar la brecha lingüística en esta zona de Santander.
                 </p>
               </div>
             </div>
           </div>
 
-          <!-- Emprendimientos -->
+          <!-- Ritmos para la paz -->
           <div class="bg-[var(--color-fondo-secundario)] p-6 rounded-2xl shadow-md border-l-4 border-[var(--color-hover-primario)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
             <div class="flex items-start gap-4">
               <div class="p-3 bg-[var(--color-fondo)] rounded-full shadow-sm shrink-0">
-                <Icon icon="mdi:lightbulb-on" class="w-8 h-8 text-[var(--color-hover-primario)]" />
+                <Icon icon="mdi:music" class="w-8 h-8 text-[var(--color-hover-primario)]" />
               </div>
               <div>
-                <h4 class="text-xl font-bold text-[var(--color-texto-secundario)] mb-2">Apoyo a Emprendimientos</h4>
+                <h4 class="text-xl font-bold text-[var(--color-texto-secundario)] mb-2">Ritmos para la paz</h4>
                 <p class="leading-relaxed">
-                  Fortalecimiento de emprendimientos sociales y juveniles para impulsar el desarrollo económico local.
+                  Iniciativa del colegio Campo Hermoso que, a través de la música, busca fomentar la disciplina y el crecimiento personal en aproximadamente 15 jóvenes, se enfoca en el desarrollo integral de los jóvenes, inculcando valores, fortaleciendo habilidades sociales y promoviendo la convivencia pacífica.
                 </p>
               </div>
             </div>
           </div>
 
-          <!-- Inmersión en Inglés -->
+          <!-- Y-Talk -->
           <div class="bg-[var(--color-fondo-secundario)] p-6 rounded-2xl shadow-md border-l-4 border-[var(--color-hover-primario)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
             <div class="flex items-start gap-4">
               <div class="p-3 bg-[var(--color-fondo)] rounded-full shadow-sm shrink-0">
-                <Icon icon="mdi:translate" class="w-8 h-8 text-[var(--color-hover-primario)]" />
+                <Icon icon="mdi:chat" class="w-8 h-8 text-[var(--color-hover-primario)]" />
               </div>
               <div>
-                <h4 class="text-xl font-bold text-[var(--color-texto-secundario)] mb-2">Inmersión en Inglés</h4>
+                <h4 class="text-xl font-bold text-[var(--color-texto-secundario)] mb-2">Y-Talk</h4>
                 <p class="leading-relaxed">
-                  Actividades de práctica de inglés para reducir la brecha social y abrir oportunidades para los jóvenes.
+                  Es un espacio conversacional de inglés que se lleva a cabo en la sede de la YMCA. A través de actividades lúdico-formativas, el programa busca no solo mejorar las habilidades en inglés de los participantes, sino también reconocer y apoyar la importante labor de los voluntarios. Es una iniciativa que combina el aprendizaje del idioma con el fomento de la participación comunitaria.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Speaking English YMCA-UTS -->
+          <div class="bg-[var(--color-fondo-secundario)] p-6 rounded-2xl shadow-md border-l-4 border-[var(--color-hover-primario)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+            <div class="flex items-start gap-4">
+              <div class="p-3 bg-[var(--color-fondo)] rounded-full shadow-sm shrink-0">
+                <Icon icon="mdi:school" class="w-8 h-8 text-[var(--color-hover-primario)]" />
+              </div>
+              <div>
+                <h4 class="text-xl font-bold text-[var(--color-texto-secundario)] mb-2">Speaking English YMCA-UTS</h4>
+                <p class="leading-relaxed">
+                  Iniciativa conjunta con las Unidades Tecnológicas de Santander (UTS) que crea un espacio dinámico para que los estudiantes de la institución puedan socializar, participar recreativamente y mejorar sus habilidades de habla y comprensión en inglés. A través de juegos y actividades lúdicas, este encuentro busca ser una oportunidad interactiva para que los jóvenes pongan a prueba y fortalezcan su segundo idioma en un ambiente divertido y relajado.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pequeñas sonrisas -->
+          <div class="bg-[var(--color-fondo-secundario)] p-6 rounded-2xl shadow-md border-l-4 border-[var(--color-hover-primario)] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+            <div class="flex items-start gap-4">
+              <div class="p-3 bg-[var(--color-fondo)] rounded-full shadow-sm shrink-0">
+                <Icon icon="mdi:emoticon-happy" class="w-8 h-8 text-[var(--color-hover-primario)]" />
+              </div>
+              <div>
+                <h4 class="text-xl font-bold text-[var(--color-texto-secundario)] mb-2">Pequeñas sonrisas</h4>
+                <p class="leading-relaxed">
+                  Iniciativa desarrollada en el sector de Villa Helena, Piedecuesta, que busca fortalecer el desarrollo emocional y mejorar las relaciones interpersonales de niños y niñas, utilizando una metodología experiencial con la cual aprenden jugando.
                 </p>
               </div>
             </div>

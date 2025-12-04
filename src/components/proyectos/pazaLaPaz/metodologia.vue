@@ -1,19 +1,23 @@
 <template>
   <section class="pazMetodologia">
     <h2>Metodología</h2>
-    <p>Se desarrollan procesos formativos con metodologías basadas en la educación experiencial, divididos en tres áreas:</p>
+    <p>El Proyecto Paza la Paz 2025-2028 propone una intervención integral que:</p>
     <div class="componentes">
       <article>
-        <h4><strong>Convivencia y Paz</strong></h4>
-        <p>Jóvenes que gestionan soluciones pacíficas en sus entornos.</p>
+        <h4><strong>Habilidades Socioemocionales</strong></h4>
+        <p>Fortalezca las habilidades socioemocionales de los jóvenes, dotándolos de herramientas para manejar sus emociones y desarrollar una autoestima saludable.</p>
       </article>
       <article>
-        <h4><strong>Organización y Participación Juvenil</strong></h4>
-        <p>Entrenamiento para descubrir talentos y construir un proyecto de vida.</p>
+        <h4><strong>Liderazgo Transformador</strong></h4>
+        <p>Desarrolle capacidades de liderazgo transformador, fomentando su participación activa en procesos de toma de decisiones comunitarias.</p>
       </article>
       <article>
-        <h4><strong>Emprendimiento Juvenil</strong></h4>
-        <p>Participación en proyectos sociales y económicos que fortalecen habilidades y sentido de vida.</p>
+        <h4><strong>Oportunidades Educativas y Laborales</strong></h4>
+        <p>Cree oportunidades educativas y laborales, vinculándolos a redes de emprendimiento y empleabilidad.</p>
+      </article>
+      <article>
+        <h4><strong>Entorno Comunitario Positivo</strong></h4>
+        <p>Promueva un entorno comunitario positivo, que fomente la convivencia pacífica y reduzca los riesgos de violencia.</p>
       </article>
     </div>
   </section>

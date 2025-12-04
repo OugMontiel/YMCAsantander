@@ -27,7 +27,7 @@ export default {
       subLinksMap: {
         proyectos: [
           {name: "Paza La Paz", routeName: "pazaLaPaz"},
-          {name: "Mision Paz Y Ciudadania", routeName: "misionPazYCiudadania"},
+          {name: "Semillas de paz y ciudadanía", routeName: "misionPazYCiudadania"},
         ],
         experiencia: [
           {name: "areaInternacional", routeName: "areaInternacional"},
