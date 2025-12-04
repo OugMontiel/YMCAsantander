@@ -140,13 +140,13 @@ import {Icon} from "@iconify/vue";
           </p>
 
           <!-- Video Placeholder -->
-          <div class="w-full aspect-video bg-gray-200 rounded-xl flex items-center justify-center shadow-inner mt-8">
+          <!-- <div class="w-full aspect-video bg-gray-200 rounded-xl flex items-center justify-center shadow-inner mt-8">
             <div class="text-center text-gray-500">
               <Icon icon="mdi:video-outline" class="w-16 h-16 mx-auto mb-2 opacity-50" />
               <p class="text-xl font-semibold">Video de Campaña Financiera</p>
               <p class="text-sm">(Próximamente)</p>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
 
