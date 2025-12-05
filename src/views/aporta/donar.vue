@@ -21,7 +21,7 @@ const showQR = ref(false);
       <div class="mb-8 max-w-3xl mx-auto text-center">
           <p class="text-lg font-semibold">
             Tus aportes te pueden otorgar un descuento del
-            <strong class="text-[var(--color-hover-primario)]">25%</strong> del valor donado sobre el impuesto de renta causado en Colombia.
+            <strong class="text-[var(--color-hover-primario)]">37%</strong> del valor donado sobre el impuesto de renta causado en Colombia.
           </p>
       </div>
       

@@ -72,7 +72,7 @@ import {Icon} from "@iconify/vue";
               </div>
             </div>
             <h3 class="text-xl font-bold text-[var(--color-texto-secundario)] mb-2">Beneficios Fiscales</h3>
-            <p class="leading-relaxed">Tus aportes te pueden otorgar un descuento del 25% del valor donado sobre el impuesto de renta causado en Colombia..</p>
+            <p class="leading-relaxed">Tus aportes te pueden otorgar un descuento del 37% del valor donado sobre el impuesto de renta causado en Colombia..</p>
           </div>
 
           <!-- Motivo 5 -->
