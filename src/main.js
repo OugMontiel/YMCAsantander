@@ -26,15 +26,15 @@ app.use(VueLazyLoad, {
   log: true,
   logLevel: "info",
   lifecycle: {
-    loading(el) {
-      console.log("imagen cargando:", el);
-    },
+    // loading(el) {
+    //   console.log("imagen cargando:", el);
+    // },
     error(el) {
-      console.log("error al cargar:", el);
+      console.error("error al cargar:", el);
     },
-    loaded(el) {
-      console.log("imagen cargada:", el);
-    },
+    // loaded(el) {
+    //   console.log("imagen cargada:", el);
+    // },
   },
 });
 
