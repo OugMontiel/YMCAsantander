@@ -2,7 +2,7 @@
 export const documentosEsal = [
   {
     titulo: "Certificación de cargos directivos y gerenciales",
-    archivo: "/esal/certificacionDeCargosDirectivosYGerencialesYmcaSantander.pdf",
+    archivo: "/esal/CERTIFICACION_DE_CARGOS_DIRECTIVOS_Y_GERENCIALES.pdf",
   },
   {
     titulo: "Personería Jurídica",
@@ -26,7 +26,7 @@ export const documentosEsal = [
   },
   {
     titulo: "Acta Asamblea Ordinaria",
-    archivo: "/esal/actaAsambleaOrdinariaNo89MarzoDe2025YmcaSantander.pdf",
+    archivo: "/esal/ACTA ASAMBLEA ORDINARIA No. 90 MARZO DE 2026 YMCA SANTANDER.pdf",
   },
   {
     titulo: "Informe de Gestión",
