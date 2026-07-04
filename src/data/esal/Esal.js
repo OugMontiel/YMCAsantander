@@ -10,27 +10,27 @@ export const documentosEsal = [
   },
   {
     titulo: "Certificado de Cámara de Comercio",
-    archivo: "/esal/certificadoCamaraDeComercioAbril2025.pdf",
+    archivo: "/esal/CERTIFICADO_CAMARA_DE_COMERCIO.pdf",
   },
   {
     titulo: "Estados Financieros",
-    archivo: "/esal/estadosFinancierosADic2024SantanderCompleto.pdf",
+    archivo: "/esal/ESTADOS_FINANCIEROS.pdf",
   },
   {
     titulo: "Certificación antecedentes judiciales",
-    archivo: "/esal/certificacionAntecedentesJudicialesYCaducidadDeContratos.pdf",
+    archivo: "/esal/CERTIFICACION_ANTECEDENTES_JUDICIALES_Y_CADUCIDAD_DE_CONTRATOS.pdf",
   },
   {
     titulo: "Certificación de Cumplimiento de Requisitos",
-    archivo: "/esal/certificacionDeCumplimientoDeRequisitos.pdf",
+    archivo: "/esal/CERTIFICACION_DE_CUMPLIMIENTO_DE_REQUISITOS.pdf",
   },
   {
     titulo: "Acta Asamblea Ordinaria",
-    archivo: "/esal/ACTA ASAMBLEA ORDINARIA No. 90 MARZO DE 2026 YMCA SANTANDER.pdf",
+    archivo: "/esal/ACTA_ASAMBLEA_ORDINARIA_No90_MARZO_DE_2026_YMCA_SANTANDER.pdf",
   },
   {
     titulo: "Informe de Gestión",
-    archivo: "/esal/informeDeGestionAcjYmcaSantander.pdf",
+    archivo: "/esal/INFORME_DE_GESTION _ACJ_YMCA_SANTANDER_2026.pdf",
   },
 
   // Faltantes:
