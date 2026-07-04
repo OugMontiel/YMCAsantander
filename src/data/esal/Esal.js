@@ -2,7 +2,7 @@
 export const documentosEsal = [
   {
     titulo: "Certificación de cargos directivos y gerenciales",
-    archivo: "/esal/CERTIFICACION_DE_CARGOS_DIRECTIVOS_Y_GERENCIALES.pdf",
+    archivo: "/esal/CERTIFICACION _DE_CARGOS_DIRECTIVOS_Y_GERENCIALES.pdf",
   },
   {
     titulo: "Personería Jurídica",
