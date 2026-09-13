@@ -22,7 +22,7 @@ export default {
             {name: "¿Quiénes Somos?", routeName: "about"},
             {name: "Programas", routeName: "proyectos"},
             // {name: "Experiencia", routeName: "experiencia"},
-            // {name: "Aporta", routeName: "aporta"},
+            {name: "Aporta", routeName: "aporta"},
             // {name: "Social", routeName: "social"},
           ],
         },
@@ -35,14 +35,14 @@ export default {
             {name: "ESAL", routeName: "esal"},
           ],
         },
-        // {
-        //   titulo: "Conócenos",
-        //   links: [
-        //     {name: "Hazte socio", routeName: "Socio"},
-        //     {name: "Donar ahora", routeName: "donar"},
-        //     {name: "Hazte voluntario", routeName: "hazteVoluntario"},
-        //   ],
-        // },
+        {
+          titulo: "Conócenos",
+          links: [
+            {name: "Hazte socio", routeName: "Socio"},
+            {name: "Donar ahora", routeName: "donar"},
+            {name: "Hazte voluntario", routeName: "hazteVoluntario"},
+          ],
+        },
       ],
     };
   },
