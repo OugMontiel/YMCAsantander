@@ -3,18 +3,67 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      target: production
+    image: ymcasantander-dev:latest
     container_name: ymca_santander_dev
     restart: unless-stopped
-    ports:
-      - "8081:80"
+
+    # ============================================================================
+    # PRINCIPIOS DE MÍNIMO PRIVILEGIO Y PROTECCIÓN DE CONTENEDOR (HALLAZGO 3)
+    # ============================================================================
+    user: "101:101"
+    read_only: true
+    security_opt:
+      - "no-new-privileges:true"
+    cap_drop:
+      - ALL
+
+    # Sistemas de archivos volátiles requeridos para modo sólo lectura
+    tmpfs:
+      - /tmp:size=32M,uid=101,gid=101,mode=1777
+      - /var/run:size=16M,uid=101,gid=101,mode=0755
+      - /var/cache/nginx:size=64M,uid=101,gid=101,mode=0755
+
+    # Montaje de configuración segura y autenticación para entorno de desarrollo
+    volumes:
+      - ./nginx.dev.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./.htpasswd:/etc/nginx/.htpasswd:ro
+
+    # ============================================================================
+    # CORRECCIÓN DE EXPOSICIÓN INNECESARIA Y COLISIONES (HALLAZGOS 1 Y 2):
+    # - Se elimina la exposición pública directa a 0.0.0.0 (anteriormente "8081:80").
+    # - No colisiona con el contenedor de producción ni con sus nombres o recursos.
+    # - Tráfico direccionado exclusivamente a través del proxy inverso en la red compartida.
+    # ============================================================================
+    expose:
+      - "8080"
+
+    # En caso de requerir depuración local en el host (puerto diferenciado 8081 en loopback):
+    # ports:
+    #   - "127.0.0.1:8081:8080"
+
     networks:
-      - proxy
+      proxy:
+        aliases:
+          - ymca-dev
+
+    # Verificación de salud interna sin curl ni herramientas de red
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost/ || exit 1"]
+      test: ["CMD-SHELL", "pidof nginx || exit 1"]
       interval: 30s
-      timeout: 10s
+      timeout: 5s
       retries: 3
-      start_period: 40s
+      start_period: 20s
+
+    deploy:
+      resources:
+        limits:
+          cpus: "0.50"
+          memory: 256M
+        reservations:
+          cpus: "0.10"
+          memory: 64M
+
     logging:
       driver: "json-file"
       options:
