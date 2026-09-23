@@ -37,8 +37,10 @@ RUN chown -R nginx:nginx /var/cache/nginx /var/run /var/log/nginx /tmp/nginx.pid
     chmod -R 550 /usr/share/nginx/html && \
     chmod 770 /tmp /var/cache/nginx /var/run /var/log/nginx
 
-# 4. Bastionado (Hardening): Eliminación de vectores de ataque
-RUN rm -rf /sbin/apk /etc/apk /lib/apk /usr/share/apk && \
+# 4. Bastionado (Hardening): Ajuste de Nginx y eliminación de vectores
+RUN sed -i 's/^user/#user/' /etc/nginx/nginx.conf && \
+    sed -i 's|^pid .*|pid /tmp/nginx.pid;|' /etc/nginx/nginx.conf && \
+    rm -rf /sbin/apk /etc/apk /lib/apk /usr/share/apk && \
     rm -f /usr/bin/wget /usr/bin/curl /bin/ping /bin/ping6 /usr/bin/nc /usr/bin/netcat /usr/bin/telnet
 
 # 5. Ejecución como usuario sin privilegios
@@ -48,4 +50,4 @@ USER nginx
 EXPOSE 8080
 
 # 7. Arranque de Nginx apuntando al PID correcto
-CMD ["nginx", "-g", "daemon off; pid /tmp/nginx.pid;"]
+CMD ["nginx", "-g", "daemon off;"]
